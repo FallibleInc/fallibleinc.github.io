@@ -13,13 +13,33 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
 </head>
 <body>
+  <script>
+    var ref = new Firebase("https://torrid-heat-2192.firebaseio.com/");
+    var users = ref.child("users");
+    var websites = ref.child("websites");
+
+    var addWebsite =  function () {
+      var website = $("#website").val();
+      var ref = website.push({website: website});
+      storage.setItem('website', website);
+    }
+
+    var addUser = function () {
+      var website = $("#website").val();
+      var email = $("#email").val();
+      alert(website);
+      alert(email);
+      var ref = users.push({website: website, email: email});
+    }
+  </script>
   <div class="navbar-fixed">
   <nav class="light-blue lighten-1" role="navigation">
 
     <div class="nav-wrapper container">
-    <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><i class="material-icons">verified_user</i> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><i class="material-icons">verified_user</i> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      <a href="#" class="brand-logo">Fallible</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">About</a></li>
@@ -47,12 +67,36 @@
       <form class="col s12">
       <div class="row">
         <div class="input-field offset-l1 col l6 s12">
-          <input id="email" type="email" class="validate">
-          <label for="email" data-error="wrong" data-success="right">Your startup domain name</label>
+          <input type="url" class="validate" id="website">
+          <label for="email" data-error="Oops, seems wrong!" data-success="Seems correct">Your domain name or appstore link</label>
         </div>
         <div class="col s12 l5">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get a free security check</a>
+          <a id="download-button" class="btn-large waves-effect waves-light orange modal-trigger" href="#modal1">Get a free security check</a>
         </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <div class="progress">
+              <div class="indeterminate"></div>
+            </div>
+            <h5 class="grey-text">Thank you! <br> We have added your website to our queue. It might take several hours to process. Please enter your email id below and we will mail the report to you.</h5>
+            <div class="row center">
+              <form class="col s12">
+              <div class="row">
+                <div class="input-field offset-l1 col l10 s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email" data-error="Ooops, seems wrong!" data-success="Seems correct">Your email id. We will send the report here.</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="addUser()">Submit</button>
+          </div>
+        </div>
+          
       </div>
     </form>
       </div>
@@ -142,6 +186,12 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+     });
+  </script>
   <script src="/js/materialize.min.js"></script>
   <script src="js/init.js"></script>
 
