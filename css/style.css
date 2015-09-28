@@ -34,3 +34,7 @@ nav {
 .btn-large {
 	background-color: #ff9800;
 }
+
+.btn-large:hover {
+	background-color: #29b6f6;
+}
