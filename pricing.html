@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript">
+    var host = "fallible.co";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Fallible Pricing - Your ondemand security team</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+</head>
+<body>
+  <script>
+    var ref = new Firebase("https://torrid-heat-2192.firebaseio.com/");
+    var users = ref.child("users");
+    var websites = ref.child("websites");
+
+    var addWebsite =  function () {
+      var website = $("#website").val();
+      var ref = website.push({website: website});
+      storage.setItem('website', website);
+    }
+
+    var addUser = function () {
+      var website = $("#website").val();
+      var email = $("#email").val();
+      //alert(website);
+      //alert(email);
+      var ref = users.push({website: website, email: email});
+    }
+  </script>
+  <div class="navbar-fixed">
+  <nav class="light-blue lighten-1" role="navigation">
+
+    <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><i class="material-icons">verified_user</i> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="#" class="brand-logo">Fallible</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+         <li><a href="/blog">Blog</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Pricing</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  </div>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+     <div class="row">
+      <h3 class="white-text darken-4">Find your right security plan</h3>
+        <!-- div class="col s12 m4 l4">
+          <div class="card grey darken-3">
+            <div class="card-content white-text center">
+              <span class="card-title">Basic</span>
+              <h1>FREE</h1>
+              <p>Entry level plan for personal websites. One time automated check for common security vulnerabilites. We manage your bug-bounty page.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Contact us</a>
+              <a href="#">FREE SIGNUP</a>
+            </div>
+          </div>
+        </div -->
+        <div class="col s12 m6 l6">
+          <div class="card grey darken-3">
+            <div class="card-content grey-text lighten-5 center">
+              <span class="card-title">Startup</span>
+              <h1 class="center white-text darken-5"><span class="dollar">$</span>299<span class="permonth">/mo</span></h1>
+              <p>
+                Monthly reports for automated and manual check for vulnerabilites. Covers APIs, web and mobile apps and devops setup. We manage your bug-bounty and give out bounty awards. Real-time intrusion detection system.
+              </p>
+            </div>
+            <div class="card-action center">
+              <a href="#" class="waves-effect waves-light btn btn-large white-text">Sign up</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="card grey darken-3">
+            <div class="card-content grey-text lighten-5 center">
+              <span class="card-title">Enterprise</span>
+              <h1 class="center white-text darken-5"><span class="dollar">$</span>999<span class="permonth">/mo</span></h1>
+              <p>In addition to Startup plan, you get unlimited on-demand security reports, an on-premise internal network solution for intrusion detection, integration with your build systems and dedicated 24x7 support</p>
+            </div>
+            <div class="card-action center">
+              <a href="#" class="waves-effect waves-light btn btn-large white-text">Sign up</a>
+            </div>
+          </div>
+        </div>
+        <br><br>
+         <p class="white-text darken-4">All plans come with free fixes for vulnerabilites discovered in open source softwares e.g. heartbleed, non-disclosure and data confidientiality agreement and insurance against paying for bug bounties.</p>
+         <br>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l9 s12">
+          <h5 class="white-text">About Fallible</h5>
+          <p class="grey-text text-lighten-4">We make startups secure so that they can focus on growth and things that matter. We also manage formal bug bounty programs for startups and big cos alike.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://medium.com/@fallible">Medium</a></li>
+            <li><a class="white-text" href="/blog">Our Blog</a></li>
+            <li><a class="white-text" href="https://twitter.com/fallible_inc">Twitter</a></li>
+            <li><a class="white-text" href="#!">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Contact us at <a class="orange-text text-lighten-5" href="mailto:hello@fallible.co">hello@fallible.co</a> or <a class="orange-text text-lighten-5" href="tel:+1-440-600-3663">+1-440-600-3663</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+     });
+  </script>
+  <script src="/js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
