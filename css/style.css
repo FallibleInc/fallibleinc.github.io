@@ -12,3 +12,25 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+#index-banner {
+ background-color: #29b6f6;
+}
+
+nav {
+	box-shadow: none;
+}
+
+.dollar {
+	font-size: 1.4rem;
+	vertical-align: super; 
+}
+
+.permonth {
+	font-size: 1.4rem;
+	vertical-align: s; 
+}
+
+.btn-large {
+	background-color: #ff9800;
+}
