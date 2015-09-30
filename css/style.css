@@ -6,6 +6,10 @@
  * Made By MaterializeCSS.com
  */
 
+ body {
+ 	font-family: 'Lato', sans-serif;
+ }
+
 .icon-block {
   padding: 0 15px;
 }
