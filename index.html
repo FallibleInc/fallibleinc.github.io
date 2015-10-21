@@ -50,6 +50,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
         <li><a href="/pricing">Pricing</a></li>
          <li><a href="/blog">Blog</a></li>
 	<li><a class="waves-effect waves-light btn orange modal-trigger" href="#reportbug">Report Bug</a></li>
+	<li><a class="waves-effect waves-light modal-trigger" href="#faq">FAQ</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -57,6 +58,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
       <li><a href="/pricing">Pricing</a></li>
         <li><a href="/blog">Blog</a></li>
 	<li><a class="waves-effect waves-light btn orange modal-trigger" href="#reportbug">Report Bug</a></li>
+	<li><a class="waves-effect waves-light modal-trigger" href="#faq">FAQ</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -80,16 +82,72 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
           <a id="download-button" class="btn-large waves-effect waves-light orange modal-trigger" href="#modal1">Get a free security check</a>
         </div>
 
-	 <!-- Modal Structure -->
+
+<!-- Modal Structure -->
   <div id="reportbug" class="modal">
     <div class="modal-content">
       <h4>To Report a Bug</h4>
       <p>Please mail us at hello@fallible.co with the name of the company and a brief description of the bug.</p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">ok</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-light-blue btn-flat">ok</a>
     </div>
-  </div>        
+  </div>
+
+<!-- Modal Structure -->
+  <div id="faq" class="modal">
+    <div class="modal-content">
+      <h4>Frequently Asked Questions By Startups</h4>
+      <ul class="collection">
+    <li class="collection-item avatar">
+      <i class="material-icons circle light-blue">question_answer</i>
+      <p><b>Do I need to give access to our code base?</b></p>
+      <p>No. <br>
+         We do not need access to your code base. We can find the vulnerabilities without that, we will monitor the API calls your app makes and that is enough for us.
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle light-blue">question_answer</i>
+      <p><b>You say insurance, what do you mean by that?</b></p>
+      <p>We are not an insurance company per say. <br>
+         But we take full responsibility of paying the bug bounties for bugs reported through us.
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle light-blue">question_answer</i>
+      <p><b>My code base is in python, can you work with python?</b></p>
+      <p>Yes, language or your tech stack is immaterial to us. <br>
+         We do not need access to your code base. We can find the vulnerabilities without that, we will monitor the API calls your app makes and that is enough for us.
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle light-blue">question_answer</i>
+      <p><b>How long does it take you to inform us about the bug?</b></p>
+      <p>Within 30 minutes. <br>
+         We have dedicated security prosessional looking at the bug reports, our experts can verify the truthfulness in minutes and can inform you if it is legit.
+      </p>
+    </li>
+ <li class="collection-item avatar">
+      <i class="material-icons circle light-blue">question_answer</i>
+      <p><b>Can we get refund if we discontinue with the service?</b></p>
+      <p>Sure. We will refund the payment for the remaining months. <br>
+      </p>
+    </li>    
+<li class="collection-item avatar">
+      <i class="material-icons circle light-blue">question_answer</i>
+      <p><b>$300 is too costly for us, can we negotiate?</b></p>
+      <p>No. <br>
+      </p>
+    </li>
+
+  </ul>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-light-blue btn-flat">got it</a>
+    </div>
+  </div>
+
+        
 <!-- Modal Structure -->
         <div id="modal1" class="modal">
           <div class="modal-content">
@@ -109,7 +167,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
           </div>
           </div>
           <div class="modal-footer">
-            <button class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="addUser()">Submit</button>
+            <button class=" modal-action modal-close waves-effect waves-light-blue btn-flat" onclick="addUser()">Submit</button>
           </div>
         </div>
           
