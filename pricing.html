@@ -19,6 +19,69 @@
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
 mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
 </head>
+<style type="text/css">
+  
+  img {
+    -webkit-filter: grayscale(100%);filter: grayscale(100%);
+  }
+  .publicationlogo {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+
+  }
+
+  #featuredin {
+    margin-top: 100px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  #featuredinheading {
+    text-decoration: bold;
+    font-size: 22px;
+    font-family: Lato;
+    color: gray;
+  }
+
+  #techinasia {
+    height: 65px;
+  }
+
+  #businessline {
+    height: 45px;
+  }
+
+  @media screen and (max-width: 960px) {
+    #techinasia {
+      height: 45px;
+    }
+
+    #businessline {
+      height: 20px;
+    }
+  }
+</style>
 <body>
   <script>
     var ref = new Firebase("https://torrid-heat-2192.firebaseio.com/");
@@ -188,7 +251,18 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
       </div>
     </div>
   </div>
+   <div id="featuredin">
+      <div id="featuredinheading">
+        As Featured On
+      </div>
+      <div class="publicationlogo">
+        
+        <a href="http://www.thehindubusinessline.com/todays-paper/bugs-bugs-everywhere/article7847966.ece"><img id="businessline" src="bl-newlogo-h55.jpg"></a>     
 
+        <a href="https://www.techinasia.com/talk/learnt-hacking-17-indian-startups-worth-10-billion/"><img id="techinasia" src="techinasia-logo.png"></a> 
+      
+      </div>
+    </div>
 
   <footer class="page-footer orange">
     <div class="container">
@@ -219,6 +293,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
         </div>
       </div>
     </div>
+   
     <div class="footer-copyright">
       <div class="container">
       Contact us at <a class="orange-text text-lighten-5" href="mailto:hello@fallible.co">hello@fallible.co</a> or <a class="orange-text text-lighten-5" href="tel:+1-440-600-3663">+1-914-810-8790</a>
