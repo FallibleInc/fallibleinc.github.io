@@ -58,13 +58,14 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
   }
 
   #featuredinheading {
+    margin-bottom: 10px;
     text-decoration: bold;
     font-size: 22px;
     font-family: Lato;
     color: gray;
   }
 
-  #techinasia {
+#techinasia {
     height: 65px;
   }
 
@@ -72,15 +73,32 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
     height: 45px;
   }
 
+  #businessstandard {
+    height: 45px;
+  }
+  .row {
+    margin-bottom: 10px;
+  }
+
+  #submitdetails {
+    margin-top: 10px;
+  }
+
   @media screen and (max-width: 960px) {
     #techinasia {
-      height: 45px;
+      height: 25px;
     }
 
     #businessline {
-      height: 20px;
+      height: 15px;
+    }
+
+    #businessstandard {
+      height: 15px;
     }
   }
+
+
 </style>
 <body>
   <script>
@@ -127,6 +145,57 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
     </div>
   </nav>
   </div>
+<div id="signupform" class="modal">
+  <div class="modal-content">
+  <div class="row">
+    <form class="col s12" action="http://dashboard.fallible.co/signup" method="post">
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="first_name" type="text" name="first_name" class="validate" required>
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" name="last_name" class="validate" required>
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="website" type="text" name="website" class="validate" required>
+          <label for="website">Website URL</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" name="email" class="validate" required>
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="password" type="password" name="password" class="validate" required>
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="phoneno" type="text" name="phoneno" class="validate" pattern="[\-+0-9]*" required>
+          <label for="phoneno">Phone Number</label>
+        </div>
+      </div>
+      <center>
+        <div class="row">
+          <input id="agreement" type="checkbox" name="agreement" class="validate" required>
+            <label for="agreement">I have read and agree to the <a href="//fallible.co/terms">terms and conditions</a></label>
+        </div>
+        <div class="row">
+          <button class="btn waves-effect waves-light" id="submitdetails" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </center>
+    </form>
+  </div>
+</div>
+</div>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
      <div class="row">
@@ -154,7 +223,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
               </p>
             </div>
             <div class="card-action center">
-              <a href="#" class="waves-effect waves-light btn btn-large white-text">Sign up</a>
+              <a href="#signupform" class="modal-trigger waves-effect waves-light btn btn-large white-text">Sign up</a>
             </div>
           </div>
         </div>
@@ -166,7 +235,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
               <p>In addition to Startup plan, you get unlimited on-demand security reports, an on-premise internal network solution for intrusion detection, integration with your build systems and dedicated 24x7 support</p>
             </div>
             <div class="card-action center">
-              <a href="#" class="waves-effect waves-light btn btn-large white-text">Sign up</a>
+              <a href="#signupform" class="modal-trigger waves-effect waves-light btn btn-large white-text">Sign up</a>
             </div>
           </div>
         </div>
@@ -251,12 +320,13 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
       </div>
     </div>
   </div>
+
    <div id="featuredin">
       <div id="featuredinheading">
         As Featured On
       </div>
       <div class="publicationlogo">
-        
+   	<a href="http://www.business-standard.com/article/companies/what-we-learnt-by-hacking-17-indian-start-ups-worth-10-billion-115110900301_1.html"><img id="businessstandard" src="business-standard-logo.png"></a>     
         <a href="http://www.thehindubusinessline.com/todays-paper/bugs-bugs-everywhere/article7847966.ece"><img id="businessline" src="bl-newlogo-h55.jpg"></a>     
 
         <a href="https://www.techinasia.com/talk/learnt-hacking-17-indian-startups-worth-10-billion/"><img id="techinasia" src="techinasia-logo.png"></a> 
@@ -301,9 +371,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
     </div>
   </footer>
 
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script>
     $(document).ready(function(){
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
@@ -312,6 +380,8 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
   </script>
   <script src="/js/materialize.min.js"></script>
   <script src="js/init.js"></script>
+
+  
 
   </body>
 </html>
