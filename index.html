@@ -40,7 +40,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
 
   }
 
-  #featuredin {
+  #featuredin,#customers {
     
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -56,7 +56,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
             align-items: center;
   }
 
-  #featuredinheading {
+  #featuredinheading,#customersheading {
     margin-bottom: 10px;
     text-decoration: bold;
     font-size: 22px;
@@ -68,7 +68,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
     height: 65px;
   }
 
-  #businessline {
+  #businessline,#grofers,#healthkart {
     height: 45px;
   }
 
@@ -86,8 +86,23 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
   #signup {
     text-transform: none;
   }
+
+  div#customers {height: 160px;background: #FF9800;}
+
+  #grofers, #healthkart {
+    height: 60px;
+  }
+
+  img#grofers,#healthkart {
+    -webkit-filter: invert(1) brightness(100);
+  }
+
+  div#customersheading {
+    color: white;
+  }
+
   @media screen and (max-width: 960px) {
-    #techinasia {
+    #techinasia,#grofers,#healthkart {
       height: 20px;
     }
 
@@ -346,6 +361,17 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
 
     </div>
   </div>
+
+
+<div id="customers">
+    <div id="customersheading">
+        Great Startups care about Security
+    </div>
+     <div class="publicationlogo">
+        <a href="http://grofers.com"><img id="grofers" src="grofers-logo.png"></a>
+        <a href="http://healthkart.com"><img id="healthkart" src="HealthKart_Logo.png"></a>
+     </div>
+</div>
 
 <div id="featuredin">
   <div id="featuredinheading">
