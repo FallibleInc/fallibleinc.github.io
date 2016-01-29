@@ -3,6 +3,7 @@
  */
 
 table > thead > tr {
+    color: white;
     font-size: larger;
     align-content: center;
     background-color: #29b6f6;
@@ -29,7 +30,7 @@ label {
 }
 
 .progressbar {
-  background-color: black;
+  background-color: #dcdcdc;
   border-radius: 13px; /* (height of inner div) / 2 + padding */
   padding: 3px;
 }
