@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+  <script type="text/javascript">
+    var host = "fallible.co";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    
+<!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+    
+<!-- start Mixpanel -->
+    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("babee8001ed28a26179d81eaabf7d882");
+    </script>
+<!-- end Mixpanel -->
+<style type="text/css">
+  
+  img {
+    -webkit-filter: grayscale(100%);filter: grayscale(100%);
+  }
+  .publicationlogo {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+  }
+  #featuredin,#customers {
+    
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #featuredinheading,#customersheading {
+    margin-bottom: 10px;
+    text-decoration: bold;
+    font-size: 22px;
+    font-family: Lato;
+    color: gray;
+  }
+  #techinasia {
+    height: 65px;
+  }
+  #businessline,#grofers,#healthkart {
+    height: 45px;
+  }
+  #businessstandard {
+    height: 45px;
+  }
+  .row {
+    margin-bottom: 10px;
+  }
+  #submitdetails {
+    margin-top: 10px;
+  }
+  #signup {
+    text-transform: none;
+  }
+  div#customers {height: 160px;background: #FF9800;}
+  #grofers, #healthkart {
+    height: 60px;
+  }
+  img#grofers,#healthkart {
+    -webkit-filter: invert(1) brightness(100);
+	filter: invert(1) brightness(100);
+  }
+  
+  div#featuredin {
+    height: 180px;
+  }
+  div#customersheading {
+    color: white;
+  }
+  @media screen and (max-width: 960px) {
+    #techinasia,#grofers,#healthkart {
+      height: 20px;
+    }
+    #customersheading, #featuredinheading {
+	font-size: 20px;
+    }
+    #businessline {
+      height: 11px;
+    }
+    #businessstandard {
+      height: 11px;
+    }
+  }
+</style>
+    
+    <meta charset="UTF-8">
+    <title>Fallible: Public Security Dashboard</title>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="external/jquery.dataTables-1.10.10.min.css">
+    <link rel="stylesheet" href="main.css">
+
+    <!-- JS -->
+    <script src="external/jquery-1.12.0.min.js"></script>
+    <script src="external/jquery.dataTables-1.10.10.min.js"></script>
+    <script src="external/accounting.min.js"></script>
+    <script src="main.js"></script>
+
+</head>
+    
+<body onload="generateTable()">
+  <div class="navbar-fixed">
+  <nav class="light-blue lighten-1" role="navigation">
+
+    <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><i class="material-icons">verified_user</i> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="#" class="brand-logo">Fallible</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">About</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+         <li><a href="/blog">Blog</a></li>
+	<li><a class="waves-effect waves-light btn orange modal-trigger" href="#reportbug">Report Bug</a></li>
+	<li><a class="waves-effect waves-light modal-trigger" href="#faq">FAQ</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav" style="left: -250px;">
+      <li><a href="#">About</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/blog">Blog</a></li>
+	<li><a class="waves-effect waves-light btn orange modal-trigger" href="#reportbug">Report Bug</a></li>
+	<li><a class="waves-effect waves-light modal-trigger" href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  </div>
+    
+    <h1 align="center">Fallible: Public Security Dashboard</h1>
+    <table id="container" class="display row-border compact hover stripe" cellspacing="0" width="90%">
+        <thead>
+            <tr>
+                <th width="33.5%" align="left">Company</th>
+                <th width="16.5%" align="center">Category</th>
+                <th width="16.5%" align="center">Funding</th>
+                <th width="33.5%" align="center">Secure</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <!--<tfoot>-->
+            <!--<tr>-->
+                <!--<th>Company</th>-->
+                <!--<th>Category</th>-->
+                <!--<th>Funding</th>-->
+                <!--<th>Secure</th>-->
+            <!--</tr>-->
+        <!--</tfoot>-->
+    </table>
+
+</body>
+    
+    <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Fallible</h5>
+          <p class="grey-text text-lighten-4">We make startups secure so that they can focus on growth and things that matter. We also manage formal bug bounty programs for startups and big cos alike.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Terms / Policies</h5>
+          <ul>
+            <li><a class="white-text" href="/privacy">Privacy Policy</a></li>
+            <li><a class="white-text" href="/terms">Terms of Service</a></li>
+	    <li><a class="white-text" href="/refund">Refund Policy</a></li>
+            <li><a class="white-text" href="/contactus">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://medium.com/@fallible">Medium</a></li>
+            <li><a class="white-text" href="/blog">Our Blog</a></li>
+            <li><a class="white-text" href="https://twitter.com/fallible_inc">Twitter</a></li>
+            <li><a class="white-text" href="#!">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Contact us at <a class="orange-text text-lighten-5" href="mailto:hello@fallible.co">hello@fallible.co</a> or <a class="orange-text text-lighten-5" href="tel:+91-72-59-361414">+91-72-59-361414</a>
+      </div>
+    </div>
+  </footer>
+</html>

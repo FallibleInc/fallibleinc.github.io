@@ -1,0 +1,42 @@
+/**
+ * Created by sitesh on 26/01/16.
+ */
+
+table > thead > tr {
+    font-size: larger;
+    align-content: center;
+    background-color: #29b6f6;
+}
+
+table > tbody > tr > td:nth-child(1) {
+    font-size: larger;
+}
+
+tr:nth-child(1) {
+    font-weight: 700;
+}
+
+td, th {
+    text-align: center;
+}
+
+table > tbody > tr > td:nth-child(2) {
+    font-style: italic;
+}
+
+label {
+    font-stretch: ultra-expanded;
+}
+
+.progressbar {
+  background-color: black;
+  border-radius: 13px; /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+.progressbar > div {
+   background-color: red;
+   width: 0%; /* Adjust with JavaScript */
+   height: 20px;
+   border-radius: 10px;
+}
