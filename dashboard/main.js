@@ -3,24 +3,27 @@
  */
 
 function getLink(label, url, img) {
-    var companyUrl = document.createElement('td');
-    companyUrl.setAttribute('align', 'center');
-    companyUrl.setAttribute('width', '33%');
+    //var companyUrl = document.createElement('td');
+    //companyUrl.setAttribute('align', 'center');
+    //companyUrl.setAttribute('width', '33%');
 
+    var td = document.createElement('td');
+    td.width = '33%';
+    
     if ('N/A' !== url) {
         var link = document.createElement('a');
         link.setAttribute('href', url);
 
         var icon = document.createElement('img');
-        icon.setAttribute('src', 'images/i_' + img);
+        icon.setAttribute('src', 'images/' + img);
 
         //img.appendChild(document.createTextNode(label));
 
         link.appendChild(icon);
-        companyUrl.appendChild(link);
+        td.appendChild(link);
     }
 
-    return companyUrl;
+    return td;
 }
 
 function populateTable(dataset) {
@@ -35,25 +38,28 @@ function populateTable(dataset) {
         if (data.length < 6) continue;
 
         var company = document.createElement('td');
+        company.appendChild(document.createTextNode(data[0]));
 
-        var companyDetails = document.createElement('table');
-        companyDetails.setAttribute('width', '100%');
+        //var companyDetails = document.createElement('table');
+        //companyDetails.setAttribute('width', '100%');
 
-        var companyName = document.createElement('tr');
-        var companyTitle = document.createElement('td');
-        companyTitle.appendChild(document.createTextNode(data[0]));
-        companyTitle.setAttribute('colspan', 3);
-        companyName.appendChild(companyTitle);
+        //var companyName = document.createElement('tr');
+        //var companyTitle = document.createElement('td');
+        //companyTitle.appendChild(document.createTextNode(data[0]));
+        //companyTitle.setAttribute('colspan', 3);
+        //companyName.appendChild(companyTitle);
 
-        var companyLinks = document.createElement('tr');
-        companyLinks.appendChild(getLink('Facebook', data[5], 'icon_facebook.png'));
-        companyLinks.appendChild(getLink('Website', data[4], 'icon_www.png'));
-        companyLinks.appendChild(getLink('Twitter', data[6], 'icon_twitter.png'));
+        //var companyLinks = document.createElement('tr');
+        var companyLinks = document.createElement('td');
+        
+        companyLinks.appendChild(getLink('Facebook', data[5], '1454099581_facebook.png'));
+        companyLinks.appendChild(getLink('Website', data[4], '1454099599_file-link.png'));
+        companyLinks.appendChild(getLink('Twitter', data[6], '1454099563_twitter.png'));
 
-        companyDetails.appendChild(companyName);
-        companyDetails.appendChild(companyLinks);
+        //companyDetails.appendChild(companyName);
+        //companyDetails.appendChild(companyLinks);
 
-        company.appendChild(companyDetails);
+        //company.appendChild(companyDetails);
 
         var category = document.createElement('td');
         category.appendChild(document.createTextNode(data[1]));
@@ -78,14 +84,18 @@ function populateTable(dataset) {
         
         var progressSecDiv = document.createElement('div');
         progressSecDiv.style.width = securityStrength + '%';
-        progressSecDiv.style.background = 'rgb(' + parseInt(255 * (1 - securityStrength / 100)) + ', ' + parseInt(255 * securityStrength / 100) + ', ' + 0 + ')';
+                
+        var greenShare = 2 * Math.max(0, securityStrength - 50);
+        var redShare = 100 - greenShare;
+        
+        progressSecDiv.style.background = 'rgb(' + parseInt(2.55 * redShare) + ', ' + parseInt(2.55 * greenShare) + ', ' + 0 + ')';
         
         secDiv.appendChild(progressSecDiv);
         security.appendChild(secDiv);
 
-
         var dataRow = document.createElement('tr');
         dataRow.appendChild(company);
+        dataRow.appendChild(companyLinks);
         dataRow.appendChild(category);
         dataRow.appendChild(funding);
         dataRow.appendChild(security);
@@ -95,7 +105,7 @@ function populateTable(dataset) {
 
     $('#container').DataTable({
         "paging": false,
-        "order": [[ 2, "desc" ]]
+        "order": [[ 3, "desc" ]]
     });
 }
 
