@@ -52,9 +52,9 @@ function populateTable(dataset) {
         //var companyLinks = document.createElement('tr');
         var companyLinks = document.createElement('td');
         
-        companyLinks.appendChild(getLink('Facebook', data[5], '1454099581_facebook.png'));
-        companyLinks.appendChild(getLink('Website', data[4], '1454099599_file-link.png'));
-        companyLinks.appendChild(getLink('Twitter', data[6], '1454099563_twitter.png'));
+        companyLinks.appendChild(getLink('Facebook', data[5], 'facebook.png'));
+        companyLinks.appendChild(getLink('Website', data[4], 'link-variant.png'));
+        companyLinks.appendChild(getLink('Twitter', data[6], 'twitter.png'));
 
         //companyDetails.appendChild(companyName);
         //companyDetails.appendChild(companyLinks);
