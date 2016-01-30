@@ -2,7 +2,19 @@
  * Created by sitesh on 26/01/16.
  */
 
-table > thead > tr {
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+#container_filter {
+    width: 25%;
+    text-align: center;
+    font-style: italic;
+    padding-right: 7%;
+}
+
+table > thead > tr, table > tfoot > tr {
     color: white;
     font-size: larger;
     align-content: center;
@@ -25,8 +37,11 @@ table > tbody > tr > td:nth-child(2) {
     font-style: italic;
 }
 
-label {
-    font-stretch: ultra-expanded;
+#dashboard_writeup {
+    color: burlywood;
+    float: left;
+    padding-left: 5%;
+    font-style: italic;
 }
 
 .progressbar {

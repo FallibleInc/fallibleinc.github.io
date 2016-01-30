@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+<!--  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>-->
     
 <!-- start Mixpanel -->
     <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
@@ -140,7 +140,11 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");
         <li><a href="#">About</a></li>
         <li><a href="/pricing">Pricing</a></li>
          <li><a href="/blog">Blog</a></li>
-	<li><a class="waves-effect waves-light btn orange modal-trigger" href="#reportbug">Report Bug</a></li>
+	<li>
+        <a class="waves-effect waves-light btn orange modal-trigger" href="https://dashboard.fallible.co/signup">
+            Secure me !
+        </a>
+    </li>
 	<li><a class="waves-effect waves-light modal-trigger" href="#faq">FAQ</a></li>
       </ul>
 
@@ -156,7 +160,11 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");
   </nav>
   </div>
     
-    <h1 align="center" color="orange">Public Security Dashboard</h1>
+    <h1>Public Security Dashboard</h1>
+    <a href="https://fallible.co/blog//2016/01/30/indian-startups-security-report-scoring-paramters/">
+        <span id="dashboard_writeup">* Scoring details</span>
+    </a>
+    
     <div>
         <table id="container" class="display row-border compact hover stripe" cellspacing="0" width="90%">
             <thead>
@@ -171,14 +179,15 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");
             <tbody>
 
             </tbody>
-            <!--<tfoot>-->
-                <!--<tr>-->
-                    <!--<th>Company</th>-->
-                    <!--<th>Category</th>-->
-                    <!--<th>Funding</th>-->
-                    <!--<th>Secure</th>-->
-                <!--</tr>-->
-            <!--</tfoot>-->
+            <tfoot>
+                <tr>
+                    <th width="33.5%" align="left">Company</th>
+                    <th width="10.0%" align="left">Links</th>
+                    <th width="15.0%" align="center">Category</th>
+                    <th width="10.0%" align="center">Funding</th>
+                    <th width="32.5%" align="center">Secure</th>
+                </tr>
+            </tfoot>
         </table>
     </div>
 

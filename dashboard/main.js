@@ -84,11 +84,14 @@ function populateTable(dataset) {
         
         var progressSecDiv = document.createElement('div');
         progressSecDiv.style.width = securityStrength + '%';
-        progressSecDiv.style.background = 'rgb(' + parseInt(255 * (1 - securityStrength / 100)) + ', ' + parseInt(255 * securityStrength / 100) + ', ' + 0 + ')';
+                
+        var greenShare = 2 * Math.max(0, securityStrength - 50);
+        var redShare = 100 - greenShare;
+        
+        progressSecDiv.style.background = 'rgb(' + parseInt(2.55 * redShare) + ', ' + parseInt(2.55 * greenShare) + ', ' + 0 + ')';
         
         secDiv.appendChild(progressSecDiv);
         security.appendChild(secDiv);
-
 
         var dataRow = document.createElement('tr');
         dataRow.appendChild(company);
@@ -102,7 +105,7 @@ function populateTable(dataset) {
 
     $('#container').DataTable({
         "paging": false,
-        "order": [[ 2, "desc" ]]
+        "order": [[ 3, "desc" ]]
     });
 }
 
