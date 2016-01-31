@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://fallible.co/</loc>
+  <lastmod>2016-01-31T14:28:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/pricing</loc>
+  <lastmod>2016-01-31T14:28:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/blog/</loc>
+  <lastmod>2016-01-30T22:20:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/terms</loc>
+  <lastmod>2016-01-31T14:28:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/privacy</loc>
+  <lastmod>2016-01-31T14:28:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/refund</loc>
+  <lastmod>2016-01-31T14:28:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/contactus</loc>
+  <lastmod>2016-01-31T14:28:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/blog//2016/01/30/indian-startups-security-report-scoring-paramters/</loc>
+  <lastmod>2016-01-30T22:20:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/blog//2016/01/02/ola-bug-bounty-hack/</loc>
+  <lastmod>2016-01-30T22:20:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/blog//2015/09/25/Why-fallible/</loc>
+  <lastmod>2016-01-30T22:20:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/blog/2016/01/02/ola-bug-bounty-hack/</loc>
+  <lastmod>2016-01-30T22:20:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/blog/2015/09/25/Why-fallible/</loc>
+  <lastmod>2016-01-30T22:20:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://fallible.co/blog/2016/01/30/indian-startups-security-report-scoring-paramters/</loc>
+  <lastmod>2016-01-30T22:20:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>
