@@ -34,6 +34,9 @@ table > thead > tr, table > tfoot > tr {
     background-color: #29b6f6;
 }
 
+input#website {
+    color: black;
+}
 
 td, th {
     text-align: center;
