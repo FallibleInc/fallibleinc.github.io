@@ -6,11 +6,13 @@ h1 {
     color: orange;
     text-align: center;
     margin: 4px;
+    margin-top: 50px;
 }
 
 h5 {
     margin: 4px;
     color: grey;
+    margin-bottom: 40px;
 }
 
 #container_filter {
@@ -111,8 +113,3 @@ table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;bo
         }	
 }
 
-.addthis_native_toolbox {
-    width: 33%;
-    margin: 0 auto;
-    margin-top: 20px;
-}
