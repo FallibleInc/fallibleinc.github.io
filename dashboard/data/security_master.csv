@@ -30,7 +30,6 @@ GreenDust,E-Commerce,40000000,65,http://www.greendust.com,http://www.facebook.co
 Zivame.com,Internet,49000000,68,http://www.zivame.com,http://www.facebook.com/zivame,http://twitter.com/zivame
 Groupon India,Internet Service Providers,20000000,88,http://www.groupon.co.in,https://www.facebook.com/GrouponIN,https://twitter.com/grouponin
 Bluestone.com,Curated Web,30800000,75,http://bluestone.com,http://www.facebook.com/bluestonejewels,http://twitter.com/BluestoneDotCom
-OfficeCloud,N/A,120000000,67,http://www.officecloud.in,N/A,N/A
 Moonfrog Labs,Game,15000000,80,http://www.moonfroglabs.com/,http://www.facebook.com/moonfroglabs,http://twitter.com/MoonfrogLabs
 FirstCry.com,E-Commerce,65000000,67,http://www.firstcry.com,http://www.facebook.com/FirstCryIndia,http://twitter.com/firstcryindia
 Netmagic Solutions,Web Hosting,36000000,74,http://www.netmagicsolutions.com,N/A,http://twitter.com/netmagic
@@ -38,36 +37,36 @@ Ecom Express,Logistics,149500000,80,http://www.ecomexpress.in/,http://www.facebo
 Ola,E-Commerce,901830000,78,http://olacabs.com,http://www.facebook.com/olacabs,http://twitter.com/olacabs
 hike,Mobile,86000000,74,http://get.hike.in,http://www.facebook.com/hikeapp,http://twitter.com/hikeapp
 Myntra,E-Commerce,158750000,69,http://www.myntra.com,N/A,http://twitter.com/myntra
-ACT (Atria Convergence Technologies Pvt. Ltd.),Networking,500000000,53,http://www.acttv.in/index.php,https://www.facebook.com/ACTFibernet,https://twitter.com/ACTFibernet
+ACT Fibernet,Networking,500000000,53,http://www.acttv.in/index.php,https://www.facebook.com/ACTFibernet,https://twitter.com/ACTFibernet
 ZO Rooms,Hotels,47000000,62,http://bit.ly/1HTcZ90,https://www.facebook.com/zorooms,https://twitter.com/zorooms
-PayU,Payments,-1,71,http://payu.com,N/A,N/A
-Pepperfry,E-Commerce,-1,63,http://pepperfry.com,N/A,N/A
+PayU,Payments,0,71,http://payu.com,N/A,N/A
+Pepperfry,E-Commerce,128000000,63,http://pepperfry.com,N/A,N/A
 DoorMint,E-Commerce,3000000,65,http://doormint.com,https://www.facebook.com/doormint,https://twitter.com/DoorMint_Talk
-Ebay India,E-Commerce,-1,55,http://ebay.in,N/A,N/A
+Ebay India,E-Commerce,0,55,http://ebay.in,N/A,N/A
 BookMyShow,Ticketing,43000000,60,http://www.bookmyshow.com,http://www.facebook.com/pages/BookMyShow/82235273865,http://twitter.com/bookmyshow
 Zomato,Hospitality,223800000,50,https://www.zomato.com/,http://www.facebook.com/zomato,http://twitter.com/zomato
 Quikr,Curated Web,346000000,50,http://www.quikr.com,http://www.facebook.com/QuikrFans,http://twitter.com/Quikr
 Jabong.com,Toys,27500000,56,http://www.jabong.com,http://www.facebook.com/myjabong,http://twitter.com/jabongindia
 Swiggy,Food Processing,18500000,48,http://www.swiggy.in,https://www.facebook.com/swiggy.in/timeline,https://twitter.com/swiggy_in
-Peppertap,E-Commerce,-1,56,http://peppertap.com,N/A,N/A
+Peppertap,E-Commerce,51200000,56,http://peppertap.com,N/A,N/A
 Zopper,Consumer Electronics,20000000,56,http://zopper.com,https://www.facebook.com/zopperapp,https://twitter.com/zopperapp
 Printvenue,E-Commerce,4500000,56,http://printvenue.com,https://www.facebook.com/PrintVenue/info?tab=page_info,https://twitter.com/PrintvenueIndia
-Yepme,E-Commerce,-1,50,http://yepme.com,N/A,N/A
-Fun Cinemas,E-Commerce Platforms,-1,36,https://www.funcinemas.com ,N/A,N/A
-Provogue,E-Commerce Platforms,-1,39,http://www.provogue.com/,N/A,N/A
-PVR,E-Commerce Platforms,-1,37,http://www.pvrcinemas.com/ ,N/A,N/A
-Inox Movies,E-Commerce Platforms,-1,56,https://www.inoxmovies.com,N/A,N/A
+Yepme,E-Commerce,88200000,50,http://yepme.com,N/A,N/A
+Fun Cinemas,E-Commerce Platforms,0,36,https://www.funcinemas.com ,N/A,N/A
+Provogue,E-Commerce Platforms,0,39,http://www.provogue.com/,N/A,N/A
+PVR,E-Commerce Platforms,43000000,37,http://www.pvrcinemas.com/ ,N/A,N/A
+Inox Movies,E-Commerce Platforms,0,56,https://www.inoxmovies.com,N/A,N/A
 Bharat Matrimony,Match-Making,11750000,31,http://www.bharatmatrimony.com,http://www.facebook.com/HappyMarriages,http://twitter.com/bharatmatrimony
 HomeShop18,Retail,65000000,39,http://www.homeshop18.com,http://www.facebook.com/homeshop18,http://twitter.com/HomeShop18
 Grofers,Consumer Electronics,45500000,44,http://grofers.com,http://www.facebook.com/grofers,https://twitter.com/GROFERS
 Bigbasket.com,Groceries,85799999,38,http://bigbasket.com,http://www.facebook.com/pages/Bigbasketcom/139311472851666,http://twitter.com/Bigbasket_com
-Lenskart,E-Commerce,-1,45,http://lenskart.com,N/A,N/A
-Homeshop18,E-Commerce,-1,39,http://homeshop18.com,N/A,N/A
-Citruspay,Payments,-1,44,http://citruspay.com,N/A,N/A
-TinyOwl,Food Processing,-1,44,http://tinyowl.com,N/A,N/A
-Faasos,Food Processing,-1,44,http://faasos.com,N/A,N/A
-Zopnow,Food Processing,-1,28,http://zopnow.com,N/A,N/A
-Shopclues,E-Commerce,-1,32,http://shopclues.com,N/A,N/A
-Healthkart,E-Commerce,N/A,26,http://healthkart.com,http://www.facebook.com/healthkart,http://twitter.com/Healthkart
-Ticketnew,E-Commerce Platforms,-1,19,http://ticketnew.in,N/A,N/A
+Lenskart,E-Commerce,36000000,45,http://lenskart.com,N/A,N/A
+Homeshop18,E-Commerce,65000000,39,http://homeshop18.com,N/A,N/A
+Citruspay,Payments,32000000,44,http://citruspay.com,N/A,N/A
+TinyOwl,Food Processing,28000000,44,http://tinyowl.com,N/A,N/A
+Faasos,Food Processing,46000000,44,http://faasos.com,N/A,N/A
+Zopnow,Food Processing,10000000,28,http://zopnow.com,N/A,N/A
+Shopclues,E-Commerce,281000000,32,http://shopclues.com,N/A,N/A
+Healthkart,E-Commerce,40000000,26,http://healthkart.com,http://www.facebook.com/healthkart,http://twitter.com/Healthkart
+Ticketnew,E-Commerce Platforms,7200000,19,http://ticketnew.in,N/A,N/A
 Urban Ladder,E-Commerce,77000000,88,http://urbanladder.com,http://www.facebook.com/urbanladder,http://twitter.com/urbanladder
