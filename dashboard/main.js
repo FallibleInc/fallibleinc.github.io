@@ -115,6 +115,7 @@ function populateTable(dataset) {
     $('#container').DataTable({
         "paging": false,
         "order": [[ 3, "desc" ]],
+	"info": false,
         language: {
             search: "_INPUT_",
             searchPlaceholder: "Search"
