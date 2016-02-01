@@ -109,6 +109,10 @@ table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;bo
         table > tfoot > tr > th:nth-child(4) {
                 display: none;
         }	
-
 }
 
+.addthis_native_toolbox {
+    width: 33%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
