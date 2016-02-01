@@ -22,143 +22,20 @@
   <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
 mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
-<style type="text/css">
-  
-  img {
-    -webkit-filter: grayscale(100%);filter: grayscale(100%);
-  }
-  .publicationlogo {
-    width: 100%;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-            justify-content: space-around;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-            align-items: center;
-
-  }
-
-  #featuredin,#customers {
-    
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  #featuredinheading,#customersheading {
-    margin-bottom: 10px;
-    text-decoration: bold;
-    font-size: 22px;
-    font-family: Lato;
-    color: gray;
-  }
-
-  #techinasia {
-    height: 65px;
-  }
-
-  #businessline,#grofers,#healthkart {
-    height: 45px;
-  }
-
-  #businessstandard {
-    height: 45px;
-  }
-  .row {
-    margin-bottom: 10px;
-  }
-
-  #submitdetails {
-    margin-top: 10px;
-  }
-
-  #signup {
-    text-transform: none;
-  }
-
-  div#customers {height: 160px;background: #FF9800;}
-
-  #grofers, #healthkart {
-    height: 60px;
-  }
-
-  img#grofers,#healthkart {
-    -webkit-filter: invert(1) brightness(100);
-	filter: invert(1) brightness(100);
-  }
-  
-  div#featuredin {
-    height: 180px;
-  }
-  div#customersheading {
-    color: white;
-  }
-
-  @media screen and (max-width: 960px) {
-    #techinasia,#grofers,#healthkart {
-      height: 20px;
-    }
-
-    #customersheading, #featuredinheading {
-	font-size: 20px;
-    }
-    #businessline {
-      height: 11px;
-    }
-
-    #businessstandard {
-      height: 11px;
-    }
-  }
-</style>
 </head>
 <body>
-  <script>
-    var ref = new Firebase("https://torrid-heat-2192.firebaseio.com/");
-    var users = ref.child("users");
-    var websites = ref.child("websites");
-
-    var addWebsite =  function () {
-      var website = $("#website").val();
-      var ref = website.push({website: website});
-      storage.setItem('website', website);
-    }
-
-    var addUser = function () {
-      var website = $("#website").val();
-      var email = $("#email").val();
-      //alert(website);
-      //alert(email);
-      var ref = users.push({website: website, email: email});
-    }
-  </script>
   <div class="navbar-fixed">
   <nav class="light-blue lighten-1" role="navigation">
 
     <div class="nav-wrapper container">
-    <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><i class="material-icons">verified_user</i> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><i class="material-icons">verified_user</i> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      <a href="#" class="brand-logo">Fallible</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">About</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="/pricing">Pricing</a></li>
          <li><a href="/blog">Blog</a></li>
-	<li><a class="waves-effect waves-light btn orange modal-trigger" href="#reportbug">Report Bug</a></li>
 	<li><a class="waves-effect waves-light modal-trigger" href="#faq">FAQ</a></li>
+  <li><a class="waves-effect waves-light modal-trigger" href="#reportbug">Bounty hunter?</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -182,67 +59,14 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
       <div class="row center white-text">
         <a id="signup" href="https://dashboard.fallible.co/signup" class="modal-trigger waves-effect waves-light btn btn-large white-text">SIGN UP</a>
       </div>
-<!--Modal Structure-->
-<div id="signupform" class="modal">
-  <div class="modal-content">
-  <div class="row">
-    <form class="col s12" action="https://dashboard.fallible.co/signup" method="post">
-      <div class="row">
-        <div class="input-field col s6">
-          <input  id="first_name" type="text" name="first_name" class="validate" required>
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" name="last_name" class="validate" required>
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="website" type="text" name="website" class="validate" required>
-          <label for="website">Website URL</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" name="email" class="validate" required>
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="password" type="password" name="password" class="validate" required>
-          <label for="password">Password</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="phoneno" type="text" name="phoneno" class="validate" pattern="[\-+0-9]*" required>
-          <label for="phoneno">Phone Number</label>
-        </div>
-      </div>
-      <center>
-        <div class="row">
-          <input id="agreement" type="checkbox" name="agreement" class="validate" required>
-            <label for="agreement">I have read and agree to the <a href="//fallible.co/terms">terms and conditions</a></label>
-        </div>
-        <div class="row">
-          <button class="btn waves-effect waves-light" id="submitdetails" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-          </button>
-        </div>
-      </center>
-    </form>
-  </div>
-</div>
-</div>
-
 <!-- Modal Structure -->
   <div id="reportbug" class="modal">
     <div class="modal-content">
-      <h4>To Report a Bug</h4>
-      <p>Please mail us at hello@fallible.co with the name of the company and a brief description of the bug.</p>
+      <h4>Hello hunters!</h4>
+      <p>We are creating the best platform for people like you with integrated tools to help you in bug discovery and reporting. For the time being, please say hello to us at hello@fallible.co with the name of the company and a brief description of the bug you found.</p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-light-blue btn-flat">ok</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-light-blue btn-flat">Ok</a>
     </div>
   </div>
 
@@ -276,7 +100,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
       <i class="material-icons circle light-blue">question_answer</i>
       <p><b>How long does it take you to inform us about the bug?</b></p>
       <p>Within 30 minutes. <br>
-         We have dedicated security prosessional looking at the bug reports, our experts can verify the truthfulness in minutes and can inform you if it is legit.
+         We have dedicated security staff looking at the bug reports, our experts can verify the truthfulness in minutes and can inform you if it is legit.
       </p>
     </li>
  <li class="collection-item avatar">
@@ -298,33 +122,6 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
       <a href="#!" class=" modal-action modal-close waves-effect waves-light-blue btn-flat">got it</a>
     </div>
   </div>
-
-        
-<!-- Modal Structure -->
-<!--         <div id="modal1" class="modal">
-          <div class="modal-content">
-            <div class="progress">
-              <div class="indeterminate"></div>
-            </div>
-            <h5 class="grey-text">Thank you! <br> We have added your website to our queue. It might take several hours to process. Please enter your email id below and we will mail the report to you.</h5>
-            <div class="row center">
-              <form class="col s12">
-              <div class="row">
-                <div class="input-field offset-l1 col l10 s12">
-                  <input id="email" type="email" class="validate">
-                  <label for="email" data-error="Ooops, seems wrong!" data-success="Seems correct">Your email id. We will send the report here.</label>
-                </div>
-              </div>
-            </form>
-          </div>
-          </div>
-          <div class="modal-footer">
-            <button class=" modal-action modal-close waves-effect waves-light-blue btn-flat" onclick="addUser()">Submit</button>
-          </div>
-        </div> -->
-  <!--         
-      </div>
-    </form> -->
       </div>
       <br><br>
 
@@ -337,46 +134,44 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
 
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">bug_report</i></h2>
-            <h5 class="center">Fix your bugs, cheap</h5>
+            <h1 class="center light-blue-text"><i class="material-icons">bug_report</i></h1>
+            <h5 class="center">Automated security checks with every code deploy</h5>
 
-            <p class="light">Dedicated security consultation is costly and may cost you around $4000 for a day of service. With us, you pay a monthly subscription service and we periodically check your systems and flows for bugs.</p>
+            <p class="light about">We have created a system that continously checks your public APIs, mobile apps against a ever-expanding list of automated security checks. We continously research and keep adding to this list of checks in areas such as authentication, payments and operations. Your code is checked for regressions and new bugs every time you deploy.</p>
           </div>
         </div>
-
-        <div class="col s12 m4">
+      </div>
+      <div class="row">
+        <div class="col s12">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">visibility_off</i></h2>
-            <h5 class="center">Non-disclosure plans</h5>
+            <h1 class="center light-blue-text"><i class="material-icons">visibility</i></h1>
+            <h5 class="center">Manual checks for logic flows, if required</h5>
 
-            <p class="light">We believe in responsible discloure of bugs. With our free plan, we will not disclose the bug until it is fixed and confirmed by you. We also have a no-discloure plan where we will never make the bug and your company name public even after the bug is fixed.</p>
+            <p class="light about">We have some of the best security researchers who work towards uncovering bugs in authentication flow and payment system providers that might affect a large number of companies. We then automate these checks if they are generic in nature or else run them manually against your properties</p>
           </div>
         </div>
-
-        <div class="col s12 m4">
+      </div>
+      <div class="row">
+        <div class="col s12">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">attach_money</i></h2>
-            <h5 class="center">Bug bounty program</h5>
+            <h1 class="center light-blue-text"><i class="material-icons">group_work</i></h1>
+            <h5 class="center">Crowdsourced bug-bounty program</h5>
 
-            <p class="light">We manage a bug bounty program for you so that researchers who have spent their time finding vulnerabilites in your code are not dissapointed. You do not have to pay anything for the bounties. Think of it as an insurance provided by us.</p>
+            <p class="light about">We provide you an option to run a managed bug bounty program for you so that researchers can spend their time finding vulnerabilites in your code are not disapointed. Bounties are paid by us and you do not have to pay anything apart from our subscription.</p>
           </div>
         </div>
       </div>
 
     </div>
     <br><br>
-
-    <div class="section">
-
-    </div>
   </div>
 
 
 <div id="customers">
     <div id="customersheading">
-        Customers who care about Security
+        Our pilot customers
     </div>
      <div class="publicationlogo">
         <a href="http://grofers.com"><img id="grofers" src="grofers-logo.png"></a>
@@ -384,9 +179,22 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
      </div>
 </div>
 
+<div class= "container">
+ <div class="row">
+    <a name="about"></a><br><br>
+        <div class="col s12">
+          <div class="icon-block">
+            <h3 class="center light-blue-text">About us</h3>
+
+            <p class="light about">We are a group of hackers passionate about improving the security posture of companies, startups in particular. We have previously worked at some of the biggest  internet cos, enterprise software and tech startups in domains of video, ads, media, distributed systems and machine learning. We are based out of Bangalore, India.</p>
+          </div>
+        </div>
+      </div>
+</div>
+
 <div id="featuredin">
   <div id="featuredinheading">
-    As Featured On
+    We have been featured on
   </div>
 	<div class="publicationlogo">
 	<a href="http://www.business-standard.com/article/companies/what-we-learnt-by-hacking-17-indian-start-ups-worth-10-billion-115110900301_1.html"><img id="businessstandard" src="business-standard-logo.png"></a>		
