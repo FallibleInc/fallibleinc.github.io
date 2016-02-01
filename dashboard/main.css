@@ -5,13 +5,20 @@
 h1 {
     color: orange;
     text-align: center;
+    margin: 4px;
+}
+
+h5 {
+    margin: 4px;
+    color: grey;
 }
 
 #container_filter {
-    width: 25%;
+    /* width: 25%; */
     text-align: center;
-    font-style: italic;
+    /* font-style: italic; */
     padding-right: 7%;
+    padding-left: 5%;
 }
 
 img {
@@ -48,10 +55,10 @@ table.dataTable.compact thead th,table.dataTable.compact thead td{padding:4px 17
 table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;border-radius: 0px;border-top: 0px;}
 
 #dashboard_writeup {
-    color: burlywood;
+    color: #FF9308;
     float: left;
     padding-left: 5%;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 .progressbar {
@@ -67,9 +74,20 @@ table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;bo
 
 @media screen and (max-width: 960px) {
 	body {
-		font-size: 10px;
+		font-size: 11px;
+	}
+	h1 {
+		font-size: 2.2rem;
+	}
+	h5 {
+		font-size: 0.9rem;
 	}
 
+        input[type="search"] {
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-webkit-appearance: none;	
+	}	
 	/* vanish 2nd column */
 	table > tbody > tr > td:nth-child(2) {
 		display: none;
@@ -91,4 +109,6 @@ table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;bo
         table > tfoot > tr > th:nth-child(4) {
                 display: none;
         }	
+
 }
+
