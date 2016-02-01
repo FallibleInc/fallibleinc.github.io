@@ -20,7 +20,7 @@ h5 {
 }
 
 #container_filter {
-    /* width: 25%; */
+    width: 480px;
     text-align: center;
     /* font-style: italic; */
     padding-right: 7%;
@@ -34,7 +34,11 @@ img {
 span#lastscanned {
     float: right;
     margin-right: 7%;
-    color: #FF9800;
+    color: grey;
+}
+
+#lastscanned, #dashboard_writeup {
+    font-size: 20px;
 }
 
 table > thead > tr, table > tfoot > tr {
@@ -93,6 +97,9 @@ table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;bo
 
 @media screen and (max-width: 960px) {
 	body {
+		font-size: 11px;
+	}
+	#lastscanned, #dashboard_writeup {
 		font-size: 11px;
 	}
 	h1 {

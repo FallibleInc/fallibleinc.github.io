@@ -89,13 +89,13 @@ function populateTable(dataset) {
         var greenShare = 2 * Math.max(0, securityStrength - 50);
         var redShare = 100 - greenShare;
         if (securityStrength <= 50) {
-		progressSecDiv.style.background = 'rgb(255,0,0)';
+		progressSecDiv.style.background = 'rgb(255,50,50)';
 	}else if (securityStrength < 65) {
-		progressSecDiv.style.background = 'rgb(255,160,0)';
+		progressSecDiv.style.background = 'rgb(255,179,71)';
 	}else if (securityStrength < 75){
-		progressSecDiv.style.background = 'rgb(255,220,0)';
+		progressSecDiv.style.background = 'rgb(253,220,40)';
 	}else {
-		progressSecDiv.style.background = 'rgb(0,230,0)';
+		progressSecDiv.style.background = 'rgb(60,190,60)';
 	}
         //progressSecDiv.style.background = 'rgb(' + parseInt(2.55 * redShare) + ', ' + parseInt(2.55 * greenShare) + ', ' + 0 + ')';
         
