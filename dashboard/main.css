@@ -45,6 +45,7 @@ table > tbody > tr > td:nth-child(2) {
     font-style: italic;
 }
 
+
 table.dataTable.compact tbody th,table.dataTable.compact tbody td{border-top: none;}
 table.dataTable.compact thead th,table.dataTable.compact thead td{padding:4px 17px 4px 4px;border-radius: 0px;border-bottom: none;}
 table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;border-radius: 0px;border-top: 0px;}
@@ -65,4 +66,32 @@ table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;bo
    background-color: red;
    width: 0%; /* Adjust with JavaScript */
    height: 20px;
+}
+
+@media screen and (max-width: 960px) {
+	body {
+		font-size: 10px;
+	}
+
+	/* vanish 2nd column */
+	table > tbody > tr > td:nth-child(2) {
+		display: none;
+	}
+	table > thead > tr > th:nth-child(2) {
+		display: none;
+	}
+	table > tfoot > tr > th:nth-child(2) {
+		display: none;
+	}
+
+	/* vanish 4th column */
+	table > tbody > tr > td:nth-child(4) {
+                display: none;
+        }
+        table > thead > tr > th:nth-child(4) {
+                display: none;
+        }
+        table > tfoot > tr > th:nth-child(4) {
+                display: none;
+        }	
 }
