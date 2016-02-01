@@ -45,6 +45,10 @@ table > tbody > tr > td:nth-child(2) {
     font-style: italic;
 }
 
+table.dataTable.compact tbody th,table.dataTable.compact tbody td{border-top: none;}
+table.dataTable.compact thead th,table.dataTable.compact thead td{padding:4px 17px 4px 4px;border-radius: 0px;border-bottom: none;}
+table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;border-radius: 0px;border-top: 0px;}
+
 #dashboard_writeup {
     color: burlywood;
     float: left;
@@ -53,7 +57,6 @@ table > tbody > tr > td:nth-child(2) {
 }
 
 .progressbar {
-  background-color: #dcdcdc;
   border-radius: 13px; /* (height of inner div) / 2 + padding */
   padding: 3px;
 }
@@ -62,5 +65,4 @@ table > tbody > tr > td:nth-child(2) {
    background-color: red;
    width: 0%; /* Adjust with JavaScript */
    height: 20px;
-   border-radius: 10px;
 }
