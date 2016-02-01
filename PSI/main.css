@@ -15,6 +15,10 @@ h5 {
     margin-bottom: 40px;
 }
 
+#thin {
+	margin-bottom: 20px;
+}
+
 #container_filter {
     /* width: 25%; */
     text-align: center;
@@ -25,6 +29,12 @@ h5 {
 
 img {
     opacity: 0.4;
+}
+
+span#lastscanned {
+    float: right;
+    margin-right: 7%;
+    color: #FF9800;
 }
 
 table > thead > tr, table > tfoot > tr {
