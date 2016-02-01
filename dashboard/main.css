@@ -25,13 +25,6 @@ table > thead > tr, table > tfoot > tr {
     background-color: #29b6f6;
 }
 
-table > tbody > tr > td:nth-child(1) {
-    font-size: larger;
-}
-
-tr:nth-child(1) {
-    font-weight: 700;
-}
 
 td, th {
     text-align: center;
@@ -41,8 +34,12 @@ table.dataTable.display tbody td {
     border-top: none;
 }
 
-table > tbody > tr > td:nth-child(2) {
+table > tbody > tr > td:nth-child(3) {
     font-style: italic;
+}
+
+table > tbody > tr > td:nth-child(4):after {
+	content: " M"
 }
 
 

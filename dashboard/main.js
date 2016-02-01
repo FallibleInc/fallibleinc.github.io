@@ -66,8 +66,9 @@ function populateTable(dataset) {
         category.setAttribute('align', 'center');
 
         var funding = document.createElement('td');
-        funding.appendChild(document.createTextNode(accounting.formatMoney(data[2], '$', 0)));
-        funding.setAttribute('align', 'center');
+        funding.appendChild(document.createTextNode(accounting.formatMoney(data[2]/1000000, '$', 0)));
+       // funding.appendChild(document.createTextNode(numeral(data[2]).format('($ 000.00 a)')));
+	funding.setAttribute('align', 'center');
 
         var security = document.createElement('td');
         
