@@ -19,112 +19,12 @@
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
 mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
 </head>
-<style type="text/css">
-  
-  img {
-    -webkit-filter: grayscale(100%);filter: grayscale(100%);
-  }
-  .publicationlogo {
-    width: 100%;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-            justify-content: space-around;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-            align-items: center;
-
-  }
-
-  #featuredin {
-    margin-top: 100px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  #featuredinheading {
-    margin-bottom: 10px;
-    text-decoration: bold;
-    font-size: 22px;
-    font-family: Lato;
-    color: gray;
-  }
-
-#techinasia {
-    height: 65px;
-  }
-
-  #businessline {
-    height: 45px;
-  }
-
-  #businessstandard {
-    height: 45px;
-  }
-  .row {
-    margin-bottom: 10px;
-  }
-
-  #submitdetails {
-    margin-top: 10px;
-  }
-
-  @media screen and (max-width: 960px) {
-    #techinasia {
-      height: 20px;
-    }
-
-    #businessline {
-      height: 11px;
-    }
-
-    #businessstandard {
-      height: 11px;
-    }
-  }
-
-
-</style>
 <body>
-  <script>
-    var ref = new Firebase("https://torrid-heat-2192.firebaseio.com/");
-    var users = ref.child("users");
-    var websites = ref.child("websites");
-
-    var addWebsite =  function () {
-      var website = $("#website").val();
-      var ref = website.push({website: website});
-      storage.setItem('website', website);
-    }
-
-    var addUser = function () {
-      var website = $("#website").val();
-      var email = $("#email").val();
-      //alert(website);
-      //alert(email);
-      var ref = users.push({website: website, email: email});
-    }
-  </script>
   <div class="navbar-fixed">
   <nav class="light-blue lighten-1" role="navigation">
 
     <div class="nav-wrapper container">
-    <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><i class="material-icons">verified_user</i> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><i class="material-icons">verified_user</i> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      <a href="/" class="brand-logo">Fallible</a>
       <ul class="right hide-on-med-and-down">
          <li><a href="/">About</a></li>
@@ -139,64 +39,13 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
         <li><a href="#">Pricing</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a class="waves-effect waves-light btn orange modal-trigger" href="#reportbug">Report Bug</a></li>
-        <li><a class="waves-effect waves-light modal-trigger" href="#faq">FAQ</a></li>
+        <li><a class="waves-effect waves-light modal-trigger" href="https://fallible.co/#faq">FAQ</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
   </div>
-<div id="signupform" class="modal">
-  <div class="modal-content">
-  <div class="row">
-    <form class="col s12" action="http://dashboard.fallible.co/signup" method="post">
-      <div class="row">
-        <div class="input-field col s6">
-          <input  id="first_name" type="text" name="first_name" class="validate" required>
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" name="last_name" class="validate" required>
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="website" type="text" name="website" class="validate" required>
-          <label for="website">Website URL</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" name="email" class="validate" required>
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="password" type="password" name="password" class="validate" required>
-          <label for="password">Password</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="phoneno" type="text" name="phoneno" class="validate" pattern="[\-+0-9]*" required>
-          <label for="phoneno">Phone Number</label>
-        </div>
-      </div>
-      <center>
-        <div class="row">
-          <input id="agreement" type="checkbox" name="agreement" class="validate" required>
-            <label for="agreement">I have read and agree to the <a href="//fallible.co/terms">terms and conditions</a></label>
-        </div>
-        <div class="row">
-          <button class="btn waves-effect waves-light" id="submitdetails" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-          </button>
-        </div>
-      </center>
-    </form>
-  </div>
-</div>
-</div>
-  <div class="section no-pad-bot" id="index-banner">
+  <div class="section no-pad-bot" id="pricing-banner">
     <div class="container">
      <div class="row">
       <h3 class="white-text darken-4">Find your right security plan</h3>
@@ -217,7 +66,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
           <div class="card grey darken-3">
             <div class="card-content grey-text lighten-5 center">
               <span class="card-title">Startup</span>
-              <h1 class="center white-text darken-5"><span class="dollar">$</span>299<span class="permonth">/mo</span></h1>
+              <h1 class="center white-text darken-5"><span class="dollar">$</span>3600<span class="permonth">/ year</span></h1>
               <p>
                 Monthly reports for automated and manual check for vulnerabilites. Covers APIs, web and mobile apps and devops setup. We manage your bug-bounty and give out bounty awards. Real-time intrusion detection system.
               </p>
@@ -231,7 +80,7 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
           <div class="card grey darken-3">
             <div class="card-content grey-text lighten-5 center">
               <span class="card-title">Enterprise</span>
-              <h1 class="center white-text darken-5"><span class="dollar">$</span>999<span class="permonth">/mo</span></h1>
+              <h1 class="center white-text darken-5"><span class="dollar">$</span>12000<span class="permonth">/ year</span></h1>
               <p>In addition to Startup plan, you get unlimited on-demand security reports, an on-premise internal network solution for intrusion detection, integration with your build systems and dedicated 24x7 support</p>
             </div>
             <div class="card-action center">
@@ -260,14 +109,14 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
         </thead>
         <tbody>
           <tr>
-            <td>Annual Billing</td>
-            <td>$299/month</td>
-            <td>$999/month</td>
+            <td>Effective price</td>
+            <td>$300/month</td>
+            <td>$1000/month</td>
           </tr>
           <tr>
             <td>Number of reports per month</td>
-            <td>2</td>
-            <td>4+Ondemand</td>
+            <td>2+Ondeploy</td>
+            <td>4+Ondeploy</td>
           </tr>
           <tr>
             <td>Automated reports for XSS, SQL Injection, auth</td>
@@ -285,17 +134,12 @@ mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
             <td><i class="material-icons">done</i></td>
           </tr>
           <tr>
-            <td>Realtime intrusion alert system</td>
-            <td><i class="material-icons">done</i></td>
-            <td><i class="material-icons">done</i></td>
-          </tr>
-          <tr>
             <td>Managed bug bounty program with dashboard access</td>
             <td><i class="material-icons">done</i></td>
             <td><i class="material-icons">done</i></td>
           </tr>
           <tr>
-            <td>Open-source vulnerabilites advisory newsletter</td>
+            <td>Open-source vulnerabilites alert</td>
             <td><i class="material-icons">done</i></td>
             <td><i class="material-icons">done</i></td>
           </tr>
