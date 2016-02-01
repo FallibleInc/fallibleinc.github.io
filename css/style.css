@@ -18,8 +18,13 @@
 }
 
 #index-banner {
- background-color: #29b6f6;
 }
+
+.parallax-container {
+      height: 450px;
+      background:rgba(0, 0, 0, .65);
+  }
+
 
 nav {
 	box-shadow: none;
