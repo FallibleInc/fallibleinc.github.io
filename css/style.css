@@ -42,3 +42,112 @@ nav {
 .btn-large:hover {
 	background-color: #29b6f6;
 }
+
+ 
+  img {
+    -webkit-filter: grayscale(100%);filter: grayscale(100%);
+  }
+  .publicationlogo {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+
+  }
+
+  #featuredin,#customers {
+    
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  #featuredinheading,#customersheading {
+    margin-bottom: 10px;
+    text-decoration: bold;
+    font-size: 22px;
+    font-family: Lato;
+    color: gray;
+  }
+
+  #techinasia {
+    height: 65px;
+  }
+
+  #businessline,#grofers,#healthkart {
+    height: 45px;
+  }
+
+  #businessstandard {
+    height: 45px;
+  }
+  .row {
+    margin-bottom: 10px;
+  }
+
+  #submitdetails {
+    margin-top: 10px;
+  }
+
+  #signup {
+    text-transform: none;
+  }
+
+  div#customers {height: 160px;background: #FF9800;}
+
+  #grofers, #healthkart {
+    height: 60px;
+  }
+
+  img#grofers,#healthkart {
+    -webkit-filter: invert(1) brightness(100);
+	filter: invert(1) brightness(100);
+  }
+  
+  div#featuredin {
+    height: 180px;
+  }
+  div#customersheading {
+    color: white;
+  }
+
+  @media screen and (max-width: 960px) {
+    #techinasia,#grofers,#healthkart {
+      height: 20px;
+    }
+
+    #customersheading, #featuredinheading {
+	font-size: 20px;
+    }
+    #businessline {
+      height: 11px;
+    }
+
+    #businessstandard {
+      height: 11px;
+    }
+  }
+
+.about {
+  font-size: 24px;
+  line-height: 48px;
+  letter-spacing: -0.5px;
+}
