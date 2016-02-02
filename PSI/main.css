@@ -108,6 +108,9 @@ table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;bo
 	h5 {
 		font-size: 0.9rem;
 	}
+	#container_filter {
+		max-width: 100%;
+	}
 
 	#submitstartup>center>h5{
 		font-size: 1.5rem;
