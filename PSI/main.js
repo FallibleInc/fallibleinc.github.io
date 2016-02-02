@@ -32,7 +32,7 @@ function populateTable(dataset) {
     dataset = dataset.split('\n');
 
     for (var index = 0; index < dataset.length; index++) {
-        data = dataset[index].split(',');
+        data = dataset[index].trim().split(',');
 
         console.log(data);
         if (data.length < 6) continue;
