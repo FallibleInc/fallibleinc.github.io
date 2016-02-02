@@ -54,6 +54,8 @@ nav {
     -webkit-filter: grayscale(100%);filter: grayscale(100%);
   }
   .publicationlogo {
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -98,10 +100,14 @@ nav {
     height: 65px;
   }
 
-  #businessline,#grofers,#healthkart {
+  #nextbigwhat,#businessline,#grofers,#healthkart {
     height: 45px;
   }
 
+  #gadgets {
+    height: 55px;
+  }
+  
   #businessstandard {
     height: 45px;
   }
@@ -147,11 +153,14 @@ nav {
       height: 11px;
     }
 
-    #businessstandard {
+    #nextbigwhat,#businessstandard {
       height: 11px;
     }
+    #gadgets {
+      height: 16px;
+    }
     .parallax-container {
-	height: 600px;
+	    height: 600px;
     }
   }
 
