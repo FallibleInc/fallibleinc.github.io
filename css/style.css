@@ -150,6 +150,9 @@ nav {
     #businessstandard {
       height: 11px;
     }
+    .parallax-container {
+	height: 600px;
+    }
   }
 
 .about {
