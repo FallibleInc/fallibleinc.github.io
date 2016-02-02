@@ -146,6 +146,7 @@ nav {
       height: 20px;
     }
     .about {
+  font-size: 20px !important;
 	line-height: 36px !important;
     }
     #customersheading, #featuredinheading {
