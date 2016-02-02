@@ -157,3 +157,11 @@ nav {
   line-height: 48px;
   letter-spacing: -0.5px;
 }
+
+.progress {
+  background-color: #29b6f6;
+}
+
+.progress .indeterminate {
+  background-color: #03374e;
+}
