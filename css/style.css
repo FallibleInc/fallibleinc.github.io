@@ -100,7 +100,7 @@ nav {
     height: 65px;
   }
 
-  #nextbigwhat,#businessline,#grofers,#healthkart {
+  #nextbigwhat, #businessline, #grofers, #healthkart, #ola {
     height: 45px;
   }
 
@@ -125,11 +125,11 @@ nav {
 
   div#customers {height: 160px;background: #29b6f6;}
 
-  #grofers, #healthkart {
+  #grofers, #healthkart, #ola {
     height: 60px;
   }
 
-  img#grofers,#healthkart {
+  img#grofers, img#healthkart, img#ola {
     -webkit-filter: invert(1) brightness(100);
 	filter: invert(1) brightness(100);
   }
@@ -142,7 +142,7 @@ nav {
   }
 
   @media screen and (max-width: 960px) {
-    #techinasia,#grofers,#healthkart {
+    #techinasia, #grofers, #healthkart, #ola {
       height: 20px;
     }
     .about {
