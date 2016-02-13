@@ -238,6 +238,9 @@ nav {
     #hk_ios~.companyname {
       font-size: 12px;
     }
+    div#customersheading {
+      font-size: 14px;
+    }
   }
 
 .about {
