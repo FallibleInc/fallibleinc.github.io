@@ -72,7 +72,7 @@ nav {
 
   }
 
-  #featuredin,#customers {
+  #featuredin,#customers,#paidcustomers {
     
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -88,7 +88,7 @@ nav {
             align-items: center;
   }
 
-  #featuredinheading,#customersheading {
+  #featuredinheading,#customersheading,#paidcustomersheading {
     margin-bottom: 10px;
     text-decoration: bold;
     font-size: 22px;
@@ -123,34 +123,89 @@ nav {
     text-transform: none;
   }
 
-  div#customers {height: 160px;background: #29b6f6;}
+  div#customers,div#paidcustomers {height: 160px;background: #29b6f6;}
 
-  #grofers, #healthkart, #ola {
+  #grofers, #healthkart, #ola,#bms {
     height: 60px;
   }
 
-  img#grofers, img#healthkart, img#ola {
-    -webkit-filter: invert(1) brightness(100);
-	filter: invert(1) brightness(100);
+  #bms {
+    -webkit-filter: brightness(4) grayscale(1);filter: brightness(4) grayscale(1);
+  }
+
+  img#grofers, img#healthkart {
+    -webkit-filter: invert(1) brightness(3) grayscale(1);
+	 filter: invert(1) brightness(3) grayscale(1);
+  }
+
+  img#ola {
+    -webkit-filter: invert(1) brightness(7) grayscale(1);
+    filter: invert(1) brightness(7) grayscale(1);
   }
   
   div#featuredin {
     height: 180px;
   }
-  div#customersheading {
+  div#customersheading,div#paidcustomersheading {
     color: white;
   }
 
+.publicationlogo div {
+  height: 95px;
+  width: 95px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: 100px 100px;
+  -webkit-filter: grayscale(1);  filter: grayscale(1);
+  
+}
+#faasos_ios {
+  -webkit-filter:invert(0.4) brightness(1.6);  filter:invert(0.4) brightness(1.6);
+}
+#faasos_ios:hover{
+  -webkit-filter:invert(0) brightness(1);filter:invert(0) brightness(1);
+}
+.publicationlogo div:hover {
+  -webkit-filter: grayscale(0);  filter: grayscale(0);
+}
+
+#grofers_ios {
+  background-image: url(../img/grofers_ios.jpeg);
+
+}
+#hk_ios {
+  background-image: url(../img/hk_ios.png);
+}
+#quikr_ios {
+  background-image: url(../img/quikr_ios.jpeg);
+}
+#faasos_ios {
+  background-image: url(../img/faasos_ios.jpeg);
+}
+#bharat_ios {
+  background-image: url(../img/bharat_ios.jpeg);
+
+}
+.companyname {
+  
+  position: relative;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+.small {
+  font-size: 14px;
+}
   @media screen and (max-width: 960px) {
-    #techinasia, #grofers, #healthkart, #ola {
+    #techinasia, #grofers, #healthkart, #ola, #bms {
       height: 20px;
     }
     .about {
-  font-size: 20px !important;
-	line-height: 36px !important;
+        font-size: 20px !important;
+      	line-height: 36px !important;
     }
     #customersheading, #featuredinheading {
-	font-size: 20px;
+	   font-size: 20px;
     }
     #businessline {
       height: 11px;
@@ -164,6 +219,24 @@ nav {
     }
     .parallax-container {
 	    height: 600px;
+    }
+    .publicationlogo div {
+      height: 45px;
+      width: 45px;
+      border-radius: 6px;
+      background-size: 50px 50px;   
+    }
+    .companyname {
+      font-size: 14px;
+    }
+    div#paidcustomers{
+      height: 100px;
+    }
+    .small {
+      font-size: 10px;
+    }
+    #hk_ios~.companyname {
+      font-size: 12px;
     }
   }
 
