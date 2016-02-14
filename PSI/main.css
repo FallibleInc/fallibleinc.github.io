@@ -89,6 +89,7 @@ table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px;bo
    background-color: red;
    width: 0%; /* Adjust with JavaScript */
    height: 20px;
+   border-radius: 4px;
 }
 
 #submitstartup {
