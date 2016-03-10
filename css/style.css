@@ -184,10 +184,11 @@ nav {
 }
 #bharat_ios {
   background-image: url(../img/bharat_ios.jpeg);
-
+}
+#shuttl_ios {
+    background-image: url(../img/shuttl_ios.jpeg);
 }
 .companyname {
-  
   position: relative;
   color: white;
   text-align: center;
