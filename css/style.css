@@ -71,6 +71,24 @@ nav {
             align-items: center;
 
   }
+  .publicationlogo:nth-child(1) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+
+  }
 
   #featuredin,#customers,#paidcustomers {
     
@@ -125,6 +143,9 @@ nav {
 
   div#customers,div#paidcustomers {height: 160px;background: #29b6f6;}
 
+div#paidcustomers {
+  height: 360px;
+}
   #grofers, #healthkart, #ola,#bms {
     height: 60px;
   }
@@ -150,7 +171,7 @@ nav {
     color: white;
   }
 
-.publicationlogo div {
+.companyrow div[id$="ios"] {
   height: 95px;
   width: 95px;
   border-radius: 10px;
@@ -197,6 +218,19 @@ nav {
 .small {
   font-size: 14px;
 }
+.companyrow{
+  margin-top: 20px;
+  min-width: 700px !important;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
   @media screen and (max-width: 960px) {
     #techinasia, #grofers, #healthkart, #ola, #bms {
       height: 20px;
@@ -221,24 +255,40 @@ nav {
     .parallax-container {
 	    height: 600px;
     }
-    .publicationlogo div {
+    .companyrow div[id$="ios"] {
       height: 45px;
       width: 45px;
       border-radius: 6px;
       background-size: 50px 50px;   
     }
+    .companyrow>a>div {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+              flex-flow: column
+      -webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;
+      -webkit-align-items: center;-ms-flex-align: center;align-items: center;
+    }
+    
+   .companyrow {
+    min-width: 400px !important;
+    margin-top: 20px;
+   }
     .companyname {
       font-size: 14px;
+      width: 60px !important;
     }
     div#paidcustomers{
-      height: 100px;
+      height: 300px;
     }
     .small {
       font-size: 10px;
     }
-    #hk_ios~.companyname {
+    /*#hk_ios~.companyname {
       font-size: 12px;
-    }
+    }*/
     div#customersheading {
       font-size: 14px;
     }
