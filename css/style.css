@@ -146,7 +146,7 @@ nav {
 div#paidcustomers {
   height: 360px;
 }
-  #grofers, #healthkart, #ola,#bms {
+  #grofers, #healthkart, #ola, #bms {
     height: 60px;
   }
 
@@ -190,9 +190,11 @@ div#paidcustomers {
   -webkit-filter: grayscale(0);  filter: grayscale(0);
 }
 
+#ti_ios {
+  background-image: url(../img/times-internet-logo.jpg);
+}
 #grofers_ios {
   background-image: url(../img/grofers_ios.jpeg);
-
 }
 #hk_ios {
   background-image: url(../img/hk_ios.png);
