@@ -114,6 +114,10 @@ nav {
     color: gray;
   }
 
+  #paidcustomersheading {
+	  margin-top: 15px;
+  }
+
   #techinasia {
     height: 65px;
   }
