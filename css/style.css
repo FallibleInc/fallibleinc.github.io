@@ -237,6 +237,16 @@ div#paidcustomers {
   -ms-flex-pack: distribute;
           justify-content: space-around;
 }
+
+div#toplogo {
+    background-image: url(../img/fallible_logo_sq.png);
+    background-size: 50px 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 62px;
+    height: 62px;
+}
+
   @media screen and (max-width: 960px) {
     #techinasia, #grofers, #healthkart, #ola, #bms {
       height: 20px;
