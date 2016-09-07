@@ -1,300 +1,349 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="title" content="Fallible - Secure your startup">
-        <meta name="description" content="Fallible is a SaaS security product
-        that helps you secure your systems. Plans start at
-        $1100/month">
-      	<meta name="twitter:site" content="@fallible_inc">
-		<meta name="twitter:creator" content="@fallible_inc">
-  <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
-  <script type="text/javascript">
-    var host = "fallible.co";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-  </script>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Fallible - Secure your startup</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css?ver=4" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
-  <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
-mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fallible</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/vendor/modernizr.js"></script>
 </head>
+
 <body>
-  <div class="navbar-fixed">
-  <nav class="light-blue lighten-1" role="navigation">
-
-    <div class="nav-wrapper container">
-    <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><div id="toplogo"></div>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/pricing">Pricing</a></li>
-         <li><a href="/blog">Blog</a></li>
-	<li><a class="waves-effect waves-light" href="/#faq">FAQ</a></li>
-  <li><a class="waves-effect waves-light" href="/contactus">Contact us</a></li>
-  <li><a class="waves-effect waves-light modal-trigger" href="#reportbug">Bounty hunter?</a></li>
-  <li><a class="waves-effect waves-light modal-trigger" href="https://dashboard.fallible.co/login">Login</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-      <li><a href="/#about">About</a></li>
-        <li><a href="/pricing">Pricing</a></li>
-         <li><a href="/blog">Blog</a></li>
-  <li><a class="waves-effect waves-light" href="/#faq">FAQ</a></li>
-  <li><a class="waves-effect waves-light" href="/contactus">Contact us</a></li>
-  <li><a class="waves-effect waves-light modal-trigger" href="#reportbug">Bounty hunter?</a></li>
-  <li><a class="waves-effect waves-light modal-trigger" href="https://dashboard.fallible.co/login">Login</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  </div>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center white-text light-2">Your own security team</h1>
-        <div class="row center">
-          <h5 class="header col s12 white-text light">Accurate, actionable security reports for every code deploy on web, mobile and APIs.</h5>
-        </div>
-        <br>
-        <div class="row center white-text">
-          <a id="signup" href="https://dashboard.fallible.co/signup" class="modal-trigger waves-effect waves-light btn btn-large white-text">Sign up for a free scan</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="img/sm2.jpg" alt="Fallible cybersecurity"></div>
-  </div>
-
-  <!-- Modal Structure -->
-  <div id="reportbug" class="modal">
-    <div class="modal-content">
-      <h4>Hello hunters!</h4>
-      <p>We are creating the best platform for people like you with integrated tools to help you in bug discovery and reporting. For the time being, please say hello to us at hello@fallible.co with the name of the company and a brief description of the bug you found.</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-light-blue btn-flat">Ok</a>
-    </div>
-  </div>
-  </div>
-
-<div id="paidcustomers">
-    
-     <div class="publicationlogo">
-      <div class="companyrow">
-        <a href="http://timesinternet.in"><div><div id="ti_ios"></div><div class="companyname small">Times Internet</div></div></a>
-        <a href="http://shuttl.com"><div><div id="shuttl_ios"></div><div class="companyname">Shuttl</div></div></a>
-        <a href="http://www.matrimony.com"><div><div id="bharat_ios"></div><div class="companyname">Matrimony</div></div></a>
-      </div>
-      <div class="companyrow">
-	<a href="http://www.quikr.com"><div><div id="quikr_ios"></div><div class="companyname">Quikr</div></div></a>
-        <a href="http://healthkart.com"><div><div id="hk_ios"></div><div class="companyname">HealthKart</div></div></a>
-        <a href="https://www.faasos.com"><div><div id="faasos_ios"></div><div class="companyname">Faasos</div></div></a>
-      </div>
-     </div>
-     <div id="paidcustomersheading">
-        Customer Profile
-    </div>
-</div>
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12">
-          <div class="icon-block">
-            <h1 class="center light-blue-text"><i class="material-icons">bug_report</i></h1>
-            <h5 class="center">Automated security checks with every code deploy</h5>
-
-            <p class="light about">We have created a system that continuously checks your public APIs, mobile apps against an ever-expanding list of automated security checks. We continuously research and keep adding to this list of bugs in areas such as authentication, payments and operations. We have an in-house system to re-run generic vulnerabilites detected in some other app on your properties. Your code is also checked for regressions and bugs reported in any open source software you use.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-          <div class="icon-block">
-            <h1 class="center light-blue-text"><i class="material-icons">visibility</i></h1>
-            <h5 class="center">Manual checks for logic flows, if required</h5>
-
-            <p class="light about">We have some of the best security researchers who work towards uncovering bugs in authentication flow and payment system providers that might affect a large number of companies. We then automate these checks if they are generic in nature or else run them manually against your properties.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-          <div class="icon-block">
-            <h1 class="center light-blue-text"><i class="material-icons">group_work</i></h1>
-            <h5 class="center">Crowdsourced bug-bounty program</h5>
-
-            <p class="light about">We provide you an option to run a managed bug bounty program so that external security researchers can spend their time finding vulnerabilites in your code, for appropriate bounty awards. We cover all your bounty payouts.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <br><br>
-  </div>
-
-
-<div id="customers">
-    <div id="customersheading">
-        Some of the organisations we have helped securing
-    </div>
-     <div class="publicationlogo">
-        <a href="http://bookmyshow.com"><img alt="Bookmyshow logo" id="bms" src="img/bms_logo.png"></a>
-        <a href="https://www.olacabs.com"><img alt="Ola logo" id="ola" src="img/ola_logo.png"></a>
-        <a href="http://powermin.nic.in"><img alt="Government of India logo" id="healthkart" src="img/govt_of_india.png"></a>
-     </div>
+    <!--[if lt IE 10]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  
+ <div class="container-out">
+        <div class="container">
+    <header>
+        <nav class="navbar navbar-light navbar-fixed-top" id="top-nav">
+            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <a class="navbar-brand" href="/">Fallible</a>
+            <ul class="nav navbar-nav text-right pull-md-right pull-lg-right hidden-sm-down">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">PRODUCTS</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="fallible-managed-security">Fallible Managed Security</a>
+                        <a class="dropdown-item" href="cybersecurity-due-diligence">Cybersecurity Due Diligence</a>
+                        <a class="dropdown-item" href="checksum-security-scanner">Checksum Security Scanner </a>
+                        <a class="dropdown-item" href="portfolio-package">Portfolio Package</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing">PRICING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://fallible.co/blog">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-danger" href="https://dashboard.fallible.co/login">Open dashboard</a>
+                </li>
+            </ul>
+            <div class="collapse" id="exCollapsingNavbar">
+                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    &#9776;
+                </button>
+                
+                <p><a class="mobile-link" href="pricing">Pricing</a> </p>
+                <p><a class="mobile-link">Blog</a></p>
+                <p><a class="mobile-link" href="/faq">FAQ</a></p>
+                
+                <p><a class="mobile-link" href="/cybersecurity-due-diligence">Due Diligence</a></p>
+                <p><a class="mobile-link" href="/checksum-security-scanner">Checksum Scanner</a></p>
+                <p><a class="mobile-link" href="/fallible-managed-security">Managed Security</a></p>
+                <p><a class="mobile-link" href="/portfolio-package">Portfolio Packages</a></p>
+                <p> <a class="btn btn-danger" href="https://dashboard.fallible.co/login">Login</a></p>
+            </div>
+        </nav>
+    </header>
 </div>
 
+        <div class="hero">
+    <video class="hidden-sm-down video" autoplay loop>
+        <source src= "media/MP4/Noted.mp4" type="video/mp4">
+        <source src="media/WEBM/Noted.webm" type="video/webm">
+    </video>
+    <div class="flex-container">
+        <!-- <h1 class="flex-item heading">Secure your <span class="changing-text" id="text">Web apps</span> </h1> -->
+        <h1 class="flex-item heading" id="text">Securing <span class="changing-text">60% of online payments</span> in India</h1>
+        <h2 class="flex-item sub-heading">Accurate, actionable security reports for each code deploy. First report within a week. </h2>
+        <div class="lead">
+        	<form class="form-inline">
+        		<input class="form-control form-control-lg" type="text" placeholder="Your domain (e.g. google.com)">&nbsp;
+        		<a class="btn btn-danger btn-lg" href="https://dashboard.fallible.co/signup" role="button">Get Started</a>
+        	</form>
+        </div>
+    </div>
+</div>
 
-<div class= "container">
- <div class="row">
-  <div class="col s12">
-    <br>
-    <h5><a name="faq">Frequently Asked Questions</a></h5><br>
-    <ul class="collection">
-      <li class="collection-item avatar">
-        <i class="material-icons circle light-blue">question_answer</i>
-        <p><b>Do I need to give access to our code base?</b></p>
-        <p>No. <br>
-           We do not need access to your code base. We can find the vulnerabilities without that, we will monitor the API calls your app makes and that is enough for us.
-        </p>
-      </li>
-      <li class="collection-item avatar">
-        <i class="material-icons circle light-blue">question_answer</i>
-        <p><b>My code base is in python, can you work with python?</b></p>
-        <p>Yes, language or your tech stack is immaterial to us. <br>
-           We do not need access to your code base. We can find the vulnerabilities without that, we will monitor the API calls your app makes and that is enough for us.
-        </p>
-      </li>
-      <li class="collection-item avatar">
-        <i class="material-icons circle light-blue">question_answer</i>
-        <p><b>How long does it take you to verify a fix to your reported bug?</b></p>
-        <p>Within minutes. <br>
-           We have dedicated security staff looking at the bug reports, our experts can verify the fix in minutes and can inform you if it works.
-        </p>
-      </li>
-   <li class="collection-item avatar">
-        <i class="material-icons circle light-blue">question_answer</i>
-        <p><b>Can we get refund if we discontinue with the service?</b></p>
-        <p>Sure. We will refund the payment for the remaining months. <br>
-        </p>
-      </li>    
-  <li class="collection-item avatar">
-        <i class="material-icons circle light-blue">question_answer</i>
-        <p><b>Your plan is too costly for us, can we negotiate?</b></p>
-        <p>No. However, if you are bootstrapping, do let us know at hello@fallible.co and we will work something out.<br>
-        </p>
-      </li>
-
-    </ul>
-  </div>
  </div>
-</div>
+    <div class="tiles">
+    <div class="double-tile">
+        <svg id="network" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#fbfbfb" stroke-width="3">
+        <path d="m760.934,400-48.356,180.467" />
+        <path d="m760.934,400-673.512-180.467" />
+        <path d="m760.934,400-180.467,312.578" />
+        <path d="m760.934,400-541.401-312.578" />
+        <path d="m760.934,400-360.934,360.934" />
+        <path d="m760.934,400-360.934-360.934" />
+        <path d="m760.934,400-541.401,312.578" />
+        <path d="m760.934,400-180.467-312.578" />
+        <path d="m760.934,400-673.512,180.467" />
+        <path d="m760.934,400-48.356-180.467" />
+        <path d="m39.066,400 673.512,180.467" />
+        <path d="m39.066,400 48.356-180.467" />
+        <path d="m39.066,400 541.401,312.578" />
+        <path d="m39.066,400 180.467-312.578" />
+        <path d="m39.066,400 360.934,360.934" />
+        <path d="m39.066,400 360.934-360.934" />
+        <path d="m39.066,400 180.467,312.578" />
+        <path d="m39.066,400 541.401-312.578" />
+        <path d="m39.066,400 48.356,180.467" />
+        <path d="m39.066,400 673.512-180.467" />
+        <path d="m712.578,580.467-132.111,132.111" />
+        <path d="m712.578,580.467-493.045-493.045" />
+        <path d="m712.578,580.467-312.578,180.467" />
+        <path d="m712.578,580.467-312.578-541.401" />
+        <path d="m712.578,580.467-493.045,132.111" />
+        <path d="m712.578,580.467-132.111-493.045" />
+        <path d="m712.578,580.467h-625.156" />
+        <path d="m712.578,580.467v-360.934" />
+        <path d="m87.422,219.533 493.045,493.045" />
+        <path d="m87.422,219.533 132.111-132.111" />
+        <path d="m87.422,219.533 312.578,541.401" />
+        <path d="m87.422,219.533 312.578-180.467" />
+        <path d="m87.422,219.533 132.111,493.045" />
+        <path d="m87.422,219.533 493.045-132.111" />
+        <path d="m87.422,219.533v360.934" />
+        <path d="m87.422,219.533h625.156" />
+        <path d="m580.467,712.578-180.467,48.356" />
+        <path d="m580.467,712.578-180.467-673.512" />
+        <path d="m580.467,712.578h-360.934" />
+        <path d="m580.467,712.578v-625.156" />
+        <path d="m580.467,712.578-493.045-132.111" />
+        <path d="m580.467,712.578 132.111-493.045" />
+        <path d="m219.533,87.422 180.467,673.512" />
+        <path d="m219.533,87.422 180.467-48.356" />
+        <path d="m219.533,87.422v625.156" />
+        <path d="m219.533,87.422h360.934" />
+        <path d="m219.533,87.422-132.111,493.045" />
+        <path d="m219.533,87.422 493.045,132.111" />
+        <path d="m400,760.934-180.467-48.356" />
+        <path d="m400,760.934 180.467-673.512" />
+        <path d="m400,760.934-312.578-180.467" />
+        <path d="m400,760.934 312.578-541.401" />
+        <path d="m400,39.066-180.467,673.512" />
+        <path d="m400,39.066 180.467,48.356" />
+        <path d="m400,39.066-312.578,541.401" />
+        <path d="m400,39.066 312.578,180.467" />
+        <path d="m219.533,712.578-132.111-132.111" />
+        <path d="m219.533,712.578 493.045-493.045" />
+        <path d="m580.467,87.422-493.045,493.045" />
+        <path d="m580.467,87.422 132.111,132.111" />
+    </g>
+    <g fill="#DD6461" stroke="#000" stroke-width="2">
+        <path d="m768.934,400a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m47.066,400a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m720.578,580.467a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m95.422,219.533a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m588.467,712.578a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m227.533,87.422a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m408,760.934a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m408,39.066a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m227.533,712.578a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m588.467,87.422a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m95.422,580.467a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+        <path d="m720.578,219.533a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
+    </g>
+</svg>
 
-<div class= "container">
- <div class="row">
-    <a name="about"></a><br><br>
-        <div class="col s12">
-          <div class="icon-block">
-            <h4 class="center light-blue-text">About us</h4>
-
-            <p class="light about">We are a group of hackers passionate about improving the security posture of companies, tech startups in particular. We have previously worked at some of the biggest  internet companies, enterprise software and tech startups in domains of video, ads, media, distributed systems and machine learning. In the last few months, we have discovered severe vulnerabilities in almost all Indian startups including Ola, Zomato, Jabong, Bigbasket etc. We are based out of Bangalore, India.</p>
-          </div>
+        <div>
+            <h3>Introducing Portfolio Package for VC firms.</h3>
+            <br>
+            <a href="portfolio-package" class="btn btn-danger">
+                Know more
+            </a>
         </div>
-      </div>
+    </div>
+    <div class="half-tiles-container">
+        <div class="half-tile">
+            <div>
+                <h3>Security Guide for Developers</h3></div>
+            <div>
+                <a href="https://github.com/FallibleInc/security-guide-for-developers" class="btn btn-danger">
+                    Follow on GitHub
+                </a>
+                <br>
+            </div>
+        </div>
+        <div class="half-tile">
+            <div>
+                <h3>Checksum Security Scanner</h3></div>
+            <div>
+                <a href="checksum-security-scanner" class="btn btn-danger">
+                    Early access
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="half-tiles-container">
+        <div class="half-tile">
+            <h3>Common issues in OTP based authentication</h3>
+            <div>
+                <a href="https://fallible.co/blog/2016/05/10/otp-based-authentication-and-urbanclap" class="btn btn-danger">
+                    Read more
+                </a>
+                <br>
+            </div>
+        </div>
+        <div class="half-tile">
+            <h3>Automating data leak detection</h3>
+            <div>
+                <a href="https://fallible.co/blog/2016/03/13/Automating-data-leak-detection" class="btn btn-danger">
+                    Read more
+                </a>
+                <br>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div id="featuredin">
-  <div id="featuredinheading">
-    We have been featured on
-  </div>
-    
-  <div class="publicationlogo">
-    <a href="http://gadgets.ndtv.com/apps/news/new-product-security-index-reveals-indias-most-and-least-secure-startups-797312"><img alt="NDTV gadgets360 logo" id="gadgets" src="img/ndtvgadgetlogo.png"></a>
-    <a href="http://www.nextbigwhat.com/indian-startup-security-297/"><img alt="NextBigWhat logo" id="nextbigwhat" src="img/nextbigwhat.png"></a>
-  </div>
-	<div class="publicationlogo">
-	<a href="http://www.business-standard.com/article/companies/what-we-learnt-by-hacking-17-indian-start-ups-worth-10-billion-115110900301_1.html"><img alt="BusinessStandard logo" id="businessstandard" src="img/business-standard-logo.png"></a>		
-    <a href="http://www.thehindubusinessline.com/todays-paper/bugs-bugs-everywhere/article7847966.ece"><img alt="Hindu Businessline logo" id="businessline" src="img/bl-newlogo-h55.jpg"></a>			
 
-    <a href="https://www.techinasia.com/talk/learnt-hacking-17-indian-startups-worth-10-billion/"><img alt="Techinasia publication logo" id="techinasia" src="img/techinasia-logo.png"></a>	
-  </div>
+    <div class="container-fluid">
+    <div class="row explained-content">
+         <div class="col-sm-6 col-md-6 col-lg-6 explained-box">
+            <p class="quote"><span class="blockquote">&#8220;</span> 97%  of exploits used one of top 10  publicly disclosed vulnerability (CVE)  which was not fixed by the victim company. <span class="blockquote">&#8222;</span></p>
+             <div class="features-logo"><img src="media/verizon.png" alt="Forbes logo" class="featured-img img-responsive"></div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 explained-box">
+            <p class="quote"><span class="blockquote">&#8220;</span> Many organizations have significant network security in place but it’s not enough as 84% of all attacks are happening on the application layer. <span class="blockquote">&#8222;</span></p>
+            <div class="features-logo"><img src="media/Forbes_logo.svg.png" alt="Forbes logo" class="featured-img img-responsive"></div>
+        </div>
+    </div>
 </div>
-  <footer class="page-footer orange">
+
     <div class="container">
-      <div class="row">
-        <div class="col l4 s12">
-          <h5 class="white-text">About Fallible</h5>
-          <p class="grey-text text-lighten-4">We make startups secure so that they can focus on growth and things that matter. We also manage formal bug bounty programs for startups and big companies alike.</p>
-
-
+    <div class="row">
+        <div class=" col-sm-12 col-md-12 col-lg-12 featured-heading">
+            <h3> Featured On </h3>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Terms / Policies</h5>
-          <ul>
-            <li><a class="white-text" href="/privacy">Privacy Policy</a></li>
-            <li><a class="white-text" href="/terms">Terms of Service</a></li>
-	    <li><a class="white-text" href="/refund">Refund Policy</a></li>
-            <li><a class="white-text" href="/contactus">Contact Us</a></li>
-          </ul>
+    </div>
+    <div class="row news-images">
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
+            <a href="http://www.business-standard.com/article/companies/what-we-learnt-by-hacking-17-indian-start-ups-worth-10-billion-115110900301_1"><img class="media-img img-responsive" src="media/business-std-logo.png" alt="Business strndard logo"></a>
         </div>
-        <div class="col l2 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="https://medium.com/@fallible">Medium</a></li>
-            <li><a class="white-text" href="/blog">Our Blog</a></li>
-            <li><a class="white-text" href="https://twitter.com/fallible_inc">Twitter</a></li>
-            <li><a class="white-text" href="http://facebook.com/fallible.co">Facebook</a></li>
-          </ul>
-  </div>
-  	<div class="col l3 s12">
-		<h5 class="white-text">We are Hiring</h5>
-		<ul>
-			<li><a class="white-text" href="https://hasjob.co/fallible.co/qdx0s">Software Engineer - Security</a></li>
-		</ul>
-	</div>
-      </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
+            <a href="http://www.thehindubusinessline.com/todays-paper/bugs-bugs-everywhere/article7847966.ece"><img class="media-img img-responsive" src="media/hindu.png" alt="hindu businessline logo"></a>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
+            <a href="https://news.nextbigwhat.com/indian-startup-security-297/"><img class="media-img img-responsive" src="media/next-big.png" alt="Next big what logo"></a>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
+            <a href="https://www.techinasia.com/talk/learnt-hacking-17-indian-startups-worth-10-billion"><img class="media-img img-responsive" src="media/techinasia.png" alt="Tech in Asia logo"></a>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
+            <a href="https://www.smashingmagazine.com/2016/07/web-development-reading-list-147/"><img class="media-img img-responsive" src="media/smashing.png" alt="Smashing magazine logo"></a>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
+            <a href="https://www.producthunt.com/books/the-security-checklist"><img class="media-img img-responsive" src="media/product-hunt-logo.png" alt="Product hunt logo"></a>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
+            <a href="http://timesofindia.indiatimes.com/tech/tech-news/SaaS-startup-Fallible-to-launch-its-first-product-Checksum/articleshow/52450800.cms"><img class="media-img img-responsive" src="media/toi.png" alt="Times of India logo"></a>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
+            <a href="http://gadgets.ndtv.com/apps/news/new-product-security-index-reveals-indias-most-and-least-secure-startups-797312"><img class="media-img img-responsive" src="media/ndtv.png" alt="Ndtv logo"></a>
+        </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Contact us at <a class="orange-text text-lighten-5" href="mailto:hello@fallible.co">hello@fallible.co</a> or <a class="orange-text text-lighten-5" href="tel:+1-415-315-9434">+1-415-315-9434</a>
-      </div>
+</div>
+
+
+    <footer class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="lead-footer">
+                <form class="form-inline">
+                    <input class="form-control form-control-lg" type="text" placeholder="Your primary domain">&nbsp;
+                    <a class="btn button-inverse btn-lg" href="https://dashboard.fallible.co/signup" role="button">Get Started</a>
+                </form>
+            </div>
+        </div>
     </div>
-  </footer>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="align-icons">
+                <a href="https://www.linkedin.com/company/fallible"><i class="fa fa-linkedin icons" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/fallible_inc"><i class="fa fa-twitter icons" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/fallible.co"><i class="fa fa-facebook icons" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="align-pages">
+                <a class="page" href="privacy">Privacy Policy</a>
+                <a class="page" href="terms">Terms of Service</a>
+                <a class="page" href="refund">Refund Policy</a>
+                <a class="page" href="contactus">Contact</a>
+                <a class="page" href="https://angel.co/fallible/jobs/157321-software-engineer-security-r-d">Join Us</a>
+                <a class="page" href="https://fallible.co/blog">Blog</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 copyright">
+            <p>© 2016 Checksum Labs, Inc. All rights reserved. </p>
+        </div>
+    </div>
+</footer>
+
+    
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script>
-    $(document).ready(function(){
-        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        $('.modal-trigger').leanModal();
-     });
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-68651333-1', 'auto');
+      ga('send', 'pageview');
   </script>
-  <script src="/js/materialize.min.js"></script>
-  <script src="js/init.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script src="scripts/vendor.js"></script>
+    
+    <script src="scripts/main.js"></script>
+    <!-- begin olark code -->
+    <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+    f[z]=function(){
+    (a.s=a.s||[]).push(arguments)};var a=f[z]._={
+    },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+    f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+    0:+new Date};a.P=function(u){
+    a.p[u]=new Date-a.p[0]};function s(){
+    a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+    hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+    return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+    b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+    b.contentWindow[g].open()}catch(w){
+    c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+    var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+    b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+    loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+    /* custom configuration goes here (www.olark.com/documentation) */
+    olark.identify('4350-869-10-6474');/*]]>*/</script><noscript><a href="https://www.olark.com/site/4350-869-10-6474/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+    <!-- end olark code -->
+</body>
 
-  ga('create', 'UA-68651333-1', 'auto');
-  ga('send', 'pageview');
-
-  </script>
-  <script type="text/javascript" src="js/livechat.js"></script>
-  <script src="//cdn.optimizely.com/js/5059690828.js"></script>
-  </body>
 </html>

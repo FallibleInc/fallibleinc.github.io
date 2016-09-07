@@ -1,236 +1,305 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-  <script type="text/javascript">
-    var host = "fallible.co";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-  </script>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Fallible Pricing - Your own security team</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
-  <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
-mixpanel.init("babee8001ed28a26179d81eaabf7d882");</script><!-- end Mixpanel -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fallible</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/vendor/modernizr.js"></script>
 </head>
+
 <body>
- 
- <div class="navbar-fixed">
-  <nav class="light-blue lighten-1" role="navigation">
-
-    <div class="nav-wrapper container">
-    <a id="logo-container" href="https://fallible.co" class="brand-logo hide-on-med-and-down"><i class="material-icons">verified_user</i> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     <a href="https://fallible.co" class="brand-logo">Fallible</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/pricing">Pricing</a></li>
-         <li><a href="/blog">Blog</a></li>
-  <li><a class="waves-effect waves-light" href="/#faq">FAQ</a></li>
-  <li><a class="waves-effect waves-light" href="/contactus">Contact us</a></li>
-  <li><a class="waves-effect waves-light modal-trigger" href="#reportbug">Bounty hunter?</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-      <li><a href="/#about">About</a></li>
-        <li><a href="/pricing">Pricing</a></li>
-         <li><a href="/blog">Blog</a></li>
-  <li><a class="waves-effect waves-light" href="/#faq">FAQ</a></li>
-  <li><a class="waves-effect waves-light" href="/contactus">Contact us</a></li>
-  <li><a class="waves-effect waves-light modal-trigger" href="#reportbug">Bounty hunter?</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  </div>
-
-  <div class="section no-pad-bot" id="pricing-banner">
+    <!--[if lt IE 10]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+   
     <div class="container">
-     <div class="row">
-      <center><h3 class="white-text darken-4">Find your right security plan</h3></center>
-        <!-- div class="col s12 m4 l4">
-          <div class="card grey darken-3">
-            <div class="card-content white-text center">
-              <span class="card-title">Basic</span>
-              <h1>FREE</h1>
-              <p>Entry level plan for personal websites. One time automated check for common security vulnerabilites. We manage your bug-bounty page.</p>
+    <header>
+        <nav class="navbar navbar-light navbar-fixed-top" id="top-nav">
+            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <a class="navbar-brand" href="/">Fallible</a>
+            <ul class="nav navbar-nav text-right pull-md-right pull-lg-right hidden-sm-down">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">PRODUCTS</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="fallible-managed-security">Fallible Managed Security</a>
+                        <a class="dropdown-item" href="cybersecurity-due-diligence">Cybersecurity Due Diligence</a>
+                        <a class="dropdown-item" href="checksum-security-scanner">Checksum Security Scanner </a>
+                        <a class="dropdown-item" href="portfolio-package">Portfolio Package</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing">PRICING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://fallible.co/blog">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-danger" href="https://dashboard.fallible.co/login">Open dashboard</a>
+                </li>
+            </ul>
+            <div class="collapse" id="exCollapsingNavbar">
+                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    &#9776;
+                </button>
+                
+                <p><a class="mobile-link" href="pricing">Pricing</a> </p>
+                <p><a class="mobile-link">Blog</a></p>
+                <p><a class="mobile-link" href="/faq">FAQ</a></p>
+                
+                <p><a class="mobile-link" href="/cybersecurity-due-diligence">Due Diligence</a></p>
+                <p><a class="mobile-link" href="/checksum-security-scanner">Checksum Scanner</a></p>
+                <p><a class="mobile-link" href="/fallible-managed-security">Managed Security</a></p>
+                <p><a class="mobile-link" href="/portfolio-package">Portfolio Packages</a></p>
+                <p> <a class="btn btn-danger" href="https://dashboard.fallible.co/login">Login</a></p>
             </div>
-            <div class="card-action">
-              <a href="#">Contact us</a>
-              <a href="#">FREE SIGNUP</a>
-            </div>
-          </div>
-        </div -->
-        <div class="col s12 m6 l6">
-          <div class="card grey darken-3">
-            <div class="card-content grey-text lighten-5 center">
-              <span class="card-title">Standard</span>
-              <h1 class="center white-text darken-5"><span class="dollar">$</span>12100*<span class="permonth">/ year</span></h1>
-              <p>
-                Monthly reports for automated and manual check for vulnerabilites. Covers APIs, web and mobile apps and devops setup. We manage your bug-bounty and give out bounty awards. Real-time intrusion detection system.
-              </p>
-            </div>
-            <div class="card-action center">
-              <a href="https://dashboard.fallible.co/signup" class="modal-trigger waves-effect waves-light btn btn-large white-text">Sign up</a>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6 l6">
-          <div class="card grey darken-3">
-            <div class="card-content grey-text lighten-5 center">
-              <span class="card-title">Enterprise</span>
-              <h1 class="center white-text darken-5"><span class="dollar">$</span>20900*<span class="permonth">/ year</span></h1>
-              <p>In addition to Standard plan, you get unlimited on-demand security reports, an on-premise internal network solution for intrusion detection, integration with your build systems and dedicated 24x7 support</p>
-            </div>
-            <div class="card-action center">
-              <a href="https://dashboard.fallible.co/signup" class="waves-effect waves-light btn btn-large white-text">Sign up</a>
-            </div>
-          </div>
-        </div>
-        <br><br>
-         <p align="right" class="white-text">* Save 1 month on taking annual subscription</p>
-         
-        <p class="white-text darken-4">All plans are inclusive of fixes for vulnerabilites discovered in relevant open source software e.g. heartbleed, non-disclosure, data confidentiality agreement and insurance against paying for bug bounties.</p>
-      </div>
-    </div>
-  </div>
+        </nav>
+    </header>
+</div>
 
-  <div class="section">
+
+    <div class="container-fluid pricing">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <hr class="dividing-line">
+                <h2 class="pricing-heading"> Pricing </h2>
+                <h4 class="pricing-subheading">Flexible Pricing. Free Developer Account. No credit card required.</h4>
+            </div>
+        </div>
+        <div class="duration-toggle">
+            <div class="pricing-subheading label text-xs-right"> Monthly </div>
+            <div class="toggle-button">
+                <div id="switch" class="hover">
+                    <div id="toggle">
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-subheading label text-xs-left"> Annually </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h4 class="pricing-subheading tag-line">Commit for a year and get two months free.</h4>
+            </div>
+        </div>
+    </div>
     <div class="container">
-      <div class="row">
-        <div class="col l12 m12 s12">
-        <table class="grey-text striped">
-          <thead>
-          <tr>
-              <th data-field="id"><h4 class="blue-text lighten-4">Fallible features</h4></th>
-              <th data-field="name"><h5>Standard</h5></th>
-              <th data-field="price"><h5>Enterprise</h5></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Effective price</td>
-            <td>$1099/month</td>
-            <td>$1899/month</td>
-          </tr>
-          <tr>
-            <td>Report generation</td>
-            <td>Weekly</td>
-            <td>On-demand</td>
-          </tr>
-          <tr>
-            <td>Automated reports for XSS, SQL Injection, auth</td>
-            <td><i class="material-icons">done</i></td>
-            <td><i class="material-icons">done</i></td>
-          </tr>
-          <tr>
-            <td>Manual Checks for logical flaws, payments, data projection</td>
-            <td><i class="material-icons">done</i></td>
-            <td><i class="material-icons">done</i></td>
-          </tr>
-          <tr>
-            <td>Mobile apps & APIs check</td>
-            <td><i class="material-icons">done</i></td>
-            <td><i class="material-icons">done</i></td>
-          </tr>
-          <tr>
-            <td>Managed bug bounty program with dashboard access</td>
-            <td><i class="material-icons">done</i></td>
-            <td><i class="material-icons">done</i></td>
-          </tr>
-          <tr>
-            <td>Open-source vulnerabilites alert</td>
-            <td><i class="material-icons">done</i></td>
-            <td><i class="material-icons">done</i></td>
-          </tr>
-          <tr>
-            <td>On-premise deployment</td>
-            <td>No</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Support</td>
-            <td>Yes, Email</td>
-            <td>Yes, 24x7</td>
-          </tr>
-           <tr>
-            <td>Contact us at <a class="grey-text darken-4" href="mailto:hello@fallible.co">hello@fallible.co</a></td>
-            <td><a href="https://dashboard.fallible.co/signup" class="modal-trigger waves-effect waves-light btn btn-large white-text">Sign up</a></td>
-            <td><a href="#" class="waves-effect waves-light btn btn-large white-text">Sign up</a></td>
-          </tr>
-        </tbody>
-        </table>
-      </div>
-      </div>
+        <div class="row">
+            <div class="col-sm-12s col-md-4 col-lg-4" id="free-card">
+                <div class="card text-xs-center">
+                    <div class="card-header color-card common-card">
+                        Basic
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="amount-small">Free</span></h4>
+                        <p class="card-text">Monthly security report for 1 website</p>
+                        <p class="card-text">Covers 50+ security checks including XSS, SQL and content injection, basic devops seurity checks.</p>
+                        <p class="card-text">Vulnerabilities alerts for Open source software and libraries</p>
+                        <p class="card-text">Access to our  security related content</p>
+                        <a href="https://dashboard.fallible.co/signup" class="btn btn-lg button-size color-card">Signup</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4" id="standard-card">
+                <div class="card text-xs-center">
+                    <div class="card-header standard common-card">
+                        Standard
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">$<span class="amount">1400</span>/ <span class="month">month</span></h4>
+                        <p class="card-text">Weekly report for all checks of Free plan</p>
+                        <p class="card-text">Manual checks by security researchers for logic flow, payment, authentication related issues in web, mobile and APIs</p>
+                        <p class="card-text">Mobile apps static and dynamic analysis for vulnerabilites</p>
+                        <p class="card-text">Email support</p>
+                        <a href="https://dashboard.fallible.co/signup" class="btn btn-lg button-size btn-danger">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4" id="enterprise-card">
+                <div class="card text-xs-center">
+                    <div class="card-header color-card common-card">
+                        Enterprise
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="amount-small">Talk to us</span></h4>
+                        <p class="card-text">Weekly report for all checks of Free plan</p>
+                        <p class="card-text">Manual checks by security researchers for logic flow, payment, authentication related issues in web, mobile and APIs and SDKs</p>
+                        <p class="card-text">Mobile apps static and dynamic analysis for vulnerabilites</p>
+                        <p class="card-text">Time bound phone & chat support</p>
+                        <a href="https://dashboard.fallible.co/signup" class="btn btn-lg button-size color-card">Signup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-   <div id="featuredin">
-      <div id="featuredinheading">
-        As Featured On
-      </div>
-       <div class="publicationlogo">
-           <a href="http://gadgets.ndtv.com/apps/news/new-product-security-index-reveals-indias-most-and-least-secure-startups-797312"><img id="gadgets" src="img/ndtvgadgetlogo.png"></a>
-           <a href="http://www.nextbigwhat.com/indian-startup-security-297/"><img id="nextbigwhat" src="img/nextbigwhat.png"></a>
+     <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-sm-12">
+                <table class="table table-striped table-inverse table">
+                    <thead>
+                        <tr>
+                            <th data-field="id">
+                                <h4 class="table-title">Fallible features</h4></th>
+                            <th data-field="price">
+                                <h4 class="table-title text-xs-center">Free</h4></th>
+                            <th data-field="name">
+                                <h4 class="table-title text-xs-center">Standard</h4></th>
+                            <th data-field="price">
+                                <h4 class="table-title text-xs-center">Enterprise</h4></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Report generation</td>
+                            <td class="text-xs-center">Monthly</td>
+                            <td class="text-xs-center">Weekly</td>
+                            <td class="text-xs-center">On-demand</td>
+                        </tr>
+                        <tr>
+                            <td>Automated reports for XSS, SQL Injection, auth</td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Open-source vulnerabilites alert</td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Manual Checks for logical flaws, payments, data leak</td>
+                            <td></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>API & SDK checks</td>
+                            <td></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>HAR and Swagger imports for analysis</td>
+                            <td></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile apps static analysis</td>
+                            <td></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile apps dynamic analysis</td>
+                            <td></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Optional on-premise deployment</td>
+                            <td class="text-xs-center">No</td>
+                            <td class="text-xs-center">No</td>
+                            <td class="text-xs-center">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td class="text-xs-center">No</td>
+                            <td class="text-xs-center">Yes, Email</td>
+                            <td class="text-xs-center">Yes, Phone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-       <div class="publicationlogo">
-           <a href="http://www.business-standard.com/article/companies/what-we-learnt-by-hacking-17-indian-start-ups-worth-10-billion-115110900301_1.html"><img id="businessstandard" src="img/business-standard-logo.png"></a>
-           <a href="http://www.thehindubusinessline.com/todays-paper/bugs-bugs-everywhere/article7847966.ece"><img id="businessline" src="img/bl-newlogo-h55.jpg"></a>
-           <a href="https://www.techinasia.com/talk/learnt-hacking-17-indian-startups-worth-10-billion/"><img id="techinasia" src="img/techinasia-logo.png"></a>	
-       </div>
-    </div>
-
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About Fallible</h5>
-          <p class="grey-text text-lighten-4">We make startups secure so that they can focus on growth and things that matter. We also manage formal bug bounty programs for startups and big cos alike.</p>
-
-
-        </div>
-	<div class="col l3 s12">
-          <h5 class="white-text">Terms / Policies</h5>
-          <ul>
-            <li><a class="white-text" href="/privacy">Privacy Policy</a></li>
-            <li><a class="white-text" href="/terms">Terms of Service</a></li>
-	    <li><a class="white-text" href="/refund">Refund Policy</a></li>
-            <li><a class="white-text" href="/contactus">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="https://medium.com/@fallible">Medium</a></li>
-            <li><a class="white-text" href="/blog">Our Blog</a></li>
-            <li><a class="white-text" href="https://twitter.com/fallible_inc">Twitter</a></li>
-            <li><a class="white-text" href="https://www.facebook.com/Fallible-882205698495611">Facebook</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
    
-    <div class="footer-copyright">
-      <div class="container">
-      Contact us at <a class="orange-text text-lighten-5" href="mailto:hello@fallible.co">hello@fallible.co</a> or <a class="orange-text text-lighten-5" href="tel:+1-415-315-9434">+1-415-315-9434</a>
-      </div>
+    <footer class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="lead-footer">
+                <form class="form-inline">
+                    <input class="form-control form-control-lg" type="text" placeholder="Your primary domain">&nbsp;
+                    <a class="btn button-inverse btn-lg" href="https://dashboard.fallible.co/signup" role="button">Get Started</a>
+                </form>
+            </div>
+        </div>
     </div>
-  </footer>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="align-icons">
+                <a href="https://www.linkedin.com/company/fallible"><i class="fa fa-linkedin icons" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/fallible_inc"><i class="fa fa-twitter icons" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/fallible.co"><i class="fa fa-facebook icons" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="align-pages">
+                <a class="page" href="privacy">Privacy Policy</a>
+                <a class="page" href="terms">Terms of Service</a>
+                <a class="page" href="refund">Refund Policy</a>
+                <a class="page" href="contactus">Contact</a>
+                <a class="page" href="https://angel.co/fallible/jobs/157321-software-engineer-security-r-d">Join Us</a>
+                <a class="page" href="https://fallible.co/blog">Blog</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 copyright">
+            <p>© 2016 Checksum Labs, Inc. All rights reserved. </p>
+        </div>
+    </div>
+</footer>
+ 
 
- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script>
-    $(document).ready(function(){
-        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        $('.modal-trigger').leanModal();
-     });
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-68651333-1', 'auto');
+      ga('send', 'pageview');
   </script>
-  <script src="/js/materialize.min.js"></script>
-  <script src="js/init.js"></script>
-  <script type="text/javascript" src="js/livechat.js"></script>
-  </body>
+    <script src="scripts/vendor.js"></script>
+    
+    <script src="scripts/main.js"></script>
+    <!-- begin olark code -->
+    <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+    f[z]=function(){
+    (a.s=a.s||[]).push(arguments)};var a=f[z]._={
+    },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+    f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+    0:+new Date};a.P=function(u){
+    a.p[u]=new Date-a.p[0]};function s(){
+    a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+    hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+    return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+    b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+    b.contentWindow[g].open()}catch(w){
+    c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+    var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+    b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+    loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+    /* custom configuration goes here (www.olark.com/documentation) */
+    olark.identify('4350-869-10-6474');/*]]>*/</script><noscript><a href="https://www.olark.com/site/4350-869-10-6474/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+    <!-- end olark code -->
+</body>
+
 </html>
