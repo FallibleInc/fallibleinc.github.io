@@ -447,10 +447,55 @@
             font-size: 0.875rem;
         }
 
+        /* Mobile Menu Styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-menu.mobile-open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--primary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin: 0 2rem;
+            padding: 1rem;
+            box-shadow: var(--shadow-lg);
+            gap: 1rem;
+        }
+
+        .nav-menu.mobile-open .nav-item {
+            text-align: center;
+        }
+
+        .nav-menu.mobile-open .cta-button {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
             }
 
             .hero-container {
@@ -493,6 +538,9 @@
                 <li class="nav-item"><a href="contactus.html">Contact</a></li>
             </ul>
             <a href="https://dashboard.fallible.co/login" class="cta-button">Dashboard</a>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -665,6 +713,25 @@
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('mobile-open');
+                });
+                
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.nav-container')) {
+                        navMenu.classList.remove('mobile-open');
+                    }
+                });
             }
         });
     </script>

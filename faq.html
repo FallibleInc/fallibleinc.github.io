@@ -416,10 +416,49 @@
             font-size: 0.875rem;
         }
 
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-menu.active {
+            display: flex !important;
+            position: fixed;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--primary-color);
+            flex-direction: column;
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            border-top: 1px solid var(--border-color);
+            z-index: 999;
+        }
+
+        .nav-menu.active .nav-item {
+            margin: 0.5rem 0;
+        }
+
+        .nav-menu.active .nav-item a {
+            padding: 1rem 0;
+            display: block;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
             }
 
             .faq-title {
@@ -558,6 +597,9 @@
                 <li class="nav-item"><a href="contactus.html">Contact</a></li>
             </ul>
             <a href="https://dashboard.fallible.co/login" class="cta-button">Dashboard</a>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -740,6 +782,35 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            const icon = this.querySelector('i');
+            
+            navMenu.classList.toggle('active');
+            
+            // Toggle icon between hamburger and X
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu .nav-item a').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMenu = document.querySelector('.nav-menu');
+                const icon = document.querySelector('.mobile-menu-toggle i');
+                
+                navMenu.classList.remove('active');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
         });
 
         // FAQ toggle functionality
