@@ -1,281 +1,1003 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cybersecurity pricing plans for enterprises. Standard plan at $2100/month and custom Enterprise solutions. Professional penetration testing and managed security services.">
+    <meta name="keywords" content="cybersecurity pricing, penetration testing cost, managed security services pricing, enterprise security cost, bangalore cybersecurity pricing">
+    <meta name="author" content="Checksum Labs, Inc.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#2563eb">
     
-<meta name="description" content="Fallible has a basic free plan alongwith a transparent pricing for when you want to take the leap."/> 
-
-    <title>Pricing - Fallible</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fallible.co/pricing.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Pricing Plans - Fallible Cybersecurity">
+    <meta property="og:description" content="Cybersecurity pricing plans for enterprises. Standard plan at $2100/month and custom Enterprise solutions for large organizations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fallible.co/pricing.html">
+    <meta property="og:site_name" content="Fallible - Checksum Labs">
+    <meta property="og:image" content="https://fallible.co/apple-touch-icon.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@fallible_inc">
+    <meta name="twitter:title" content="Cybersecurity Pricing - Fallible">
+    <meta name="twitter:description" content="Professional cybersecurity services starting at $2100/month. Enterprise solutions available.">
+    <meta name="twitter:image" content="https://fallible.co/apple-touch-icon.png">
+    
+    <title>Pricing Plans - Fallible</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
-    <!-- Place favicon.ico in the root directory -->
     
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #f8fafc;
+            --tertiary-color: #f1f5f9;
+            --accent-color: #2563eb;
+            --accent-secondary: #1e40af;
+            --accent-muted: #3b82f6;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --text-light: #94a3b8;
+            --border-color: #e2e8f0;
+            --border-light: #f1f5f9;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-item a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding-top: 6rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .pricing-header {
+            text-align: center;
+            padding: 4rem 0;
+            background: var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(16, 185, 129, 0.03) 100%);
+            z-index: 1;
+        }
+
+        .pricing-header .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pricing-bg-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        .geometric-shape {
+            position: absolute;
+            pointer-events: none;
+            border-radius: 50%;
+            background: var(--accent-color);
+            animation: geometric-float 12s ease-in-out infinite;
+        }
+
+        .geometric-shape.triangle {
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 14px solid var(--accent-color);
+            border-radius: 0;
+        }
+
+        .geometric-shape.square {
+            border-radius: 2px;
+        }
+
+        .geometric-shape:nth-child(1) { 
+            width: 12px; height: 12px; 
+            left: 15%; top: 20%; 
+            animation-delay: 0s; 
+        }
+        .geometric-shape:nth-child(2) { 
+            width: 8px; height: 8px; 
+            left: 25%; top: 60%; 
+            animation-delay: 2s; 
+        }
+        .geometric-shape:nth-child(3) { 
+            left: 45%; top: 30%; 
+            animation-delay: 4s; 
+        }
+        .geometric-shape:nth-child(4) { 
+            width: 10px; height: 10px; 
+            left: 65%; top: 70%; 
+            animation-delay: 6s; 
+        }
+        .geometric-shape:nth-child(5) { 
+            width: 6px; height: 6px; 
+            left: 80%; top: 25%; 
+            animation-delay: 8s; 
+        }
+        .geometric-shape:nth-child(6) { 
+            left: 35%; top: 80%; 
+            animation-delay: 3s; 
+        }
+
+        @keyframes geometric-float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.3;
+            }
+            25% {
+                transform: translateY(-15px) rotate(90deg);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-8px) rotate(180deg);
+                opacity: 0.4;
+            }
+            75% {
+                transform: translateY(-20px) rotate(270deg);
+                opacity: 0.7;
+            }
+        }
+
+        .pricing-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            animation: particle-flow 6s linear infinite;
+            opacity: 0.4;
+        }
+
+        .particle:nth-child(odd) {
+            background: var(--accent-muted);
+        }
+
+        @keyframes particle-flow {
+            0% {
+                transform: translateX(-10px) translateY(0px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateX(calc(100vw + 10px)) translateY(-20px);
+                opacity: 0;
+            }
+        }
+
+        .pricing-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        .pricing-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .toggle-label {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: var(--border-color);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .toggle-switch.active {
+            background: var(--accent-color);
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .toggle-switch.active .toggle-button {
+            transform: translateX(30px);
+        }
+
+        .savings-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+
+        /* Pricing Cards */
+        .pricing-section {
+            padding: 4rem 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--primary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-color);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-description {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+        }
+
+        .plan-price {
+            margin-bottom: 2rem;
+        }
+
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .price-currency {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .price-period {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.75rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .plan-features li .icon {
+            color: var(--accent-color);
+            font-size: 1rem;
+            margin-top: 0.125rem;
+            flex-shrink: 0;
+        }
+
+        .plan-button {
+            width: 100%;
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .plan-button:hover {
+            background: var(--accent-secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .plan-button.secondary {
+            background: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+        }
+
+        .plan-button.secondary:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* Features Table */
+        .features-section {
+            padding: 4rem 0;
+            background: var(--secondary-color);
+        }
+
+        .features-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--primary-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .features-table th,
+        .features-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .features-table th {
+            background: var(--tertiary-color);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .features-table td {
+            color: var(--text-secondary);
+        }
+
+        .features-table .check-icon {
+            color: var(--accent-color);
+            font-size: 1.125rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+            font-size: 0.875rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .pricing-title {
+                font-size: 2.5rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .toggle-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .features-table {
+                font-size: 0.875rem;
+            }
+
+            .features-table th,
+            .features-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data for Pricing -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Fallible Cybersecurity Services",
+        "description": "Professional cybersecurity services for enterprises including penetration testing, managed security, and vulnerability assessment",
+        "brand": {
+            "@type": "Organization",
+            "name": "Checksum Labs, Inc."
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Standard Plan",
+                "description": "Perfect for growing businesses and startups - Weekly security reports, manual vulnerability testing, mobile app security analysis",
+                "price": "2100",
+                "priceCurrency": "USD",
+                "billingIncrement": "P1M",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2025-01-01",
+                "url": "https://dashboard.fallible.co/signup",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "Checksum Labs, Inc."
+                },
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cybersecurity Standard Plan",
+                    "serviceType": "Cybersecurity Services"
+                }
+            },
+            {
+                "@type": "Offer",
+                "name": "Enterprise Plan",
+                "description": "Advanced security for large organizations - On-demand security reports, advanced manual testing, complete mobile security suite",
+                "price": "0",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "Contact for pricing",
+                    "priceCurrency": "USD"
+                },
+                "availability": "https://schema.org/InStock",
+                "url": "https://fallible.co/contactus.html",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "Checksum Labs, Inc."
+                },
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cybersecurity Enterprise Plan",
+                    "serviceType": "Enterprise Cybersecurity Services"
+                }
+            }
+        ],
+        "category": "Cybersecurity Services",
+        "serviceArea": {
+            "@type": "Place",
+            "name": "Worldwide"
+        }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://fallible.co/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Pricing",
+                "item": "https://fallible.co/pricing.html"
+            }
+        ]
+    }
+    </script>
 </head>
-
 <body>
-    <!--[if lt IE 10]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-   
-    <div class="container">
-    <header>
-        <nav class="navbar navbar-light navbar-fixed-top" id="top-nav">
-            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                &#9776;
-            </button>
-            <a class="navbar-brand" href="/">Fallible</a>
-            <ul class="nav navbar-nav text-right pull-md-right pull-lg-right hidden-sm-down">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">PRODUCTS</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="fallible-managed-security">Fallible Managed Security</a>
-                        <a class="dropdown-item" href="cybersecurity-due-diligence">Cybersecurity Due Diligence</a>
-                        <a class="dropdown-item" href="checksum-security-scanner">Checksum Security Scanner </a>
-                        <a class="dropdown-item" href="portfolio-package">Portfolio Package</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pricing">PRICING</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://fallible.co/blog">BLOG</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn dashboard-button" href="https://dashboard.fallible.co/login">Open dashboard</a>
-                </li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Fallible</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html#services">Services</a></li>
+                <li class="nav-item"><a href="fallible-managed-security.html">Managed Security</a></li>
+                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a href="https://medium.com/@fallible">Blog</a></li>
+                <li class="nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a href="contactus.html">Contact</a></li>
             </ul>
-            <div class="collapse" id="exCollapsingNavbar">
-                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    &#9776;
-                </button>
-                
-                <p><a class="mobile-link" href="pricing">Pricing</a> </p>
-                <p><a class="mobile-link">Blog</a></p>
-                <p><a class="mobile-link" href="/faq">FAQ</a></p>
-                
-                <p><a class="mobile-link" href="/cybersecurity-due-diligence">Due Diligence</a></p>
-                <p><a class="mobile-link" href="/checksum-security-scanner">Checksum Scanner</a></p>
-                <p><a class="mobile-link" href="/fallible-managed-security">Managed Security</a></p>
-                <p><a class="mobile-link" href="/portfolio-package">Portfolio Package</a></p>
-                <p> <a class="btn btn-danger" href="https://dashboard.fallible.co/login">Login</a></p>
-            </div>
-        </nav>
-    </header>
-</div>
+            <a href="https://dashboard.fallible.co/login" class="cta-button">Dashboard</a>
+        </div>
+    </nav>
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Pricing Header -->
+        <section class="pricing-header">
+            <div class="pricing-bg-animation">
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape triangle"></div>
+                <div class="geometric-shape square"></div>
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape square"></div>
+                <div class="geometric-shape triangle"></div>
+            </div>
+            <div class="pricing-particles">
+                <div class="particle" style="top: 20%; animation-delay: 0s;"></div>
+                <div class="particle" style="top: 40%; animation-delay: 1s;"></div>
+                <div class="particle" style="top: 60%; animation-delay: 2s;"></div>
+                <div class="particle" style="top: 80%; animation-delay: 3s;"></div>
+                <div class="particle" style="top: 30%; animation-delay: 4s;"></div>
+                <div class="particle" style="top: 50%; animation-delay: 5s;"></div>
+                <div class="particle" style="top: 70%; animation-delay: 1.5s;"></div>
+                <div class="particle" style="top: 90%; animation-delay: 2.5s;"></div>
+            </div>
+            <div class="container">
+                <h1 class="pricing-title">Pricing Plans</h1>
+                <p class="pricing-subtitle">Choose the perfect security plan for your organization. Get started today and scale as you grow.</p>
+                
+                <div class="toggle-container">
+                    <span class="toggle-label">Monthly</span>
+                    <div class="toggle-switch" id="billing-toggle">
+                        <div class="toggle-button"></div>
+                    </div>
+                    <span class="toggle-label">Annual</span>
+                    <span class="savings-badge">Save 20%</span>
+                </div>
+            </div>
+        </section>
 
-    <div class="container-fluid pricing">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <hr class="dividing-line">
-                <h2 class="pricing-heading"> Pricing </h2>
-                <h4 class="pricing-subheading">Flexible Pricing. Free Developer Account. No credit card required.</h4>
-            </div>
-        </div>
-        <div class="duration-toggle">
-            <div class="pricing-subheading label text-xs-right"> Monthly </div>
-            <div class="toggle-button">
-                <div id="switch" class="hover">
-                    <div id="toggle">
+        <!-- Pricing Cards -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="pricing-grid">
+                    <!-- Standard Plan -->
+                    <div class="pricing-card featured">
+                        <h3 class="plan-name">Standard</h3>
+                        <p class="plan-description">Perfect for growing businesses and startups</p>
+                        
+                        <div class="plan-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount" id="standard-price">2100</span>
+                            <span class="price-period">/ month</span>
+                        </div>
+
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check icon"></i>Weekly security reports</li>
+                            <li><i class="fas fa-check icon"></i>Manual vulnerability testing</li>
+                            <li><i class="fas fa-check icon"></i>Mobile app security analysis</li>
+                            <li><i class="fas fa-check icon"></i>API & SDK security testing</li>
+                            <li><i class="fas fa-check icon"></i>Email support</li>
+                            <li><i class="fas fa-check icon"></i>HAR & Swagger imports</li>
+                        </ul>
+
+                        <a href="https://dashboard.fallible.co/signup" class="plan-button">Sign Up Now</a>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <p class="plan-description">Advanced security for large organizations</p>
+                        
+                        <div class="plan-price">
+                            <span class="price-amount" style="font-size: 2rem;">Custom Pricing</span>
+                        </div>
+
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check icon"></i>On-demand security reports</li>
+                            <li><i class="fas fa-check icon"></i>Advanced manual testing</li>
+                            <li><i class="fas fa-check icon"></i>Complete mobile security suite</li>
+                            <li><i class="fas fa-check icon"></i>Priority phone & chat support</li>
+                            <li><i class="fas fa-check icon"></i>On-premise deployment option</li>
+                            <li><i class="fas fa-check icon"></i>Custom integrations</li>
+                        </ul>
+
+                        <a href="contactus.html" class="plan-button secondary">Contact Sales</a>
                     </div>
                 </div>
             </div>
-            <div class="pricing-subheading label text-xs-left"> Annually </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <h4 class="pricing-subheading tag-line">Commit for a year and get two months free.</h4>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6" id="standard-card">
-                <div class="card text-xs-center">
-                    <div class="card-header standard common-card">
-                        Standard
-                    </div>
-                    <div class="card-block">
-                        <h4 class="card-title">$<span class="amount">2100</span>/ <span class="month">month</span></h4>
-                        <p class="card-text">Weekly report for all checks of Free plan</p>
-                        <p class="card-text">Manual checks by security researchers for logic flow, payment, authentication related issues in web, mobile and APIs</p>
-                        <p class="card-text">Mobile apps static and dynamic analysis for vulnerabilites</p>
-                        <p class="card-text">Email support</p>
-                        <a href="https://dashboard.fallible.co/signup" class="btn btn-lg button-size btn-danger">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6" id="enterprise-card">
-                <div class="card text-xs-center">
-                    <div class="card-header color-card common-card">
-                        Enterprise
-                    </div>
-                    <div class="card-block">
-                        <h4 class="card-title"><span class="amount-small">Talk to us</span></h4>
-                        <p class="card-text">Weekly report for all checks of Free plan</p>
-                        <p class="card-text">Manual checks by security researchers for logic flow, payment, authentication related issues in web, mobile and APIs and SDKs</p>
-                        <p class="card-text">Mobile apps static and dynamic analysis for vulnerabilites</p>
-                        <p class="card-text">Time bound phone & chat support</p>
-                        <a href="https://dashboard.fallible.co/signup" class="btn btn-lg button-size color-card">Signup</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-sm-12">
-                <table class="table table-striped table-inverse table">
+        </section>
+
+        <!-- Features Comparison -->
+        <section class="features-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: var(--text-primary);">Feature Comparison</h2>
+                
+                <table class="features-table">
                     <thead>
                         <tr>
-                            <th data-field="id">
-                                <h4 class="table-title">Fallible features</h4></th>
-                            <th data-field="name">
-                                <h4 class="table-title text-xs-center">Standard</h4></th>
-                            <th data-field="price">
-                                <h4 class="table-title text-xs-center">Enterprise</h4></th>
+                            <th>Feature</th>
+                            <th style="text-align: center;">Standard</th>
+                            <th style="text-align: center;">Enterprise</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Report generation</td>
-                            <td class="text-xs-center">Weekly</td>
-                            <td class="text-xs-center">On-demand</td>
+                            <td>Report Generation</td>
+                            <td style="text-align: center;">Weekly</td>
+                            <td style="text-align: center;">On-demand</td>
                         </tr>
                         <tr>
-                            <td>Automated reports for XSS, SQL Injection, auth</td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td>Automated Security Scans</td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
                         </tr>
                         <tr>
-                            <td>Open-source vulnerabilites alert</td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td>Open-source Vulnerability Alerts</td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
                         </tr>
                         <tr>
-                            <td>Manual Checks for logical flaws, payments, data leak</td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td>Manual Security Testing</td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
                         </tr>
                         <tr>
-                            <td>API & SDK checks</td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td>API & SDK Security</td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
                         </tr>
                         <tr>
-                            <td>HAR and Swagger imports for analysis</td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td>Mobile App Analysis</td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
                         </tr>
                         <tr>
-                            <td>Mobile apps static analysis</td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td>On-premise Deployment</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><i class="fas fa-check check-icon"></i></td>
                         </tr>
                         <tr>
-                            <td>Mobile apps dynamic analysis</td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="text-xs-center"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Optional on-premise deployment</td>
-                            <td class="text-xs-center">No</td>
-                            <td class="text-xs-center">Yes</td>
-                        </tr>
-                        <tr>
-                            <td>Support</td>
-                            <td class="text-xs-center">Yes, Email</td>
-                            <td class="text-xs-center">Yes, Phone</td>
+                            <td>Support Level</td>
+                            <td style="text-align: center;">Email</td>
+                            <td style="text-align: center;">Phone & Chat</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
-   
-    <footer class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="lead-footer">
-                <form class="form-inline">
-                    <input class="form-control form-control-lg" type="text" placeholder="Your primary domain">&nbsp;
-                    <a class="btn button-inverse btn-lg" href="https://dashboard.fallible.co/signup" role="button">Get Started</a>
-                </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fallible</h3>
+                    <p>Elite cybersecurity solutions for global organizations. Protecting your digital assets with cutting-edge security technologies and expert threat intelligence.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/fallible" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/fallible_inc" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="fallible-managed-security.html">Managed Security</a></p>
+                    <p><a href="https://android.fallible.co">Mobile Security</a></p>
+                    <p><a href="index.html#services">Security Consulting</a></p>
+                    <p><a href="index.html#services">Cloud Security</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="https://medium.com/@fallible">Security Blog</a></p>
+                    <p><a href="https://github.com/FallibleInc/security-guide-for-developers">Security Guide for Developers</a></p>
+                    <p><a href="https://github.com/FallibleInc">Open Source Projects</a></p>
+                    <p><a href="faq.html">FAQ</a></p>
+                    <p><a href="pricing.html">Pricing</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p><a href="contactus.html">Contact Us</a></p>
+                    <p><a href="privacy.html">Privacy Policy</a></p>
+                    <p><a href="terms.html">Terms of Service</a></p>
+                    <p><a href="refund.html">Refund Policy</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Checksum Labs, Inc. All rights reserved.</p>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-icons">
-                <a href="https://www.linkedin.com/company/fallible"><i class="fa fa-linkedin icons" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/fallible_inc"><i class="fa fa-twitter icons" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/fallible.co"><i class="fa fa-facebook icons" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-pages">
-                <a class="page" href="privacy">Privacy Policy</a>
-                <a class="page" href="terms">Terms of Service</a>
-                <a class="page" href="refund">Refund Policy</a>
-                <a class="page" href="contactus">Contact</a>
-                <a class="page" href="https://angel.co/fallible/jobs/157321-software-engineer-security-r-d">Join Us</a>
-                <a class="page" href="https://fallible.co/blog">Blog</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 copyright">
-            <p>© 2016 Checksum Labs, Inc. All rights reserved. </p>
-        </div>
-    </div>
-</footer>
- 
+    </footer>
 
-
-
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- JavaScript -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-      ga('create', 'UA-68651333-1', 'auto');
-      ga('send', 'pageview');
-  </script>
-    <script src="scripts/vendor.js"></script>
-    
-    <script src="scripts/main.js"></script>
-    <!-- begin olark code -->
-    <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
-    f[z]=function(){
-    (a.s=a.s||[]).push(arguments)};var a=f[z]._={
-    },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
-    f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
-    0:+new Date};a.P=function(u){
-    a.p[u]=new Date-a.p[0]};function s(){
-    a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
-    hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
-    return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
-    b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
-    b.contentWindow[g].open()}catch(w){
-    c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
-    var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
-    b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
-    loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
-    /* custom configuration goes here (www.olark.com/documentation) */
-    olark.identify('4350-869-10-6474');/*]]>*/</script><noscript><a href="https://www.olark.com/site/4350-869-10-6474/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
-    <!-- end olark code -->
+        // Billing toggle functionality
+        const billingToggle = document.getElementById('billing-toggle');
+        const standardPrice = document.getElementById('standard-price');
+        const pricePeriod = document.querySelector('.price-period');
+        
+        billingToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            
+            if (this.classList.contains('active')) {
+                // Annual pricing
+                standardPrice.textContent = '21000';
+                pricePeriod.textContent = '/ year';
+            } else {
+                // Monthly pricing
+                standardPrice.textContent = '2100';
+                pricePeriod.textContent = '/ month';
+            }
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68651333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
-
 </html>

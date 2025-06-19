@@ -1,181 +1,773 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about Fallible's cybersecurity services. Get answers to penetration testing, mobile app security, vulnerability assessment, and pricing questions.">
+    <meta name="keywords" content="cybersecurity FAQ, penetration testing questions, mobile app security, vulnerability assessment, security consulting FAQ, bangalore cybersecurity">
+    <meta name="author" content="Checksum Labs, Inc.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#2563eb">
     
-<meta name="description" content="How does Fallible work? Do you work with Scala? All common queries answered."/> 
- 
-    <title>Frequently Asked Questions</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fallible.co/faq.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Frequently Asked Questions - Fallible Cybersecurity">
+    <meta property="og:description" content="Get answers to common questions about our cybersecurity services, penetration testing, mobile app security, and pricing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fallible.co/faq.html">
+    <meta property="og:site_name" content="Fallible - Checksum Labs">
+    <meta property="og:image" content="https://fallible.co/apple-touch-icon.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@fallible_inc">
+    <meta name="twitter:title" content="Cybersecurity FAQ - Fallible">
+    <meta name="twitter:description" content="Get answers to common questions about our cybersecurity services and solutions.">
+    <meta name="twitter:image" content="https://fallible.co/apple-touch-icon.png">
+    
+    <title>Frequently Asked Questions - Fallible</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
-    <!-- Place favicon.ico in the root directory -->
     
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #f8fafc;
+            --tertiary-color: #f1f5f9;
+            --accent-color: #2563eb;
+            --accent-secondary: #1e40af;
+            --accent-muted: #3b82f6;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --text-light: #94a3b8;
+            --border-color: #e2e8f0;
+            --border-light: #f1f5f9;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-item a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding-top: 6rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .faq-header {
+            text-align: center;
+            padding: 4rem 0;
+            background: var(--secondary-color);
+        }
+
+        .faq-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        .faq-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--primary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-color);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            background: var(--tertiary-color);
+        }
+
+        .faq-question:hover {
+            background: var(--secondary-color);
+        }
+
+        .faq-question h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .faq-toggle {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem 2rem;
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .faq-answer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact CTA */
+        .contact-cta {
+            background: var(--secondary-color);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .cta-text {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-color);
+            padding: 1rem 2rem;
+            border: 1px solid var(--accent-color);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+            font-size: 0.875rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .faq-title {
+                font-size: 2.5rem;
+            }
+
+            .faq-question {
+                padding: 1rem 1.5rem;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: 1rem 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data for FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do I need to give access to our code base?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. We do not need access to your code base. We can find vulnerabilities without that access by monitoring the API calls your app makes, which is sufficient for our comprehensive security analysis."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "My code base is in Python, can you work with Python?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the programming language or your tech stack is immaterial to us. Since we don't need access to your code base, we can work with any technology stack. We monitor API calls and perform security analysis regardless of the underlying technology."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take you to verify a fix to your reported bug?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Within minutes. We have dedicated security staff monitoring bug reports, and our experts can verify fixes quickly and inform you immediately if the remediation is successful."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can we get a refund if we discontinue with the service?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We offer refunds for the remaining months of your subscription if you decide to discontinue our service. Please refer to our refund policy for complete details."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Your plan is too costly for us, can we negotiate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our pricing is standardized. However, if you are a bootstrapping startup, please reach out to us at hello@fallible.co and we will work something out to support your growth."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of security vulnerabilities do you detect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We detect a wide range of vulnerabilities including SQL injection, XSS, authentication bypasses, logic flaws, payment vulnerabilities, data leaks, API security issues, mobile app vulnerabilities, and open-source component vulnerabilities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often do you provide security reports?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For our Standard plan, we provide weekly security reports. Enterprise customers receive on-demand reporting with real-time alerts for critical vulnerabilities. All reports include detailed findings, risk assessments, and remediation guidance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you provide compliance reporting?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we provide compliance reporting for various standards including PCI DSS, SOC 2, GDPR, and other regulatory requirements. Our reports help you meet audit requirements and maintain compliance standards."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://fallible.co/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "FAQ",
+                "item": "https://fallible.co/faq.html"
+            }
+        ]
+    }
+    </script>
 </head>
-
 <body>
-    <!--[if lt IE 10]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-   <div class="container">
-    <header>
-        <nav class="navbar navbar-light navbar-fixed-top" id="top-nav">
-            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                &#9776;
-            </button>
-            <a class="navbar-brand" href="/">Fallible</a>
-            <ul class="nav navbar-nav text-right pull-md-right pull-lg-right hidden-sm-down">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">PRODUCTS</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="fallible-managed-security">Fallible Managed Security</a>
-                        <a class="dropdown-item" href="cybersecurity-due-diligence">Cybersecurity Due Diligence</a>
-                        <a class="dropdown-item" href="checksum-security-scanner">Checksum Security Scanner </a>
-                        <a class="dropdown-item" href="portfolio-package">Portfolio Package</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pricing">PRICING</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://fallible.co/blog">BLOG</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn dashboard-button" href="https://dashboard.fallible.co/login">Open dashboard</a>
-                </li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Fallible</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html#services">Services</a></li>
+                <li class="nav-item"><a href="fallible-managed-security.html">Managed Security</a></li>
+                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a href="https://medium.com/@fallible">Blog</a></li>
+                <li class="nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a href="contactus.html">Contact</a></li>
             </ul>
-            <div class="collapse" id="exCollapsingNavbar">
-                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    &#9776;
-                </button>
-                
-                <p><a class="mobile-link" href="pricing">Pricing</a> </p>
-                <p><a class="mobile-link">Blog</a></p>
-                <p><a class="mobile-link" href="/faq">FAQ</a></p>
-                
-                <p><a class="mobile-link" href="/cybersecurity-due-diligence">Due Diligence</a></p>
-                <p><a class="mobile-link" href="/checksum-security-scanner">Checksum Scanner</a></p>
-                <p><a class="mobile-link" href="/fallible-managed-security">Managed Security</a></p>
-                <p><a class="mobile-link" href="/portfolio-package">Portfolio Package</a></p>
-                <p> <a class="btn btn-danger" href="https://dashboard.fallible.co/login">Login</a></p>
-            </div>
-        </nav>
-    </header>
-</div>
+            <a href="https://dashboard.fallible.co/login" class="cta-button">Dashboard</a>
+        </div>
+    </nav>
 
-<div class="container faq">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 faq-content">
-            <h1 class="faq-heading"> Frequently Asked Questions </h1>
-                <h2 class="question-style">Do I need to give access to our code base?</h2>
-                <p class="answer style">No. We do not need access to your code base. We can find the vulnerabilities without that, we will monitor the API calls your app makes and that is enough for us.</p>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- FAQ Header -->
+        <section class="faq-header">
+            <div class="container">
+                <h1 class="faq-title">Frequently Asked Questions</h1>
+                <p class="faq-subtitle">Find answers to common questions about our cybersecurity services and solutions.</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 faq-content">
-                <h2 class="question-style">My code base is in python, can you work with python?</h2>
-                <p class="answer style">Yes, language or your tech stack is immaterial to us. We do not need access to your code base. We can find the vulnerabilities without that, we will monitor the API calls your app makes and that is enough for us.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 faq-content">
-                <h2 class="question-style">How long does it take you to verify a fix to your reported bug?</h2>
-                <p class="answer style">Within minutes. We have dedicated security staff looking at the bug reports, our experts can verify the fix in minutes and can inform you if it works.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 faq-content">
-                <h2 class="question-style">Can we get refund if we discontinue with the service?</h2>
-                <p class="answer style">Sure. We will refund the payment for the remaining months. </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 faq-content">
-                <h2 class="question-style">Your plan is too costly for us, can we negotiate?</h2>
-                <p class="answer style">No. However, if you are bootstrapping, do let us know at hello@fallible.co and we will work something out. </p>
-            </div>
-        </div>
-    </div> 
-<footer class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="lead-footer">
-                <form class="form-inline">
-                    <input class="form-control form-control-lg" type="text" placeholder="Your primary domain">&nbsp;
-                    <a class="btn button-inverse btn-lg" href="https://dashboard.fallible.co/signup" role="button">Get Started</a>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-icons">
-                <a href="https://www.linkedin.com/company/fallible"><i class="fa fa-linkedin icons" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/fallible_inc"><i class="fa fa-twitter icons" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/fallible.co"><i class="fa fa-facebook icons" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-pages">
-                <a class="page" href="privacy">Privacy Policy</a>
-                <a class="page" href="terms">Terms of Service</a>
-                <a class="page" href="refund">Refund Policy</a>
-                <a class="page" href="contactus">Contact</a>
-                <a class="page" href="https://angel.co/fallible/jobs/157321-software-engineer-security-r-d">Join Us</a>
-                <a class="page" href="https://fallible.co/blog">Blog</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 copyright">
-            <p>© 2016 Checksum Labs, Inc. All rights reserved. </p>
-        </div>
-    </div>
-</footer>
- 
+        </section>
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-grid">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3>Do I need to give access to our code base?</h3>
+                            <i class="fas fa-chevron-down faq-toggle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No. We do not need access to your code base. We can find vulnerabilities without that access by monitoring the API calls your app makes, which is sufficient for our comprehensive security analysis.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3>My code base is in Python, can you work with Python?</h3>
+                            <i class="fas fa-chevron-down faq-toggle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, the programming language or your tech stack is immaterial to us. Since we don't need access to your code base, we can work with any technology stack. We monitor API calls and perform security analysis regardless of the underlying technology.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3>How long does it take you to verify a fix to your reported bug?</h3>
+                            <i class="fas fa-chevron-down faq-toggle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Within minutes. We have dedicated security staff monitoring bug reports, and our experts can verify fixes quickly and inform you immediately if the remediation is successful.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3>Can we get a refund if we discontinue with the service?</h3>
+                            <i class="fas fa-chevron-down faq-toggle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. We offer refunds for the remaining months of your subscription if you decide to discontinue our service. Please refer to our <a href="refund.html">refund policy</a> for complete details.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3>Your plan is too costly for us, can we negotiate?</h3>
+                            <i class="fas fa-chevron-down faq-toggle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our pricing is standardized. However, if you are a bootstrapping startup, please reach out to us at <a href="mailto:hello@fallible.co">hello@fallible.co</a> and we will work something out to support your growth.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3>What types of security vulnerabilities do you detect?</h3>
+                            <i class="fas fa-chevron-down faq-toggle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We detect a wide range of vulnerabilities including SQL injection, XSS, authentication bypasses, logic flaws, payment vulnerabilities, data leaks, API security issues, mobile app vulnerabilities, and open-source component vulnerabilities.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3>How often do you provide security reports?</h3>
+                            <i class="fas fa-chevron-down faq-toggle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For our Standard plan, we provide weekly security reports. Enterprise customers receive on-demand reporting with real-time alerts for critical vulnerabilities. All reports include detailed findings, risk assessments, and remediation guidance.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3>Do you provide compliance reporting?</h3>
+                            <i class="fas fa-chevron-down faq-toggle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide compliance reporting for various standards including PCI DSS, SOC 2, GDPR, and other regulatory requirements. Our reports help you meet audit requirements and maintain compliance standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Still have questions?</h2>
+                    <p class="cta-text">Our security experts are here to help. Get in touch with us for personalized assistance with your cybersecurity needs.</p>
+                    <div class="cta-buttons">
+                        <a href="contactus.html" class="btn-primary">Contact Us</a>
+                        <a href="https://dashboard.fallible.co/signup" class="btn-secondary">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fallible</h3>
+                    <p>Elite cybersecurity solutions for global organizations. Protecting your digital assets with cutting-edge security technologies and expert threat intelligence.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/fallible" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/fallible_inc" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="fallible-managed-security.html">Managed Security</a></p>
+                    <p><a href="https://android.fallible.co">Mobile Security</a></p>
+                    <p><a href="index.html#services">Security Consulting</a></p>
+                    <p><a href="index.html#services">Cloud Security</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="https://medium.com/@fallible">Security Blog</a></p>
+                    <p><a href="https://github.com/FallibleInc/security-guide-for-developers">Security Guide for Developers</a></p>
+                    <p><a href="https://github.com/FallibleInc">Open Source Projects</a></p>
+                    <p><a href="faq.html">FAQ</a></p>
+                    <p><a href="pricing.html">Pricing</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p><a href="contactus.html">Contact Us</a></p>
+                    <p><a href="privacy.html">Privacy Policy</a></p>
+                    <p><a href="terms.html">Terms of Service</a></p>
+                    <p><a href="refund.html">Refund Policy</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Checksum Labs, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-      ga('create', 'UA-68651333-1', 'auto');
-      ga('send', 'pageview');
-  </script>
-    <script src="scripts/vendor.js"></script>
-    
-    <script src="scripts/main.js"></script>
-    <!-- begin olark code -->
-    <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
-    f[z]=function(){
-    (a.s=a.s||[]).push(arguments)};var a=f[z]._={
-    },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
-    f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
-    0:+new Date};a.P=function(u){
-    a.p[u]=new Date-a.p[0]};function s(){
-    a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
-    hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
-    return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
-    b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
-    b.contentWindow[g].open()}catch(w){
-    c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
-    var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
-    b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
-    loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
-    /* custom configuration goes here (www.olark.com/documentation) */
-    olark.identify('4350-869-10-6474');/*]]>*/</script><noscript><a href="https://www.olark.com/site/4350-869-10-6474/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
-    <!-- end olark code -->
+        // FAQ toggle functionality
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't already active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68651333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
-
 </html>

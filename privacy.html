@@ -1,292 +1,693 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fallible privacy policy. Learn how we protect your data and privacy in our cybersecurity services. GDPR compliant data protection.">
+    <meta name="keywords" content="fallible privacy policy, cybersecurity privacy, data protection, GDPR compliance, security data handling">
+    <meta name="author" content="Checksum Labs, Inc.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#2563eb">
     
-<meta name="description" content="At Fallible, we take great pain to protect your privacy and data."/> 
-
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fallible.co/privacy.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Privacy Policy - Fallible">
+    <meta property="og:description" content="Fallible privacy policy and data protection practices for cybersecurity services. GDPR compliant.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fallible.co/privacy.html">
+    <meta property="og:site_name" content="Fallible - Checksum Labs">
+    <meta property="og:image" content="https://fallible.co/apple-touch-icon.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@fallible_inc">
+    <meta name="twitter:title" content="Privacy Policy - Fallible">
+    <meta name="twitter:description" content="Fallible privacy policy and data protection practices for cybersecurity services.">
+    <meta name="twitter:image" content="https://fallible.co/apple-touch-icon.png">
+    
     <title>Privacy Policy - Fallible</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
-    <!-- Place favicon.ico in the root directory -->
     
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #f8fafc;
+            --tertiary-color: #f1f5f9;
+            --accent-color: #2563eb;
+            --accent-secondary: #1e40af;
+            --accent-muted: #3b82f6;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --text-light: #94a3b8;
+            --border-color: #e2e8f0;
+            --border-light: #f1f5f9;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-item a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding-top: 6rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 4rem 0;
+            background: var(--secondary-color);
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--primary-color);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .content-wrapper h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .content-wrapper h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-wrapper p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .content-wrapper ul {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .content-wrapper li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .content-wrapper strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .content-wrapper a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .content-wrapper a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: var(--tertiary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+            font-size: 0.875rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .content-wrapper {
+                padding: 2rem;
+                margin: 0 1rem;
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy",
+        "description": "Fallible privacy policy and data protection practices for cybersecurity services",
+        "url": "https://fallible.co/privacy.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Fallible - Checksum Labs",
+            "url": "https://fallible.co"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Checksum Labs, Inc."
+        }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://fallible.co/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Privacy Policy",
+                "item": "https://fallible.co/privacy.html"
+            }
+        ]
+    }
+    </script>
 </head>
-
 <body>
-    <!--[if lt IE 10]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-   <div class="container">
-    <header>
-        <nav class="navbar navbar-light navbar-fixed-top" id="top-nav">
-            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                &#9776;
-            </button>
-            <a class="navbar-brand" href="/">Fallible</a>
-            <ul class="nav navbar-nav text-right pull-md-right pull-lg-right hidden-sm-down">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">PRODUCTS</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="fallible-managed-security">Fallible Managed Security</a>
-                        <a class="dropdown-item" href="cybersecurity-due-diligence">Cybersecurity Due Diligence</a>
-                        <a class="dropdown-item" href="checksum-security-scanner">Checksum Security Scanner </a>
-                        <a class="dropdown-item" href="portfolio-package">Portfolio Package</a>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Fallible</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html#services">Services</a></li>
+                <li class="nav-item"><a href="fallible-managed-security.html">Managed Security</a></li>
+                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a href="https://medium.com/@fallible">Blog</a></li>
+                <li class="nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a href="contactus.html">Contact</a></li>
+            </ul>
+            <a href="https://dashboard.fallible.co/login" class="cta-button">Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Privacy Policy</h1>
+                <p class="page-subtitle">Our commitment to protecting your privacy and personal data in all cybersecurity services</p>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="highlight-box">
+                        <p><strong>Effective Date:</strong> Jan 19, 2025</p>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pricing">PRICING</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://fallible.co/blog">BLOG</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn dashboard-button" href="https://dashboard.fallible.co/login">Open dashboard</a>
-                </li>
-            </ul>
-            <div class="collapse" id="exCollapsingNavbar">
-                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    &#9776;
-                </button>
-                
-                <p><a class="mobile-link" href="pricing">Pricing</a> </p>
-                <p><a class="mobile-link">Blog</a></p>
-                <p><a class="mobile-link" href="/faq">FAQ</a></p>
-                
-                <p><a class="mobile-link" href="/cybersecurity-due-diligence">Due Diligence</a></p>
-                <p><a class="mobile-link" href="/checksum-security-scanner">Checksum Scanner</a></p>
-                <p><a class="mobile-link" href="/fallible-managed-security">Managed Security</a></p>
-                <p><a class="mobile-link" href="/portfolio-package">Portfolio Package</a></p>
-                <p> <a class="btn btn-danger" href="https://dashboard.fallible.co/login">Login</a></p>
-            </div>
-        </nav>
-    </header>
-</div>
 
-<div class="container privacy">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="heading-privacy">Privacy Policy </h2>
-            <p class="privacy-text">Checksum Labs, Inc. ("Fallible" or "We"), a corporation duly established and registered in the State of Delaware, U.S.A., is the owner and operator of https://fallible.co (the "Website"), which is intended to supply various services as more fully described in the Website (the "Services").
-                <br>
-                <br> This Privacy Policy constitutes an integral part of our Terms of Use and is subject to the provisions thereof, including with respect to Limitation of Liability and governing law. We encourage you to read our Privacy Policy as part of your evaluation process and to read it again when we notify you of changes from time to time.
-                <br>
-                <br> We encourage you to read our Privacy Policy as part of your evaluation process and to read it again when we notify you on changes from time to time.
-                <p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">What is Covered in This Privacy Policy</h2>
-            <p class="privacy-text">This Privacy Policy clearly indicates:</p>
-            <ol class="privacy-text">
-                <li>What personally identifying information Fallible collects.</li>
-                <li>How Fallible uses the information.</li>
-                <li>With whom Fallible may share the information.</li>
-                <li>What choices are available to users regarding collection, use and distribution of the information.</li>
-                <li>What types of security procedures are in place to protect the loss, misuse or alteration of information under Fallible's control.</li>
-                <li>How users can correct any inaccuracies in the information.</li>
-            </ol>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">What Information Do We Collect, and How is it Used?
-                </h2>
-            <p class="privacy-text">When visiting the Website and/or using the Services, you may provide us with certain types of information, as described below. Except as described in this Policy, Fallible never collects personally identifying information from the user.
-            </p>
-            <p class="dividing-text">Registration (Sign-Up)</p>
-            <p class="privacy-text">In order to use the Services, a user must first complete the registration form. During registration, a user may be required to give contact information such as first and last name, company name, address, email address, job function, phone number, mobile number, URL and/or IP addresses. We use this information to verify the ownership of servers, URL, and IP addresses, to do non-invasive informational testing of users' servers, and to contact the user about Services for which they have expressed interest. In order to use the Services, users must provide a username and password. </p>
-            <p class="dividing-text">User Payment Information</p>
-            <p class="privacy-text">When users order the Service, they must provide payment information (such as credit card number and expiration date). This information is used for one-time and recurring billing purposes according to the type of Services ordered and the terms pertaining thereto , and to fulfill users' orders. If we have trouble processing an order, personal information is used to contact the user. Payment information is stored in encrypted format, as more fully detailed below (see Security) and is used only to send to our credit card processor, for the purposes of collecting payment for Services rendered or to be rendered. We never make this information visible to anyone other than our credit card processor and never communicate it over a non-encrypted connection. The full credit card number is never seen by anyone inside our company, once entered and submitted, except by the credit card processor for the purposes of authorizing, clearing and reversing charges to your credit card. </p>
-            <p class="dividing-text">Delivery of Services</p>
-            <p class="privacy-text">Fallible's Services collect information about servers connected to the IPs or URLs given by the users during the registration process. IP's and URL's are checked to verify users' authority to require security vulnerability testing. No security vulnerability data is collected until the user requests it. Users can start and stop the Fallible's scan and data collection process by changing their settings in their Account Settings web page available on the Website to users. Fallible only collects information that can be accessed from the internet about users' computer(s) and/or that is provided by users via phone and/or e-mail and does not install software on the users' computer for this purpose. </p>
-            <p class="dividing-text">User Profile</p>
-            <p class="privacy-text">We store personally identifying information that we collect, and log files to create a profile of our users. Users' profile is used to tailor users' visit to our Website.</p>
-            <p class="dividing-text">Cookies</p>
-            <p class="privacy-text">When you visit Fallible, we send one or more cookies to your computer or other device. We use cookies to improve the quality of our service, including for storing user preferences, improving search results and ad selection, and tracking user trends, such as how people search. Most browsers are initially set up to accept cookies, but you can reset your browser to refuse all cookies or to indicate when a cookie is being sent. However, some Fallible features and services may not function properly if your cookies are disabled.This Privacy Policy covers the use of cookies by Fallible only and does not cover the use of cookies by any third parties. Some of our business partners, such as Google Analytics and any third parties serving advertisements to our website, may use cookies on our Website in the future, and such cookies may collect anonymous traffic data. However, we will have no access to or control over these cookies.</p>
-            <p class="dividing-text">Log Files</p>
-            <p class="privacy-text">Like most standard Web site servers we use log files. This includes internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, platform type, date/time stamp, and number of clicks to analyze trends, administer the site, track user's movement in the aggregate, and gather broad demographic information for aggregate use. Session's Ids, IP addresses, etc. are not linked to personally identifying information in our database, except as entered by the user during registration. Session IDs and IP addresses entered during registration time by the user are tied to personally identifying information to enable the provision of our Services.</p>
-            <p class="dividing-text">User Communications</p>
-            <p class="privacy-text">When you send email or other communications to Fallible, we may retain those communications in order to process your inquiries, respond to your requests and improve our services. When you send and receive SMS messages to or from one of our services that provides SMS functionality, we may collect and maintain information associated with those messages, such as the phone number, the wireless carrier associated with the phone number, the content of the message, and the date and time of the transaction. We may use your email address to communicate with you about our services.</p>
-            <p class="dividing-text">Supplementation of Information</p>
-            <p class="privacy-text">In order for the Website to properly function, it is necessary for us to supplement the information we collect with information from certain 3rd party sources, including Google Analytics and our credit card processor. We may also use other third party processors. We do not honor Do Not Track requests.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">Additional Information Use</h2>
-            <p class="privacy-text">In addition to the above, we may use the information we collect from you, your website(s), and your computer to:</p>
-            <ul class="privacy-text">
-                <li> Provide, maintain, protect, and improve our services (including advertising services) and develop new services; and</li>
-                <li> Protect the rights or property of Fallible or our users.</li>
-            </ul>
-            <p class="privacy-text">Fallible processes personal information on our servers in India and in other countries. In some cases, we process personal information outside your own country.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">What Information Do We Disclose?</h2>
-            <p class="privacy-text">Aggregate Information (non-personally identifying)We share aggregated demographic and security vulnerability information with our users, partners and advertisers. This is not linked to any personally identifying information.Information Sharing and DisclosureWe do not commercialize or share any personally identifying information with 3rd parties, unless:</p>
-            <ul class="privacy-text">
-                <li> Such information is shared and/or commercialized following receipt of a specific request and/or permission from users;</li>
-                <li> Such information is shared with affiliated companies and/or potential investors (in any form of business transaction, including purchase or merger) pursuant to an agreement which contains reasonable confidentiality arrangements;</li>
-                <li> Such information is shared with contractors who work with us (in order to facilitate our business) pursuant to an agreement which contains reasonably confidentiality arrangements;</li>
-                <li> Such information is shared in order to comply with or in accordance with any applicable law and/or court orders and/or in order to prevent suspected illegal acts, frauds, situations involving potential threats to the safety of any person, or as otherwise required by law;</li>
-                <li> Such information is shared in order to help Fallible defend against claims and/or establish or exercise any legal right that Fallible may have;</li>
-                <li> Such information is shared in order to help Fallible prevent violations of Fallible's Terms of Use and this Privacy Policy or to otherwise protect the rights, property, or safety of Fallible, or others, including exchanging information with third parties for fraud protection and credit risk reduction.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">Business Transitions</h2>
-            <p class="privacy-text">In the event that Fallible goes through a business transition, such as a merger, being acquired by another company, or selling all or part of its assets, users' personally identifying information will, in most instances, be part of the assets transferred.
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">Service Announcements</h2>
-            <p class="privacy-text">It is often necessary to send out a strictly Service-related announcement. For instance, if our Service is temporarily suspended for maintenance we might send users an email. Generally, users may not opt-out of these communications, though they can deactivate their account. However, these communications are not promotional in nature.
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">Customer Service Communications</h2>
-            <p class="privacy-text">We communicate with users on a regular basis via email to provide requested Services, offers, or information. In regards to issues relating to their account, we reply via email or phone.
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">Links</h2>
-            <p class="privacy-text">The Website may contain links to other sites. Please be aware that we are not responsible for the privacy practices of such other sites. We encourage our users to be aware when they leave our Website and to read the privacy statements of each and every Web site that collects personally identifying information. This privacy statement applies solely to information collected by the Website.
-                <br>
-                <br> This Privacy Policy applies to Fallible services only. We do not exercise control over the sites displayed as search results, sites that include Fallible applications, products or services, or links from within our various services. These other sites may place their own cookies or other files on your computer, collect data or solicit personal information from you.
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">Security</h2>
-            <p class="privacy-text">Fallible takes reasonable measures in order to safeguard users' personally identifying information.
-                <br>
-                <br> Payment information (such as credit card number and/or social security number) and information about the security vulnerability of users' website is protected, by using Secure Sockets Layer (SSL) software, which encrypts the aforementioned information when viewed online.
-                <br>
-                <br> While on a secured page, such as our order form, the lock icon on the bottom of Web browsers such as Firefox and Microsoft Internet Explorer becomes locked, as opposed to un-locked, or open, when users are just surfing.
-                <br>
-                <br> In addition, we limit access to personally identifying information to employees who we believe reasonably need to receive such information to provide our Services or in order to do their jobs and take other precautions we deem reasonable to protect the security of users' personally identifying information.
-                <br>
-                <br> However, users should be aware that we cannot fully guarantee the security of their personally identifying information. As in many computer systems, internet applications and software programs, unauthorized use, failure of hardware or software, etc. may be injuriousness to the confidentiality of users' personally identifying information.If users have any questions about security, please contact hello@fallible.co
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">Correcting/Updating/Deleting/Deactivating Personal Information</h2>
-            <p class="privacy-text">If a user's personally identifying information changes (such as zip code, phone, email or postal address), or if a user no longer desires our Service, we provide a way to correct, update or delete/deactivate users' personally identifying information. This can usually be done by emailing to hello@fallible.co
-                <br>
-                <br> When a request for user deletion is received, we will make all reasonable efforts to purge said data from our systems. However, due to the nature of our service, some information may not be fully removed due to backups or archived copies.
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">Notification of Changes</h2>
-            <p class="privacy-text">If we decide to change our privacy policy, we will post those changes to this privacy statement and other places we deem appropriate so our users are always aware of what information we collect, how we use it, and under what circumstances, if any, we disclose it. We will use information in accordance with the privacy policy under which the information was collected.
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-privacy">Contact Information</h2>
-            <p class="privacy-text">If users have any questions or suggestions regarding our privacy policy including privacy, information use, collection, or security please contact hello@fallible.co
-            </p>
-        </div>
-    </div>
-</div>
-<footer class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="lead-footer">
-                <form class="form-inline">
-                    <input class="form-control form-control-lg" type="text" placeholder="Your primary domain">&nbsp;
-                    <a class="btn button-inverse btn-lg" href="https://dashboard.fallible.co/signup" role="button">Get Started</a>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-icons">
-                <a href="https://www.linkedin.com/company/fallible"><i class="fa fa-linkedin icons" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/fallible_inc"><i class="fa fa-twitter icons" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/fallible.co"><i class="fa fa-facebook icons" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-pages">
-                <a class="page" href="privacy">Privacy Policy</a>
-                <a class="page" href="terms">Terms of Service</a>
-                <a class="page" href="refund">Refund Policy</a>
-                <a class="page" href="contactus">Contact</a>
-                <a class="page" href="https://angel.co/fallible/jobs/157321-software-engineer-security-r-d">Join Us</a>
-                <a class="page" href="https://fallible.co/blog">Blog</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 copyright">
-            <p>© 2016 Checksum Labs, Inc. All rights reserved. </p>
-        </div>
-    </div>
-</footer>
- 
+                    <p>Checksum Labs, Inc., a Delaware corporation doing business as Fallible ("Company," "we," "us," or "our"), is the owner and operator of https://fallible.co (the "Website"), which provides security audit services (the "Services").</p>
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+                    <p>This Privacy Policy constitutes an integral part of our Terms of Service and is subject to the provisions thereof, including with respect to limitation of liability and governing law. We encourage you to read our Privacy Policy as part of your evaluation process and to review it when we notify you of changes.</p>
+
+                    <h2>What This Privacy Policy Covers</h2>
+                    <p>This Privacy Policy describes:</p>
+                    <ul>
+                        <li>What personally identifying information we collect</li>
+                        <li>How we use the information</li>
+                        <li>With whom we may share the information</li>
+                        <li>What choices are available to you regarding collection, use and distribution of the information</li>
+                        <li>What security procedures are in place to protect your information</li>
+                        <li>How you can correct any inaccuracies in the information</li>
+                        <li>Your rights regarding your personal information</li>
+                    </ul>
+
+                    <h2>What Information We Collect and How We Use It</h2>
+
+                    <h3>Registration Information</h3>
+                    <p>To use our Services, you must complete our registration form. During registration, you may be required to provide:</p>
+                    <ul>
+                        <li>Name and contact information (first and last name, company name, address, email address, phone number)</li>
+                        <li>Job function and company details</li>
+                        <li>Website URLs and/or IP addresses for security testing</li>
+                        <li>Username and password</li>
+                    </ul>
+
+                    <p>We use this information to:</p>
+                    <ul>
+                        <li>Verify ownership of servers, URLs, and IP addresses</li>
+                        <li>Perform security testing of your systems</li>
+                        <li>Contact you about Services you have requested</li>
+                        <li>Provide customer support</li>
+                    </ul>
+
+                    <h3>Payment Information</h3>
+                    <p>When you order Services, you must provide payment information (such as credit card details). This information is:</p>
+                    <ul>
+                        <li>Used solely for billing purposes according to your service agreement</li>
+                        <li>Stored in encrypted format</li>
+                        <li>Transmitted only over secure, encrypted connections</li>
+                        <li>Shared only with our payment processor for transaction processing</li>
+                        <li>Never viewed in full by our internal staff once submitted</li>
+                    </ul>
+
+                    <h3>Service Delivery Data</h3>
+                    <p>Our Services collect information about servers connected to the IPs or URLs you provide during registration. We:</p>
+                    <ul>
+                        <li>Verify your authority to request security testing</li>
+                        <li>Collect security vulnerability data only after you request it</li>
+                        <li>Allow you to start and stop data collection through your Account Settings</li>
+                        <li>Collect only information accessible from the internet or provided by you directly</li>
+                        <li>Do not install software on your systems</li>
+                    </ul>
+
+                    <h3>User Profile</h3>
+                    <p>We create user profiles from collected information and log files to customize your experience on our Website.</p>
+
+                    <h3>Cookies</h3>
+                    <p>We use cookies to:</p>
+                    <ul>
+                        <li>Store user preferences</li>
+                        <li>Improve our services</li>
+                        <li>Track usage trends and analytics</li>
+                    </ul>
+                    <p>You can configure your browser to refuse cookies, but some features may not function properly. This policy covers only our use of cookies, not third-party cookies that may be placed by our service providers.</p>
+
+                    <h3>Log Files</h3>
+                    <p>We collect standard web server log information including:</p>
+                    <ul>
+                        <li>IP addresses</li>
+                        <li>Browser type and version</li>
+                        <li>Internet service provider</li>
+                        <li>Referring/exit pages</li>
+                        <li>Date/time stamps</li>
+                        <li>Click patterns</li>
+                    </ul>
+                    <p>This information is used to analyze trends, administer the site, and gather demographic information. Log data is not linked to personally identifying information except for IPs and URLs you provide during registration for service delivery purposes.</p>
+
+                    <h3>Communications</h3>
+                    <p>We may retain communications you send to us to:</p>
+                    <ul>
+                        <li>Process inquiries and requests</li>
+                        <li>Respond to customer service issues</li>
+                        <li>Improve our services</li>
+                        <li>Send service-related announcements</li>
+                    </ul>
+
+                    <h2>How We Share Your Information</h2>
+
+                    <h3>Aggregate Information</h3>
+                    <p>We may share aggregated, non-personally identifying demographic and security information with partners. This information cannot be used to identify individual users.</p>
+
+                    <h3>Limited Sharing of Personal Information</h3>
+                    <p>We do not sell or commercialize your personally identifying information. We may share your information only in these limited circumstances:</p>
+                    <ul>
+                        <li><strong>With your consent</strong> - When you specifically request or permit such sharing</li>
+                        <li><strong>Service providers</strong> - With contractors who help us provide Services, under strict confidentiality agreements</li>
+                        <li><strong>Business transactions</strong> - With affiliated companies or potential acquirers in connection with mergers, acquisitions, or asset sales, under confidentiality agreements</li>
+                        <li><strong>Legal compliance</strong> - To comply with applicable laws, court orders, or legal processes</li>
+                        <li><strong>Protection of rights</strong> - To prevent illegal activities, fraud, or threats to safety, or to defend our legal rights</li>
+                        <li><strong>Enforcement</strong> - To prevent violations of our Terms of Service or this Privacy Policy</li>
+                    </ul>
+
+                    <h3>Business Transitions</h3>
+                    <p>If we undergo a merger, acquisition, or sale of assets, your personally identifying information may be transferred as part of that transaction.</p>
+
+                    <h2>Your Rights and Choices</h2>
+
+                    <h3>Access and Correction</h3>
+                    <p>You can access, correct, update, or request deletion of your personal information by contacting us at <a href="mailto:hello@fallible.co">hello@fallible.co</a>.</p>
+
+                    <h3>Account Deactivation</h3>
+                    <p>You may deactivate your account at any time. Upon deactivation, we will make reasonable efforts to remove your data from our active systems, though some information may remain in backups or archives for a limited time.</p>
+
+                    <h3>Service Communications</h3>
+                    <p>You cannot opt out of service-related announcements (such as maintenance notifications) as these are necessary for service delivery. You can deactivate your account to stop all communications.</p>
+
+                    <h2>Data Retention</h2>
+                    <p>We retain your personal information for as long as necessary to provide Services and fulfill the purposes outlined in this Privacy Policy, typically:</p>
+                    <ul>
+                        <li>Account information: Until account deletion plus 30 days for processing</li>
+                        <li>Payment information: As required by financial regulations (typically 7 years)</li>
+                        <li>Service data: Until account deletion plus 30 days for processing</li>
+                        <li>Log files: 12 months</li>
+                    </ul>
+
+                    <h2>International Data Processing</h2>
+                    <p>We process personal information on servers located in the United States. If you are located outside the United States, your information will be transferred to and processed in the United States, which may have different data protection laws than your jurisdiction.</p>
+
+                    <h2>Security</h2>
+                    <p>We implement appropriate technical and organizational measures to protect your personal information, including:</p>
+                    <ul>
+                        <li>SSL encryption for data transmission</li>
+                        <li>Encrypted storage of payment information</li>
+                        <li>Limited access to personal information on a need-to-know basis</li>
+                        <li>Regular security assessments of our systems</li>
+                    </ul>
+                    <p>However, no method of transmission over the internet or electronic storage is completely secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+                    <p>If you have questions about security, please contact <a href="mailto:hello@fallible.co">hello@fallible.co</a>.</p>
+
+                    <h2>Third-Party Links and Services</h2>
+                    <p>Our Website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites. We encourage you to read the privacy policies of any third-party websites you visit.</p>
+                    <p>We may use third-party service providers (such as analytics providers) who may collect information about your use of our Website. These third parties operate under their own privacy policies.</p>
+
+                    <h2>Children's Privacy</h2>
+                    <p>Our Services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.</p>
+
+                    <h2>California Privacy Rights</h2>
+                    <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):</p>
+                    <ul>
+                        <li>Right to know what personal information we collect, use, and share</li>
+                        <li>Right to delete personal information we have collected from you</li>
+                        <li>Right to opt-out of the sale of personal information (we do not sell personal information)</li>
+                        <li>Right to non-discrimination for exercising your privacy rights</li>
+                    </ul>
+                    <p>To exercise these rights, contact us at <a href="mailto:hello@fallible.co">hello@fallible.co</a>.</p>
+
+                    <h2>Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. We will notify you of material changes by:</p>
+                    <ul>
+                        <li>Posting the updated policy on our Website</li>
+                        <li>Sending notice to your registered email address</li>
+                        <li>Providing 30 days advance notice of material changes</li>
+                    </ul>
+                    <p>Your continued use of our Services after changes become effective constitutes acceptance of the revised Privacy Policy.</p>
+
+                    <h2>Contact Information</h2>
+                    <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
+                    <div class="highlight-box">
+                        <p><strong>Checksum Labs, Inc.</strong><br>
+                        Email: <a href="mailto:hello@fallible.co">hello@fallible.co</a><br>
+                        Website: <a href="https://fallible.co">https://fallible.co</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fallible</h3>
+                    <p>Elite cybersecurity solutions for global organizations. Protecting your digital assets with cutting-edge security technologies and expert threat intelligence.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/fallible" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/fallible_inc" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="fallible-managed-security.html">Managed Security</a></p>
+                    <p><a href="https://android.fallible.co">Mobile Security</a></p>
+                    <p><a href="index.html#services">Security Consulting</a></p>
+                    <p><a href="index.html#services">Cloud Security</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="https://medium.com/@fallible">Security Blog</a></p>
+                    <p><a href="https://github.com/FallibleInc/security-guide-for-developers">Security Guide for Developers</a></p>
+                    <p><a href="https://github.com/FallibleInc">Open Source Projects</a></p>
+                    <p><a href="faq.html">FAQ</a></p>
+                    <p><a href="pricing.html">Pricing</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p><a href="contactus.html">Contact Us</a></p>
+                    <p><a href="privacy.html">Privacy Policy</a></p>
+                    <p><a href="terms.html">Terms of Service</a></p>
+                    <p><a href="refund.html">Refund Policy</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Checksum Labs, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 
-      ga('create', 'UA-68651333-1', 'auto');
-      ga('send', 'pageview');
-  </script>
-    <script src="scripts/vendor.js"></script>
-    
-    <script src="scripts/main.js"></script>
-    <!-- begin olark code -->
-    <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
-    f[z]=function(){
-    (a.s=a.s||[]).push(arguments)};var a=f[z]._={
-    },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
-    f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
-    0:+new Date};a.P=function(u){
-    a.p[u]=new Date-a.p[0]};function s(){
-    a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
-    hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
-    return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
-    b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
-    b.contentWindow[g].open()}catch(w){
-    c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
-    var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
-    b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
-    loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
-    /* custom configuration goes here (www.olark.com/documentation) */
-    olark.identify('4350-869-10-6474');/*]]>*/</script><noscript><a href="https://www.olark.com/site/4350-869-10-6474/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
-    <!-- end olark code -->
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68651333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
-
 </html>

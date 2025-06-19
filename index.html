@@ -1,353 +1,1286 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fallible - Elite cybersecurity firm with 10 years experience securing payment infrastructure. Professional penetration testing, mobile app security, and managed security services for global organizations.">
+    <meta name="keywords" content="cybersecurity, penetration testing, mobile app security, vulnerability assessment, security consulting, bangalore cybersecurity, managed security services">
+    <meta name="author" content="Checksum Labs, Inc.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     
-<meta name="description" content="Fallible secures your API endpoints and protects you from data breaches."/> 
- 
-    <title>Security for your APIs - Fallible</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fallible.co/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Fallible - Elite Cybersecurity Solutions">
+    <meta property="og:description" content="Elite cybersecurity firm with 10 years experience securing payment infrastructure. Professional penetration testing and managed security services for global organizations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fallible.co/">
+    <meta property="og:site_name" content="Fallible - Checksum Labs">
+    <meta property="og:image" content="https://fallible.co/apple-touch-icon.png">
+    <meta property="og:image:width" content="180">
+    <meta property="og:image:height" content="180">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@fallible_inc">
+    <meta name="twitter:creator" content="@fallible_inc">
+    <meta name="twitter:title" content="Fallible - Elite Cybersecurity Solutions">
+    <meta name="twitter:description" content="Elite cybersecurity firm with 10 years experience securing payment infrastructure. Professional penetration testing and managed security services.">
+    <meta name="twitter:image" content="https://fallible.co/apple-touch-icon.png">
+    
+    <title>Fallible - Elite Cybersecurity Solutions</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
-    <!-- Place favicon.ico in the root directory -->
     
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #f8fafc;
+            --tertiary-color: #f1f5f9;
+            --accent-color: #2563eb;
+            --accent-secondary: #1e40af;
+            --accent-muted: #3b82f6;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --text-light: #94a3b8;
+            --border-color: #e2e8f0;
+            --border-light: #f1f5f9;
+            --gradient-primary: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            --gradient-accent: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            --gradient-secondary: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-item a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--primary-color);
+            padding: 6rem 0 2rem;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.025em;
+        }
+
+        .hero-content .highlight {
+            color: var(--accent-color);
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        .experience-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--tertiary-color);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-secondary);
+            padding: 1rem 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            background: var(--tertiary-color);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .security-illustration {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(16, 185, 129, 0.02) 100%);
+            border-radius: 20px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+
+        .security-grid {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            gap: 12px;
+            padding: 30px;
+        }
+
+        .security-node {
+            position: relative;
+            background: var(--primary-color);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            min-height: 40px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .security-node::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 0%, var(--accent-color) 50%, transparent 100%);
+            opacity: 0;
+            animation: scan 4s ease-in-out infinite;
+        }
+
+        .security-node:nth-child(odd)::before {
+            animation-delay: 0.5s;
+        }
+
+        .security-node:nth-child(3n)::before {
+            animation-delay: 1s;
+        }
+
+        .security-node:nth-child(4n)::before {
+            animation-delay: 1.5s;
+        }
+
+        .security-node:nth-child(5n)::before {
+            animation-delay: 2s;
+        }
+
+        .security-node.active {
+            border-color: var(--accent-color);
+            background: rgba(37, 99, 235, 0.05);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+        }
+
+        .security-node.threat {
+            border-color: #ef4444;
+            background: rgba(239, 68, 68, 0.05);
+            animation: pulse-threat 2s ease-in-out infinite;
+        }
+
+        .security-node.secure {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .connection-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent-color) 20%, var(--accent-color) 80%, transparent 100%);
+            opacity: 0.3;
+            animation: data-flow 3s ease-in-out infinite;
+            transform-origin: left;
+        }
+
+        .security-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            z-index: 10;
+            box-shadow: 0 6px 30px rgba(37, 99, 235, 0.4);
+            animation: pulse-center 3s ease-in-out infinite;
+            border: 3px solid white;
+        }
+
+        @keyframes scan {
+            0%, 100% { 
+                opacity: 0; 
+                transform: translateX(-100%); 
+            }
+            50% { 
+                opacity: 0.6; 
+                transform: translateX(100%); 
+            }
+        }
+
+        @keyframes pulse-threat {
+            0%, 100% { 
+                box-shadow: 0 0 0 rgba(239, 68, 68, 0.4); 
+            }
+            50% { 
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.6); 
+            }
+        }
+
+        @keyframes pulse-center {
+            0%, 100% { 
+                transform: translate(-50%, -50%) scale(1); 
+                box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3); 
+            }
+            50% { 
+                transform: translate(-50%, -50%) scale(1.1); 
+                box-shadow: 0 6px 30px rgba(37, 99, 235, 0.5); 
+            }
+        }
+
+        @keyframes data-flow {
+            0% { 
+                opacity: 0.2; 
+                transform: scaleX(0); 
+            }
+            50% { 
+                opacity: 0.6; 
+                transform: scaleX(1); 
+            }
+            100% { 
+                opacity: 0.2; 
+                transform: scaleX(0); 
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            letter-spacing: -0.025em;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--primary-color);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-color);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+
+
+        /* Media Coverage */
+        .media-coverage {
+            padding: 6rem 0;
+            background: var(--secondary-color);
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .media-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            background: var(--primary-color);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .media-item:hover {
+            opacity: 1;
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-color);
+        }
+
+        .media-item img {
+            max-width: 120px;
+            max-height: 50px;
+            object-fit: contain;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+            font-size: 0.875rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+                padding-top: 6rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .security-illustration {
+                width: 300px;
+                height: 300px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Checksum Labs, Inc.",
+        "alternateName": "Fallible",
+        "description": "Elite cybersecurity solutions for global organizations with 10 years of experience securing payment infrastructure",
+        "url": "https://fallible.co",
+        "logo": "https://fallible.co/apple-touch-icon.png",
+        "image": "https://fallible.co/apple-touch-icon.png",
+        "telephone": "+1-415-315-9200",
+        "email": "hello@fallible.co",
+        "foundingDate": "2015",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "HD 038, WeWork Pavilion, 62/63 The Pavilion, Church Street",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "postalCode": "560001",
+            "addressCountry": "IN"
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Global"
+        },
+        "serviceArea": {
+            "@type": "Place",
+            "name": "Worldwide"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/fallible",
+            "https://twitter.com/fallible_inc",
+            "https://medium.com/@fallible",
+            "https://github.com/FallibleInc"
+        ],
+        "knowsAbout": [
+            "Cybersecurity",
+            "Penetration Testing",
+            "Mobile App Security",
+            "Cloud Security",
+            "Vulnerability Assessment",
+            "Security Consulting",
+            "Managed Security Services",
+            "Payment Security"
+        ],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "10 Years Cybersecurity Experience"
+            }
+        ],
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Managed Security Services",
+                    "description": "24/7 security monitoring, incident response, and threat hunting"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mobile App Security",
+                    "description": "Comprehensive security testing for Android and iOS applications"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cloud Security",
+                    "description": "Multi-cloud security assessments and continuous monitoring"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Penetration Testing",
+                    "description": "Advanced vulnerability assessments and penetration testing"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Checksum Labs, Inc.",
+        "description": "Leading cybersecurity company in Bangalore providing enterprise security solutions",
+        "image": "https://fallible.co/apple-touch-icon.png",
+        "telephone": "+1-415-315-9200",
+        "email": "hello@fallible.co",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "HD 038, WeWork Pavilion, 62/63 The Pavilion, Church Street",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "postalCode": "560001",
+            "addressCountry": "India"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "12.9716",
+            "longitude": "77.5946"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "priceRange": "$$$$",
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "12.9716",
+                "longitude": "77.5946"
+            },
+            "geoRadius": "50000"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Cybersecurity Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Payment Security",
+                        "description": "Secured more than half of India's online payment infrastructure"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 </head>
-
 <body>
-    <!--[if lt IE 10]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-  
- <div class="container-out">
-        <div class="container">
-    <header>
-        <nav class="navbar navbar-light navbar-fixed-top" id="top-nav">
-            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                &#9776;
-            </button>
-            <a class="navbar-brand" href="/">Fallible</a>
-            <ul class="nav navbar-nav text-right pull-md-right pull-lg-right hidden-sm-down">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">PRODUCTS</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="fallible-managed-security">Fallible Managed Security</a>
-                        <a class="dropdown-item" href="cybersecurity-due-diligence">Cybersecurity Due Diligence</a>
-                        <a class="dropdown-item" href="checksum-security-scanner">Checksum Security Scanner </a>
-                        <a class="dropdown-item" href="portfolio-package">Portfolio Package</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pricing">PRICING</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://fallible.co/blog">BLOG</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn dashboard-button" href="https://dashboard.fallible.co/login">Open dashboard</a>
-                </li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Fallible</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#services">Services</a></li>
+                <li class="nav-item"><a href="fallible-managed-security.html">Managed Security</a></li>
+                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a href="https://medium.com/@fallible">Blog</a></li>
+                <li class="nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a href="contactus.html">Contact</a></li>
             </ul>
-            <div class="collapse" id="exCollapsingNavbar">
-                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    &#9776;
-                </button>
+            <a href="https://dashboard.fallible.co/login" class="cta-button">Dashboard</a>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="experience-badge">
+                    <i class="fas fa-award"></i>
+                    <span>10 Years of Excellence</span>
+                </div>
+                <h1>Trusted <span class="highlight">Cybersecurity</span> for Global Organizations</h1>
+                <p class="subtitle">A decade of protecting billion-dollar enterprises, financial institutions, and venture capital firms with proven security expertise and unmatched industry knowledge.</p>
                 
-                <p><a class="mobile-link" href="pricing">Pricing</a> </p>
-                <p><a class="mobile-link">Blog</a></p>
-                <p><a class="mobile-link" href="/faq">FAQ</a></p>
-                
-                <p><a class="mobile-link" href="/cybersecurity-due-diligence">Due Diligence</a></p>
-                <p><a class="mobile-link" href="/checksum-security-scanner">Checksum Scanner</a></p>
-                <p><a class="mobile-link" href="/fallible-managed-security">Managed Security</a></p>
-                <p><a class="mobile-link" href="/portfolio-package">Portfolio Package</a></p>
-                <p> <a class="btn btn-danger" href="https://dashboard.fallible.co/login">Login</a></p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years of Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Enterprise Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50%+</span>
+                        <span class="stat-label">India's Payment Infrastructure</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="https://dashboard.fallible.co/signup" class="btn-primary">Sign Up Now</a>
+                    <a href="#services" class="btn-secondary">Our Services</a>
+                </div>
             </div>
-        </nav>
-    </header>
-</div>
 
-        <div class="hero">
-    <video class="hidden-sm-down video" autoplay loop>
-        <source src= "media/MP4/Noted.mp4" type="video/mp4">
-        <source src="media/WEBM/Noted.webm" type="video/webm">
-    </video>
-    <div class="flex-container">
-        <!-- <h1 class="flex-item heading">Secure your <span class="changing-text" id="text">Web apps</span> </h1> -->
-        <div class="main-text"><h1 class="flex-item heading" id="text">Securing <span class="changing-text">40% of online payments</span> in India</h1>
-        <h2 class="flex-item sub-heading">Accurate, actionable security reports for each code deploy. First report within a week. </h2></div>
-        <div class="lead">
-        	<form class="form-inline">
-        		<input class="form-control form-control-lg" type="text" placeholder="Your domain (e.g. google.com)">&nbsp;
-        		<a class="btn btn-danger btn-lg" href="https://dashboard.fallible.co/signup" role="button">Get Started</a>
-        	</form>
-        </div>
-    </div>
-</div>
-
- </div>
-    <div class="tiles">
-    <div class="double-tile">
-        <svg id="network" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-    <g stroke="#fbfbfb" stroke-width="3">
-        <path d="m760.934,400-48.356,180.467" />
-        <path d="m760.934,400-673.512-180.467" />
-        <path d="m760.934,400-180.467,312.578" />
-        <path d="m760.934,400-541.401-312.578" />
-        <path d="m760.934,400-360.934,360.934" />
-        <path d="m760.934,400-360.934-360.934" />
-        <path d="m760.934,400-541.401,312.578" />
-        <path d="m760.934,400-180.467-312.578" />
-        <path d="m760.934,400-673.512,180.467" />
-        <path d="m760.934,400-48.356-180.467" />
-        <path d="m39.066,400 673.512,180.467" />
-        <path d="m39.066,400 48.356-180.467" />
-        <path d="m39.066,400 541.401,312.578" />
-        <path d="m39.066,400 180.467-312.578" />
-        <path d="m39.066,400 360.934,360.934" />
-        <path d="m39.066,400 360.934-360.934" />
-        <path d="m39.066,400 180.467,312.578" />
-        <path d="m39.066,400 541.401-312.578" />
-        <path d="m39.066,400 48.356,180.467" />
-        <path d="m39.066,400 673.512-180.467" />
-        <path d="m712.578,580.467-132.111,132.111" />
-        <path d="m712.578,580.467-493.045-493.045" />
-        <path d="m712.578,580.467-312.578,180.467" />
-        <path d="m712.578,580.467-312.578-541.401" />
-        <path d="m712.578,580.467-493.045,132.111" />
-        <path d="m712.578,580.467-132.111-493.045" />
-        <path d="m712.578,580.467h-625.156" />
-        <path d="m712.578,580.467v-360.934" />
-        <path d="m87.422,219.533 493.045,493.045" />
-        <path d="m87.422,219.533 132.111-132.111" />
-        <path d="m87.422,219.533 312.578,541.401" />
-        <path d="m87.422,219.533 312.578-180.467" />
-        <path d="m87.422,219.533 132.111,493.045" />
-        <path d="m87.422,219.533 493.045-132.111" />
-        <path d="m87.422,219.533v360.934" />
-        <path d="m87.422,219.533h625.156" />
-        <path d="m580.467,712.578-180.467,48.356" />
-        <path d="m580.467,712.578-180.467-673.512" />
-        <path d="m580.467,712.578h-360.934" />
-        <path d="m580.467,712.578v-625.156" />
-        <path d="m580.467,712.578-493.045-132.111" />
-        <path d="m580.467,712.578 132.111-493.045" />
-        <path d="m219.533,87.422 180.467,673.512" />
-        <path d="m219.533,87.422 180.467-48.356" />
-        <path d="m219.533,87.422v625.156" />
-        <path d="m219.533,87.422h360.934" />
-        <path d="m219.533,87.422-132.111,493.045" />
-        <path d="m219.533,87.422 493.045,132.111" />
-        <path d="m400,760.934-180.467-48.356" />
-        <path d="m400,760.934 180.467-673.512" />
-        <path d="m400,760.934-312.578-180.467" />
-        <path d="m400,760.934 312.578-541.401" />
-        <path d="m400,39.066-180.467,673.512" />
-        <path d="m400,39.066 180.467,48.356" />
-        <path d="m400,39.066-312.578,541.401" />
-        <path d="m400,39.066 312.578,180.467" />
-        <path d="m219.533,712.578-132.111-132.111" />
-        <path d="m219.533,712.578 493.045-493.045" />
-        <path d="m580.467,87.422-493.045,493.045" />
-        <path d="m580.467,87.422 132.111,132.111" />
-    </g>
-    <g fill="#DD6461" stroke="#fff" stroke-width="2">
-        <path d="m768.934,400a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m47.066,400a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m720.578,580.467a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m95.422,219.533a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m588.467,712.578a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m227.533,87.422a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m408,760.934a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m408,39.066a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m227.533,712.578a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m588.467,87.422a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m95.422,580.467a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-        <path d="m720.578,219.533a8,8 0 1,0 -16,0 8,8 0 1,0 16,0" />
-    </g>
-</svg>
-
-        <div>
-            <h3>Free secret leaks scanner for Android apps.</h3>
-            <br>
-            <a href="https://android.fallible.co" class="btn btn-danger">
-                Scan Now
-            </a>
-        </div>
-    </div>
-    <div class="half-tiles-container">
-        <div class="half-tile">
-            <div>
-                <h3>Security Guide for Developers</h3></div>
-            <div>
-                <a href="https://github.com/FallibleInc/security-guide-for-developers" class="btn btn-danger">
-                    Follow on GitHub
-                </a>
-                <br>
+            <div class="hero-visual">
+                <div class="security-illustration">
+                    <div class="security-grid">
+                        <!-- Row 1 -->
+                        <div class="security-node"></div>
+                        <div class="security-node active"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node secure"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node threat"></div>
+                        <div class="security-node"></div>
+                        <!-- Row 2 -->
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node active"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node secure"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <!-- Row 3 -->
+                        <div class="security-node secure"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node active"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node threat"></div>
+                        <!-- Row 4 -->
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node threat"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node secure"></div>
+                        <div class="security-node"></div>
+                        <!-- Row 5 -->
+                        <div class="security-node"></div>
+                        <div class="security-node active"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node secure"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <!-- Row 6 -->
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node active"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node threat"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node secure"></div>
+                        <!-- Row 7 -->
+                        <div class="security-node threat"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node secure"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node active"></div>
+                        <div class="security-node"></div>
+                        <!-- Row 8 -->
+                        <div class="security-node"></div>
+                        <div class="security-node secure"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node"></div>
+                        <div class="security-node active"></div>
+                    </div>
+                    <div class="security-center">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="half-tile">
-            <div>
-                <h3>Checksum Security Scanner</h3></div>
-            <div>
-                <a href="checksum-security-scanner" class="btn btn-danger">
-                    Early access
-                </a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Security Services</h2>
+                <p class="section-subtitle">Comprehensive cybersecurity solutions tailored for enterprise-grade protection and compliance requirements.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Managed Security Services</h3>
+                    <p>24/7 security monitoring, incident response, and threat hunting. Complete security operations center (SOC) services for enterprise environments.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Security</h3>
+                    <p>Comprehensive security testing for Android and iOS applications. Secret leak detection, API security analysis, and compliance verification.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Security</h3>
+                    <p>Multi-cloud security assessments, configuration reviews, and continuous monitoring. Expertise in AWS, Azure, and Google Cloud platforms.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Security Consulting</h3>
+                    <p>Expert security consulting for enterprises, startups, and financial institutions. Strategic security planning, architecture reviews, and compliance guidance.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Penetration Testing</h3>
+                    <p>Advanced vulnerability assessments and penetration testing. Comprehensive security testing with detailed reporting and remediation guidance.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Security Training</h3>
+                    <p>Comprehensive security awareness training for development teams. Secure coding practices, threat modeling, and security culture development.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="half-tiles-container">
-        <div class="half-tile">
-            <h3>Issues in OTP based auth</h3>
-            <div>
-                <a href="https://fallible.co/blog/2016/05/10/otp-based-authentication-and-urbanclap" class="btn btn-danger">
-                    Read more
-                </a>
-                <br>
+    </section>
+
+
+    <!-- Media Coverage -->
+    <section class="media-coverage">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured In</h2>
+                <p class="section-subtitle">Recognized by leading media outlets for our cybersecurity expertise and industry contributions.</p>
+            </div>
+
+            <div class="media-grid">
+                <div class="media-item">
+                    <a href="http://www.zdnet.com/article/secret-tokens-found-hard-coded-in-hundreds-of-android-apps/">
+                        <img src="media/zdnet.jpg" alt="ZDNet">
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="https://www.scmagazine.com/flaw-in-mcdonalds-mobile-app-in-india-delivers-not-so-tasty-options/article/645622/">
+                        <img src="media/scmedia.png" alt="SC Magazine">
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="http://www.bbc.com/news/technology-39265282">
+                        <img src="media/bbc.png" alt="BBC News">
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="http://www.securityweek.com/mcdonalds-app-leaks-details-22-million-customers">
+                        <img src="media/securityweek.png" alt="Security Week">
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="https://www.techinasia.com/indian-firm-exposes-go-jek-data-leaks">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/TechinAsia_logo.png" alt="Tech in Asia">
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="http://timesofindia.indiatimes.com/tech/tech-news/SaaS-startup-Fallible-to-launch-its-first-product-Checksum/articleshow/52450800.cms">
+                        <img src="media/toi.png" alt="Times of India">
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="https://news.nextbigwhat.com/indian-startup-security-297/">
+                        <img src="media/next-big.png" alt="NextBigWhat">
+                    </a>
+                </div>
+                <div class="media-item">
+                    <a href="http://gadgets.ndtv.com/apps/news/new-product-security-index-reveals-indias-most-and-least-secure-startups-797312">
+                        <img src="media/ndtv.png" alt="NDTV">
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="half-tile">
-            <h3>Automating data leak detection</h3>
-            <div>
-                <a href="https://fallible.co/blog/2016/03/13/Automating-data-leak-detection" class="btn btn-danger">
-                    Read more
-                </a>
-                <br>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fallible</h3>
+                    <p>Elite cybersecurity solutions for global organizations. Protecting your digital assets with cutting-edge security technologies and expert threat intelligence.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/fallible" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/fallible_inc" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="fallible-managed-security.html">Managed Security</a></p>
+                    <p><a href="https://android.fallible.co">Mobile Security</a></p>
+                    <p><a href="#services">Security Consulting</a></p>
+                    <p><a href="#services">Cloud Security</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="https://medium.com/@fallible">Security Blog</a></p>
+                    <p><a href="https://github.com/FallibleInc/security-guide-for-developers">Security Guide for Developers</a></p>
+                    <p><a href="https://github.com/FallibleInc">Open Source Projects</a></p>
+                    <p><a href="faq.html">FAQ</a></p>
+                    <p><a href="pricing.html">Pricing</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p><a href="contactus.html">Contact Us</a></p>
+                    <p><a href="privacy.html">Privacy Policy</a></p>
+                    <p><a href="terms.html">Terms of Service</a></p>
+                    <p><a href="refund.html">Refund Policy</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Checksum Labs, Inc. All rights reserved.</p>
             </div>
         </div>
-    </div>
-</div>
+    </footer>
 
-
-    <div class="container-fluid">
-    <div class="row explained-content">
-         <div class="col-sm-6 col-md-6 col-lg-6 explained-box">
-            <p class="quote"><span class="blockquote">&#8220;</span> 97%  of exploits used one of top 10  publicly disclosed vulnerability (CVE)  which was not fixed by the victim company. <span class="blockquote">&#8221;</span></p>
-             <div class="features-logo"><img src="media/verizon.png" alt="Forbes logo" class="featured-img img-responsive"></div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 explained-box">
-            <p class="quote"><span class="blockquote">&#8220;</span> Many organizations have significant network security in place but it’s not enough as 84% of all attacks are happening on the application layer. <span class="blockquote">&#8221;</span></p>
-            <div class="features-logo"><img src="media/Forbes_logo.svg.png" alt="Forbes logo" class="featured-img img-responsive"></div>
-        </div>
-    </div>
-</div>
-
-    <div class="container">
-    <div class="row">
-        <div class=" col-sm-12 col-md-12 col-lg-12 featured-heading">
-            <h3> Featured On </h3>
-        </div>
-    </div>
-    <div class="row news-images">
-        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
-            <a href="http://www.zdnet.com/article/secret-tokens-found-hard-coded-in-hundreds-of-android-apps/"><img class="media-img img-responsive" src="media/zdnet.jpg" alt="Business strndard logo"></a>
-        </div>
-        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
-            <a href="https://www.scmagazine.com/flaw-in-mcdonalds-mobile-app-in-india-delivers-not-so-tasty-options/article/645622/"><img class="media-img img-responsive" src="media/scmedia.png" alt="SC Magazine logo"></a>
-        </div>
-        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
-            <a href="http://www.bbc.com/news/technology-39265282"><img class="media-img img-responsive" src="media/bbc.png" alt="BBC News logo"></a>
-        </div>
-        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
-            <a href="http://www.securityweek.com/mcdonalds-app-leaks-details-22-million-customers"><img class="media-img img-responsive" src="media/securityweek.png" alt="Security Week logo"></a>
-        </div>
-        
-        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
-            <a href="https://www.producthunt.com/books/the-security-checklist"><img class="media-img img-responsive" src="media/product-hunt.png" alt="Product hunt logo"></a>
-        </div>
-        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
-            <a href="http://timesofindia.indiatimes.com/tech/tech-news/SaaS-startup-Fallible-to-launch-its-first-product-Checksum/articleshow/52450800.cms"><img class="media-img img-responsive" src="media/toi.png" alt="Times of India logo"></a>
-        </div>
-        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
-            <a href="https://news.nextbigwhat.com/indian-startup-security-297/"><img class="media-img img-responsive" src="media/next-big.png" alt="Next big what logo"></a>
-        </div>
-        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-6 col-sm-6 news-feature">
-            <a href="http://gadgets.ndtv.com/apps/news/new-product-security-index-reveals-indias-most-and-least-secure-startups-797312"><img class="media-img img-responsive" src="media/ndtv.png" alt="Ndtv logo"></a>
-        </div>
-    </div>
-</div>
-
-
-    <footer class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="lead-footer">
-                <form class="form-inline">
-                    <input class="form-control form-control-lg" type="text" placeholder="Your primary domain">&nbsp;
-                    <a class="btn button-inverse btn-lg" href="https://dashboard.fallible.co/signup" role="button">Get Started</a>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-icons">
-                <a href="https://www.linkedin.com/company/fallible"><i class="fa fa-linkedin icons" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/fallible_inc"><i class="fa fa-twitter icons" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/fallible.co"><i class="fa fa-facebook icons" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-pages">
-                <a class="page" href="privacy">Privacy Policy</a>
-                <a class="page" href="terms">Terms of Service</a>
-                <a class="page" href="refund">Refund Policy</a>
-                <a class="page" href="contactus">Contact</a>
-                <a class="page" href="https://angel.co/fallible/jobs/157321-software-engineer-security-r-d">Join Us</a>
-                <a class="page" href="https://fallible.co/blog">Blog</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 copyright">
-            <p>© 2022-23 Bayesian Technologies Private Limited. All rights reserved. </p>
-        </div>
-    </div>
-</footer>
-
-    
-
-
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- JavaScript -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-      ga('create', 'UA-68651333-1', 'auto');
-      ga('send', 'pageview');
-  </script>
-    <script src="scripts/vendor.js"></script>
-    
-    <script src="scripts/main.js"></script>
-    <!-- begin olark code -->
-    <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
-    f[z]=function(){
-    (a.s=a.s||[]).push(arguments)};var a=f[z]._={
-    },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
-    f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
-    0:+new Date};a.P=function(u){
-    a.p[u]=new Date-a.p[0]};function s(){
-    a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
-    hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
-    return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
-    b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
-    b.contentWindow[g].open()}catch(w){
-    c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
-    var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
-    b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
-    loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
-    /* custom configuration goes here (www.olark.com/documentation) */
-    olark.identify('4350-869-10-6474');/*]]>*/</script><noscript><a href="https://www.olark.com/site/4350-869-10-6474/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
-    <!-- end olark code -->
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Security grid animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const nodes = document.querySelectorAll('.security-node');
+            const grid = document.querySelector('.security-grid');
+            
+            // Add more connection lines for 8x8 grid
+            const connections = [
+                [1, 10], [10, 20], [20, 35], [3, 13], [13, 30], [6, 14], [14, 40],
+                [9, 18], [18, 27], [27, 45], [16, 24], [24, 41], [31, 39], [39, 55],
+                [7, 15], [15, 31], [23, 32], [32, 48], [33, 42], [42, 58], [49, 57]
+            ];
+            
+            connections.forEach(([start, end], index) => {
+                if (nodes[start] && nodes[end]) {
+                    const line = document.createElement('div');
+                    line.className = 'connection-line';
+                    line.style.animationDelay = `${index * 0.3}s`;
+                    
+                    // Calculate position between nodes
+                    setTimeout(() => {
+                        const startRect = nodes[start].getBoundingClientRect();
+                        const endRect = nodes[end].getBoundingClientRect();
+                        const gridRect = grid.getBoundingClientRect();
+                        
+                        const x1 = startRect.left + startRect.width / 2 - gridRect.left;
+                        const y1 = startRect.top + startRect.height / 2 - gridRect.top;
+                        const x2 = endRect.left + endRect.width / 2 - gridRect.left;
+                        const y2 = endRect.top + endRect.height / 2 - gridRect.top;
+                        
+                        const length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                        const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+                        
+                        line.style.width = length + 'px';
+                        line.style.left = x1 + 'px';
+                        line.style.top = y1 + 'px';
+                        line.style.transform = `rotate(${angle}deg)`;
+                        
+                        grid.appendChild(line);
+                    }, 100);
+                }
+            });
+            
+            // Animate node states with more variety
+            setInterval(() => {
+                const randomNode = nodes[Math.floor(Math.random() * nodes.length)];
+                const states = ['', 'active', 'secure', 'threat'];
+                const currentState = randomNode.className.split(' ')[1] || '';
+                let newState = states[Math.floor(Math.random() * states.length)];
+                
+                // Avoid same state
+                while (newState === currentState) {
+                    newState = states[Math.floor(Math.random() * states.length)];
+                }
+                
+                randomNode.className = 'security-node ' + newState;
+            }, 1500);
+            
+            // Add wave scanning effect
+            setInterval(() => {
+                const rowSize = 8;
+                for (let row = 0; row < 8; row++) {
+                    setTimeout(() => {
+                        for (let col = 0; col < rowSize; col++) {
+                            const nodeIndex = row * rowSize + col;
+                            if (nodes[nodeIndex]) {
+                                nodes[nodeIndex].style.transform = 'scale(1.1)';
+                                setTimeout(() => {
+                                    nodes[nodeIndex].style.transform = 'scale(1)';
+                                }, 200);
+                            }
+                        }
+                    }, row * 100);
+                }
+            }, 8000);
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68651333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
-
 </html>

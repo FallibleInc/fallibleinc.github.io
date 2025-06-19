@@ -1,467 +1,700 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fallible terms of service and software subscription agreement. Legal terms and conditions for cybersecurity services and security software platform.">
+    <meta name="keywords" content="fallible terms of service, cybersecurity terms, security services agreement, software subscription terms, SaaS agreement">
+    <meta name="author" content="Checksum Labs, Inc.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#2563eb">
     
-<meta name="description" content="Fallible Security Software as a Service Subscription agreement"/> 
-
-    <title>Terms and Conditions</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fallible.co/terms.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Terms of Service - Fallible">
+    <meta property="og:description" content="Fallible terms of service and subscription agreement for cybersecurity services and security software platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fallible.co/terms.html">
+    <meta property="og:site_name" content="Fallible - Checksum Labs">
+    <meta property="og:image" content="https://fallible.co/apple-touch-icon.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@fallible_inc">
+    <meta name="twitter:title" content="Terms of Service - Fallible">
+    <meta name="twitter:description" content="Fallible terms of service and subscription agreement for cybersecurity services.">
+    <meta name="twitter:image" content="https://fallible.co/apple-touch-icon.png">
+    
+    <title>Terms of Service - Fallible</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
-    <!-- Place favicon.ico in the root directory -->
     
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #f8fafc;
+            --tertiary-color: #f1f5f9;
+            --accent-color: #2563eb;
+            --accent-secondary: #1e40af;
+            --accent-muted: #3b82f6;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --text-light: #94a3b8;
+            --border-color: #e2e8f0;
+            --border-light: #f1f5f9;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-item a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-secondary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding-top: 6rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 4rem 0;
+            background: var(--secondary-color);
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--primary-color);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .content-wrapper h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .content-wrapper h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-wrapper p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .content-wrapper ul {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .content-wrapper li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .content-wrapper strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .content-wrapper a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .content-wrapper a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: var(--tertiary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+            font-size: 0.875rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .content-wrapper {
+                padding: 2rem;
+                margin: 0 1rem;
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Terms of Service",
+        "description": "Fallible terms of service and subscription agreement for cybersecurity services",
+        "url": "https://fallible.co/terms.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Fallible - Checksum Labs",
+            "url": "https://fallible.co"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Checksum Labs, Inc."
+        }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://fallible.co/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Terms of Service",
+                "item": "https://fallible.co/terms.html"
+            }
+        ]
+    }
+    </script>
 </head>
-
 <body>
-    <!--[if lt IE 10]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-   <div class="container">
-    <header>
-        <nav class="navbar navbar-light navbar-fixed-top" id="top-nav">
-            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                &#9776;
-            </button>
-            <a class="navbar-brand" href="/">Fallible</a>
-            <ul class="nav navbar-nav text-right pull-md-right pull-lg-right hidden-sm-down">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">PRODUCTS</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="fallible-managed-security">Fallible Managed Security</a>
-                        <a class="dropdown-item" href="cybersecurity-due-diligence">Cybersecurity Due Diligence</a>
-                        <a class="dropdown-item" href="checksum-security-scanner">Checksum Security Scanner </a>
-                        <a class="dropdown-item" href="portfolio-package">Portfolio Package</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pricing">PRICING</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://fallible.co/blog">BLOG</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn dashboard-button" href="https://dashboard.fallible.co/login">Open dashboard</a>
-                </li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Fallible</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html#services">Services</a></li>
+                <li class="nav-item"><a href="fallible-managed-security.html">Managed Security</a></li>
+                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a href="https://medium.com/@fallible">Blog</a></li>
+                <li class="nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a href="contactus.html">Contact</a></li>
             </ul>
-            <div class="collapse" id="exCollapsingNavbar">
-                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    &#9776;
-                </button>
-                
-                <p><a class="mobile-link" href="pricing">Pricing</a> </p>
-                <p><a class="mobile-link">Blog</a></p>
-                <p><a class="mobile-link" href="/faq">FAQ</a></p>
-                
-                <p><a class="mobile-link" href="/cybersecurity-due-diligence">Due Diligence</a></p>
-                <p><a class="mobile-link" href="/checksum-security-scanner">Checksum Scanner</a></p>
-                <p><a class="mobile-link" href="/fallible-managed-security">Managed Security</a></p>
-                <p><a class="mobile-link" href="/portfolio-package">Portfolio Package</a></p>
-                <p> <a class="btn btn-danger" href="https://dashboard.fallible.co/login">Login</a></p>
-            </div>
-        </nav>
-    </header>
-</div>
+            <a href="https://dashboard.fallible.co/login" class="cta-button">Dashboard</a>
+        </div>
+    </nav>
 
-<div class="container service">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="heading-service">CHECKSUM LABS, INC. ("FALLIBLE") SOFTWARE AS A SERVICE ("SAAS") SUBSCRIPTION AGREEMENT (THE "AGREEMENT")</h2>
-            <p class="service-text">Last Updated: 2016-06-22</p>
-            <p class="service-text">PLEASE READ THIS AGREEMENT CAREFULLY BEFORE PURCHASING ANY OF THE FALLIBLE SOFTWARE APPLICATIONS AND DOCUMENTATION (COLLECTIVELY THE "PRODUCTS AND SERVICES"). CHECKSUM LABS, INC. ("FALLIBLE", "COMPANY", "WE", "US" or "OUR") AND THEIR AFFILIATES AND SUBSIDIARIES IS WILLING TO LICENSE THE USE OF THE PRODUCTS AND SERVICES TO YOU ONLY ON THE CONDITION THAT YOU ACCEPT ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. BY IN ANY WAY ASSENTING ELECTRONICALLY OR USING THE PRODUCTS AND SERVICES YOU AGREE TO COMPLY WITH ALL THE TERMS AND CONDITIONS CONTAINED IN THIS AGREEMENT INCLUDING FALLIBLE REFUND AND CANCELLATION POLICY, ANY MATERIALS AVAILABLE ON THE WEBSITES LOCATED AT FALLIBLE.CO AND THEIR SUBDOMAINS (THE "WEBSITES") AND THE PRIVACY POLICY (link), WHICH ARE HEREBY INCORPORATED BY REFERENCE INTO THIS AGREEMENT. IF YOU DO NOT AGREE TO THE TERMS AND CONDITIONS CONTAINED IN THIS AGREEMENT, YOU ARE NOT AUTHORIZED TO USE OR ACCESS THE PRODUCTS AND SERVICES.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">1. TERMS OF USE</h2>
-            <div class="service-text">1.1
-                <br>
-                <p>Subject to the terms and conditions of this Agreement, Fallible agrees to provide you, on a SaaS basis, the Products and Services in exchange for the subscription fees (the "Subscription Fees") agreed to by you and Fallible or Fallible's third party service providers including payment processors (each a "Third Party Service Provider").</p>
-                1.2
-                <br>
-                <p>Fallible reserves the right to update and change, from time to time, this Agreement and all documents incorporated herein by reference. Fallible may change this Agreement by posting a new version without notice to you. Use of the Products and Services after any such change constitutes acceptance of such change.</p>
-                1.3
-                <br>
-                <p>You represent to Fallible that you are at least 19 years old. If you are entering into this Agreement on behalf of a company or other legal entity, you represent that you have the authority to bind such company or legal entity to this Agreement.</p>
-                1.4
-                <br>
-                <p>By subscribing for the Products and Services, you become a registered user of the Products and Services. When your subscription sign up is completed, you will be able to access the Products and Services through one of the Websites. You may activate your account via login on the Websites, which requires that you enter your email address and password, which is obtained during the sign up process. You are liable to pay Subscription Fees even if you do not activate your account.</p>
-                1.5
-                <br>
-                <p>All upgrades of Products and Services are deemed to be part of the Products and Services and are subject to this Agreement.</p>
-                1.6
-                <br>
-                <p>Except as provided in the Fallible Refund and Cancellation Policy, all sales of Products and Services are final and the subscription fees payable by you for Products and Services are non-refundable.</p>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Terms of Service</h1>
+                <p class="page-subtitle">Software as a Service subscription agreement and terms of use for Fallible cybersecurity services</p>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">2. THIRD PARTY DATA PROVIDER DATA, FALLIBE DATA AND THIRD PARTY WEB SITES.</h2>
-            <div class="service-text">2.1
-                <br>
-                <p>The Products and Services use data (the "Third Party Data") obtained by Fallible in accordance with terms and conditions of license agreements (the "Third Party Data Provider Agreements") between Fallible and certain third party data providers (each a "Third Party Data Provider"). Certain Products and Services may use Data provided directly by Fallible ("Fallible Data"). Your use of Third Party Data, Fallible Data and any other data accessed through the Products and Services (such as other user information) is limited strictly to the purpose of using the Products and Services. Except as permitted by this Agreement, any other use of Third Party Data, Fallible Data or any other data accessed through the Products and Services will be a breach of this Agreement. For clarity, this restriction does not apply to data which you provide to Fallible or which Fallible obtains through the authorized use of your account and password information with Third Party Data Providers.</p>
-                2.2
-                <p>The Products and Services may contain links to third party web sites. Fallible has no control over any third party web sites and therefore any use by you of such websites is at your sole discretion and risk. Fallible assumes no responsibility or obligations for any such use of third party web sites.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">3. LICENSE GRANT/RESTRICTIONS ON USE.</h2>
-            <div class="service-text">3.1
-                <p>The Products and Services contain software ("Licensor Software") licensed from Fallible's licensors ("Fallible Licensors"). The Products and Services are hereby licensed to you on a limited, worldwide (except as limited below), non-exclusive, non- sublicenseable basis on the terms and conditions set forth herein.</p>
-                3.2
-                <p>This Agreement defines legal use of the Products and Services, all updates, revisions, and substitutions. All rights not expressly granted to you are reserved by Fallible or their respective owners.</p>
-                3.3
-                <p>Your license to the Products and Services continues until it is terminated by either party. You may terminate the software license granted hereunder by cancelling your subscription for the Products and Services, however, except as provided in our Refund and Cancellation Policy, you will not be entitled to a refund of any prepaid or other subscription fees. The software license granted hereunder terminates automatically if you violate any term of this Agreement, Fallible publicly posts a written notice of termination on any of the Websites, or Fallible sends a written notice of termination to you.</p>
-                3.4
-                <p>The Products and Services may include certain products or services including, without limitation, Licensor Software, that have additional specific terms or conditions relating to use or licensing that you will have to accept in order to use such products or services. Fallible will provide notice of such terms and conditions prior to your use or access to such products or services.</p>
-            </div>
-            3.5
-            <div>
-                <h2 class="subheading-service">(a) YOU MAY:</h2>
-                <div class="service-text">
-                    (i)
-                    <p>use the Products and Services, any updates provided by Fallible (in its sole discretion), Licensor Software, Third Party Data, Fallible Data or any other data accessed through the Products and Services, for your own personal or commercial use or benefit as expressly allowed by this Agreement;</p>
-                </div>
-            </div>
-            <div>
-                <h2 class="subheading-service">(b) YOU MAY NOT, DIRECTLY OR INDIRECTLY:</h2>
-                <div class="service-text">
-                    (i)
-                    <p>use the Products and Services, Licensor Software, Third Party Data, Fallible Data or any other data accessed through the Products and Services, except as expressly allowed by this Agreement;</p>
-                    (ii)
-                    <p>decompile, reverse engineer, disassemble, modify, rent, lease, loan, distribute, or make any attempt to discover the source code or underlying algorithms of, the Products and Services, Licensor Software or any portion thereof, or create derivative works or improvements based upon the Products and Services, Licensor Software or any portion thereof;</p>
-                    (iii)
-                    <p>use the Products and Services, Licensor Software, Third Party Data, Fallible Data or any other data accessed through the Products and Services in any unlawful manner, for any unlawful purpose, or in any manner inconsistent with this Agreement;</p>
-                    (iv)
-                    <p>use the Products and Services to send, save, collect, upload, post, publish, distribute or transmit any content that:</p>
-                    <ol type="A">
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="highlight-box">
+                        <p><strong>Last Updated:</strong> Jan 19, 2025</p>
+                    </div>
+
+                    <h2>CHECKSUM LABS, INC. d/b/a FALLIBLE SOFTWARE AS A SERVICE ("SAAS") SUBSCRIPTION AGREEMENT</h2>
+                    
+                    <p><em>Last Updated: Jan 19, 2025</em></p>
+
+                    <p>PLEASE READ THIS AGREEMENT CAREFULLY BEFORE PURCHASING ANY OF THE FALLIBLE SOFTWARE APPLICATIONS AND DOCUMENTATION (COLLECTIVELY THE "PRODUCTS AND SERVICES"). CHECKSUM LABS, INC., a Delaware corporation doing business as Fallible ("Company", "we", "us" or "our") IS WILLING TO LICENSE THE USE OF THE PRODUCTS AND SERVICES TO YOU ONLY ON THE CONDITION THAT YOU ACCEPT ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. BY ELECTRONICALLY ASSENTING OR USING THE PRODUCTS AND SERVICES YOU AGREE TO COMPLY WITH ALL THE TERMS AND CONDITIONS CONTAINED IN THIS AGREEMENT INCLUDING THE REFUND AND CANCELLATION POLICY, ANY MATERIALS AVAILABLE ON THE WEBSITES LOCATED AT FALLIBLE.CO AND THEIR SUBDOMAINS (THE "WEBSITES") AND THE PRIVACY POLICY (https://fallible.co/privacy), WHICH ARE HEREBY INCORPORATED BY REFERENCE INTO THIS AGREEMENT. IF YOU DO NOT AGREE TO THE TERMS AND CONDITIONS CONTAINED IN THIS AGREEMENT, YOU ARE NOT AUTHORIZED TO USE OR ACCESS THE PRODUCTS AND SERVICES.</p>
+
+                    <h3>1. TERMS OF USE</h3>
+                    <p>1.1 Subject to the terms and conditions of this Agreement, Company agrees to provide you, on a SaaS basis, the Products and Services in exchange for the subscription fees (the "Subscription Fees") agreed to by you and Company or Company's third party service providers including payment processors (each a "Third Party Service Provider").</p>
+                    
+                    <p>1.2 Company reserves the right to update and change, from time to time, this Agreement and all documents incorporated herein by reference. Company will provide thirty (30) days advance notice of material changes by posting notice on the Websites or sending notice to your registered email address. Use of the Products and Services after the effective date of any such change constitutes acceptance of such change.</p>
+                    
+                    <p>1.3 You represent to Company that you are at least 19 years old. If you are entering into this Agreement on behalf of a company or other legal entity, you represent that you have the authority to bind such company or legal entity to this Agreement.</p>
+                    
+                    <p>1.4 By subscribing for the Products and Services, you become a registered user of the Products and Services. When your subscription sign up is completed, you will be able to access the Products and Services through one of the Websites. You may activate your account via login on the Websites, which requires that you enter your email address and password, which is obtained during the sign up process. You are liable to pay Subscription Fees even if you do not activate your account.</p>
+                    
+                    <p>1.5 All upgrades of Products and Services are deemed to be part of the Products and Services and are subject to this Agreement.</p>
+                    
+                    <p>1.6 Except as provided in the Refund and Cancellation Policy set forth in Section 5.8, all sales of Products and Services are final and the subscription fees payable by you for Products and Services are non-refundable.</p>
+
+                    <h3>2. THIRD PARTY DATA PROVIDER DATA, COMPANY DATA AND THIRD PARTY WEB SITES</h3>
+                    <p>2.1 The Products and Services use data (the "Third Party Data") obtained by Company in accordance with terms and conditions of license agreements (the "Third Party Data Provider Agreements") between Company and certain third party data providers (each a "Third Party Data Provider"). Certain Products and Services may use Data provided directly by Company ("Company Data"). Your use of Third Party Data, Company Data and any other data accessed through the Products and Services (such as other user information) is limited strictly to the purpose of using the Products and Services. Except as permitted by this Agreement, any other use of Third Party Data, Company Data or any other data accessed through the Products and Services will be a breach of this Agreement. For clarity, this restriction does not apply to data which you provide to Company or which Company obtains through the authorized use of your account and password information with Third Party Data Providers.</p>
+                    
+                    <p>2.2 The Products and Services may contain links to third party web sites. Company has no control over any third party web sites and therefore any use by you of such websites is at your sole discretion and risk. Company assumes no responsibility or obligations for any such use of third party web sites.</p>
+
+                    <h3>3. LICENSE GRANT/RESTRICTIONS ON USE</h3>
+                    <p>3.1 The Products and Services contain software ("Licensor Software") licensed from Company's licensors ("Company Licensors"). The Products and Services are hereby licensed to you on a limited, worldwide (except as limited below), non-exclusive, non-sublicenseable basis on the terms and conditions set forth herein.</p>
+                    
+                    <p>3.2 This Agreement defines legal use of the Products and Services, all updates, revisions, and substitutions. All rights not expressly granted to you are reserved by Company or their respective owners.</p>
+                    
+                    <p>3.3 Your license to the Products and Services continues until it is terminated by either party. You may terminate the software license granted hereunder by cancelling your subscription for the Products and Services, however, except as provided in our Refund and Cancellation Policy, you will not be entitled to a refund of any prepaid or other subscription fees. The software license granted hereunder terminates automatically if you violate any material term of this Agreement, Company publicly posts a written notice of termination on any of the Websites, or Company sends a written notice of termination to you.</p>
+                    
+                    <p>3.4 The Products and Services may include certain products or services including, without limitation, Licensor Software, that have additional specific terms or conditions relating to use or licensing that you will have to accept in order to use such products or services. Company will provide notice of such terms and conditions prior to your use or access to such products or services.</p>
+                    
+                    <p><strong>3.5 (a) YOU MAY:</strong></p>
+                    <p>(i) use the Products and Services, any updates provided by Company (in its sole discretion), Licensor Software, Third Party Data, Company Data or any other data accessed through the Products and Services, for your own personal or commercial use or benefit as expressly allowed by this Agreement;</p>
+                    
+                    <p><strong>(b) YOU MAY NOT, DIRECTLY OR INDIRECTLY:</strong></p>
+                    <p>(i) use the Products and Services, Licensor Software, Third Party Data, Company Data or any other data accessed through the Products and Services, except as expressly allowed by this Agreement;</p>
+                    
+                    <p>(ii) decompile, reverse engineer, disassemble, modify, rent, lease, loan, distribute, or make any attempt to discover the source code or underlying algorithms of, the Products and Services, Licensor Software or any portion thereof, or create derivative works or improvements based upon the Products and Services, Licensor Software or any portion thereof;</p>
+                    
+                    <p>(iii) use the Products and Services, Licensor Software, Third Party Data, Company Data or any other data accessed through the Products and Services in any unlawful manner, for any unlawful purpose, or in any manner inconsistent with this Agreement;</p>
+                    
+                    <p>(iv) use the Products and Services to send, save, collect, upload, post, publish, distribute or transmit any content that:</p>
+                    <ul>
                         <li>is harmful, threatening, abusive, harassing, tortious, defamatory, vulgar, obscene, libelous, invasive of another's privacy, hateful, or racially, ethnically or otherwise objectionable;</li>
-                        <li>
-                            contains a solicitation of funds, advertising, or solicitation for goods and services;</li>
-                        <li>
-                            Fallible determines is contrary to the interest of Fallible, the Third Party Service Providers, Fallible Licensors, Third Party Data Providers, or other users of the Products and Services;</li>
-                        <li>
-                            is false, inaccurate, misleading or fraudulent;</li>
-                        <li>
-                            may manipulate identifiers in order to disguise the origin of any content transmitted through the Products and Services or any associated software or hardware, or the source of any content; or</li>
-                        <li>
-                            you do not have a right to make available under any law, contract or other legal relationship.</li>
-                    </ol>
-                    (v)
-                    <p>use the Products and Services to:</p>
-                    <ol type="A">
-                        <li>
-                            download, transmit or otherwise make available any material that contains malicious software or code, software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware;</li>
-                        <li>
-                            bypass any measures that Fallible has taken to restrict access to the Products and Services;</li>
-                        <li>
-                            use any robot, spider, scraper or other automated means to access the Products and Services for any purpose;</li>
-                        <li>
-                            interfere with, impose an unreasonable traffic load upon or disrupt the software, hardware, web site, servers or networks connected to the Products and Services, or disobey any requirements, procedures, policies or regulations of Fallible's networks connected to the Products and Services; or</li>
-                        <li>
-                            violate, appropriate or infringe any right of any third party.</li>
-                    </ol>
-                    (vi)
-                    <p>
-                        use or export the Products and Services in violation of applicable laws or regulations;</p>
-                    (vii)
-                    <p>
-                        sell, lease, rent, loan, transfer or sublicense use of the Products and Services, in whole or in part, to third parties or provide access thereto or derive income from the use or provision of the Products and Services, via service bureau, time sharing or application service provider services or otherwise; whether for direct commercial or monetary gain or otherwise, without Fallible's prior written permission;</p>
-                    (viii)
-                    <p>
-                        use the Products and Services in any manner that could damage, disable, overburden, or impair Fallible's services or any of Fallible's business partners' (including, without limitation, Third Party Service Providers, Fallible Licensors and Third Party Data Providers) services (e.g., you may not use the Products and Services in an automated manner), or use the Products and Services in any manner that could interfere with any other party's use and enjoyment of Fallible's services or Fallible's business partners' services; or</p>
-                    (ix)
-                    <p>
-                        use any Third Party Data to advertise, market to or otherwise solicit any customers of the Third Party Data Providers.</p>
-                </div>
-            </div>
-            3.6
-            <h2 class="subheading-service">(a) YOU WILL:</h2>
-            <div class="service-text">
-                (i)
-                <p>
-                    be solely responsible to provide or maintain any hardware or other software required for you to use the Products and Services;</p>
-                (ii)
-                <p>
-                    have all necessary right, power and authority to, or have obtained all necessary consents and rights in order to, provide all of the information that you provide through the Products and Services, and for all other purposes of this Agreement;</p>
-                (iii)
-                <p>
-                    ensure the confidentiality of your information and be, at all times, solely responsible for all activities that occur with respect to the Products and Services under your account or password, and you will notify Fallible immediately of any unauthorized use;</p>
-                (iv)
-                <p>
-                    be solely responsible for all information received, sent, saved, collected or distributed through the Products and Services by you or in respect of your account or password, however transmitted; and therefore you are entirely responsible for all content that is developed, derived, received, sent, saved, collected, distributed or otherwise made available through the Products and Services.</p>
-            </div>
-            3.7
-            <p class="service-text">
-                Fallible may impose an additional charge or a restriction of any services at any time, if your use of the Products and Services imposes a considerable effect on Fallible's (or any of its third party providers' including, without limitation, the Third Party Service Providers, Fallible Licensors and Third Party Data providers) resources or system performance. Fallible shall have sole discretion as to what constitutes excessive use or what activity is considered excessive or has a "considerable effect". Fallible is responsible for monitoring such excessive use for the account as a whole, and has no responsibility to identify your individual end-user, employee, or other agent who may or may not be responsible for the excessive use of the Products and Services.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">4. OWNERSHIP AND RELATIONSHIP OF PARTIES.</h2>
-            <div class="service-text">4.1
-                <p>
-                    The Products and Services and Licensor Software are protected by copyrights, trademarks, service marks, international treaties, and/or other proprietary rights and laws of the United States. You agree to abide by all applicable proprietary rights laws and other laws, as well as any additional copyright notices or restrictions contained in the Products and Services, the Licensor Software or this Agreement.</p>
-                4.2
-                <p>
-                    Fallible and Fallible Licensors own all right, title, and interest in and to their applicable contributions to the Products and Services. Other than the limited license granted herein, the software license granted under this Agreement grants you no right, title, or interest in any intellectual property owned or licensed by Fallible or Fallible Licensors, including, without limitation, the Products and Services, Licensor Software, Fallible trademarks and Licensor trademarks, and creates no relationship between you and Fallible or Fallible Licensors other than that of licensor to licensee. This Agreement grants you no right, title and interest in any Third Party Data, Fallible Data or any other data accessed through the Products and Services.</p>
-                4.3
-                <p>
-                    You agree not to assign, copy, transfer, or transmit the Products and Services, Licensor Software, Third Party Data, Fallible Data or any other data accessed through the Products and Services, to any third party. Your license to use the Products and Services, Licensor Software, Third Party Data, Fallible Data and any other data accessed through the Products and Services, will terminate if you violate these restrictions.</p>
-                4.4
-                <p>
-                    If your license terminates, you agree to cease any and all use of the Products and Services, Licensor Software, Third Party Data, Fallible Data and any other data accessed through the Products and Services. All rights in any Third Party Data, Licensor Software, and any third-party data servers, including all ownership rights, are reserved by and remain with the respective third parties.</p>
-                4.5
-                <p>
-                    You represent and warrant that you own all right, title and interest to any data stored by you on Fallible's host computer system using the Products and Services or uploaded or submitted to the Websites (the "Subscriber Data"). You hereby grant Fallible a royalty free, perpetual, irrevocable, worldwide, non-exclusive, transferable license (with the right to sublicense) to use, reproduce, edit, copy, modify, adapt, publish, translate, distribute (in whole or in part through multiple tiers), stream, store, retain, publicly perform or display, transmit, scan, reformat, frame, excerpt, embed or incorporate in other works (in any form, media or technology now known or hereafter developed) and create derivative works using any Subscriber Data you provide, excluding personally identifiable information, in connection with the Products and Services and the Websites for the full term of any copyright that may exist in such material with or without attribution.</p>
-                4.6
-                <p>
-                    You acknowledge and agree that Fallible may compile aggregate components of Subscriber Data, excluding personally identifiable information, together with information received from other subscribers to the Products and Services to create compiled data (the "Compiled Data"). Fallible agrees to present the Compiled Data in a manner that will not reveal personally identifiable information. You acknowledge and agree that Compiled Data is owned solely by Fallible.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">5. PAYMENT TERMS</h2>
-            <div class="service-text">
-                5.1
-                <p>
-                    The payment terms contained in this Section 5 apply only if you have subscribed for the Products and Services directly from Fallible. If you have subscribed for the Products and Services through a Third Party Service Provider, the applicable payment terms will be as agreed to by you and such Third Party Service Provider.</p>
-                5.2
-                <p>
-                    Fallible reserves the right to change the Subscription Fees at any time. Fallible charges and collects Subscription Fees in advance for use of the Products and Services.</p>
-                5.3
-                <p>
-                    The Subscription Fees do not include any payment for telecommunications and computer hardware, software, telecommunications access charges, lines or connections or other equipment and services required to access and use the Products and Services.</p>
-                5.4
-                <p>
-                    All Subscription Fees, Taxes and other charges will be billed as you've agreed to in the sign up process. </p>
-                5.5
-                <p>
-                    You agree to promptly pay Fallible in the event of any refusal of your credit card issuer to pay any amount to Fallible for any reason.</p>
-                5.6
-                <p>
-                    You must provide Fallible with complete and accurate billing and contact information. YOU REPRESENT AND WARRANT THAT YOU HAVE NOT FALSELY IDENTIFIED YOURSELF NOR PROVIDED ANY FALSE INFORMATION TO GAIN ACCESS TO THE PRODUCTS AND SERVICES AND THAT YOUR BILLING INFORMATION IS CORRECT.</p>
-                5.7
-                <p>
-                    Fallible reserves the right to revoke any stated offer and to correct any errors, inaccuracies or omissions, including after an order has been submitted, whether or not the order has been confirmed and your credit card charged. If your credit card has been charged for the purchase and an order is cancelled, Fallible will issue a credit to your credit card account in the amount of the charge. Individual bank policies will dictate when this amount is credited to your account.</p>
-                5.8
-                <p>
-                    In case of termination of subscription, the advance payment (if any) for the remaining months will be transferred back to the subscriber company within 2 to 4 weeks.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">6. SUPPORT AND SOFTWARE UPDATES/ AVAILABILITY OF ONLINE SERVICES.</h2>
-            <div class="service-text">
-                6.1
-                <p>
-                    Fallible will provide you with customer support and/or software upgrades, enhancements, or modifications for the Products and Services (collectively, "Support") provided that Fallible, in its sole discretion, may terminate such Support at any time without notice to you. Fallible may change, suspend, or discontinue any aspect of the Products and Services at any time, including the availability of any Products and Services related feature, database, or content. Fallible may also impose limits on certain features and services or restrict your access to parts or all of the Products and Services or the Websites without notice or liability.</p>
-                6.2
-                <p>
-                    Fallible will use commercially reasonable efforts to make the Products and Services available at all times. Fallible does not guarantee that the Products and Services will always be available.</p>
-                6.3
-                <p>
-                    Fallible may suspend or take down the Products and Services at any time to perform routine or emergency maintenance. Where reasonably practicable Fallible will provide you advance notice when the Products and Services will be unavailable and for how long</p>
-                6.4
-                <p>
-                    Fallible will, in general, attempt to schedule maintenance and downtime to the Products and Services during off-peak hours to try to minimize the impact to the Products and Services and you.</p>
-                6.5
-                <p>
-                    Fallible is not responsible at all to provide Products and Services or any part thereof or perform any of its obligations under these this Agreement if it is prevented from doing so by any reason beyond Fallible's reasonable control. These reasons can include, but are not limited to, acts of God, floods, fires, earthquakes, civil unrest, terrorism, war, strikes, Internet service provider acts or omissions or online attacks.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">7. DISCLAIMER OF WARRANTIES BY FALLIBLE.</h2>
-            <div class="service-text">
-                7.1
-                <p>USE OF THE PRODUCTS AND SERVICES, LICENSOR SOFTWARE, THE SUPPORT, THIRD PARTY DATA, FALLIBLE DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES IS AT YOUR SOLE RISK. THEY ARE PROVIDED "AS IS." ANY MATERIAL OR SERVICE DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE PRODUCTS AND SERVICES IS DONE AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD AND/OR USE OF ANY SUCH MATERIAL OR SERVICE.</p>
-                7.2
-                <p>FALLIBLE, ITS OFFICERS, DIRECTORS, EMPLOYEES, CONTRACTORS, AGENTS, AFFILIATES, AND ASSIGNS (COLLECTIVELY, THE "FALLIBLE ENTITIES"), THIRD PARTY SERVICE PROVIDERS, FALLIBLE LICENSORS AND THIRD PARTY DATA PROVIDERS DO NOT REPRESENT THAT THE PRODUCTS AND SERVICES, SUPPORT, LICENSOR SOFTWARE, THIRD PARTY DATA, FALLIBLE DATA OR ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES IS APPROPRIATE OR AVAILABLE FOR USE OUTSIDE CANADA. IT IS YOUR RESPONSIBILITY TO ENSURE THAT YOUR USE OF THE PRODUCTS AND SERVICES, SUPPORT, LICENSOR SOFTWARE, THIRD PARTY DATA, FALLIBLE DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES IS IN COMPLIANCE WITH APPLICABLE LOCAL LAWS.</p>
-                7.3
-                <p>
-                    THE FALLIBLE ENTITIES, THIRD PARTY SERVICE PROVIDERS, FALLIBLE LICENSORS AND THIRD PARTY DATA PROVIDERS EXPRESSLY DISCLAIM ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, RELATING TO THE PRODUCTS AND SERVICES, SUPPORT AND ANY OTHER SERVICES RELATED TO THE PRODUCTS AND SERVICES (THE "FALLIBLE SOFTWARE SERVICES"), LICENSOR SOFTWARE, THIRD PARTY DATA, FALLIBLE DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES, OR THE ACCURACY, TIMELINESS, COMPLETENESS, OR ADEQUACY OF THE PRODUCTS AND SERVICES, SUPPORT, FALLIBLE SOFTWARE SERVICES, LICENSOR SOFTWARE, THIRD PARTY DATA, FALLIBLE DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES, INCLUDING THE IMPLIED WARRANTIES OF TITLE, MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
-                7.4
-                <p>
-                    IF THE PRODUCTS AND SERVICES, SUPPORT, FALLIBLE SOFTWARE SERVICES LICENSOR SOFTWARE, THIRD PARTY DATA, FALLIBLE DATA OR ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES PROVES DEFECTIVE, YOU (AND NOT THE FALLIBLE ENTITIES, FALLIBLE LICENSORS, THIRD PARTY SERVICE PROVIDERS OR THIRD PARTY DATA PROVIDERS) ASSUME THE ENTIRE COST OF ALL REPAIR OR INJURY OF ANY KIND, EVEN IF SOME OR ALL OF THE FALLIBLE ENTITIES, THIRD PARTY SERVICE PROVIDERS, FALLIBLE LICENSORS OR THIRD PARTY DATA PROVIDERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH A DEFECT OR DAMAGES. SOME JURISDICTIONS DO NOT ALLOW RESTRICTIONS ON IMPLIED WARRANTIES SO SOME OF THESE LIMITATIONS MAY NOT APPLY TO YOU.</p>
-                7.5
-                <p>YOU UNDERSTAND THAT ASSESSING COMPUTER SECURITY IS HIGHLY COMPLEX AND CHANGEABLE, AND COMPANY MAKES NO WARRANTY THAT THE SERVICES WILL FIND EVERY VULNERABILITY IN YOUR NETWORK OR SERVER(S), OR THAT THE SOLUTIONS SUGGESTED AND ADVICE PROVIDED BY COMPANY WILL BE COMPLETE OR ERROR-FREE.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">8. LIMITATION OF LIABILITY.</h2>
-            <div class="service-text">
-                8.1
-                <p>
-                    YOU EXPRESSLY UNDERSTAND AND AGREE THAT THE FALLIBLE ENTITIES, THIRD PARTY SERVICE PROVIDERS, FALLIBLE LICENSORS AND THIRD PARTY DATA PROVIDERS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES (EVEN IF SOME OR ALL OF THE FALLIBLE ENTITIES, THIRD PARTY SERVICE PROVIDERS, FALLIBLE LICENSORS OR THIRD PARTY DATA PROVIDERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), RESULTING FROM:</p>
-                <div>(A)
-                    <p>
-                        UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA BY A THIRD PARTY(HACKER) NOT AUTHORIZED BY US.</p>
-                    (B)
-                    <p>
-                        THE USE OR THE INABILITY TO USE THE PRODUCTS AND SERVICES;</p>
-                    (C)
-                    <p>
-                        THE COST OF PROCUREMENT OF SUBSTITUTE PRODUCTS AND SERVICES;</p>
-                    (D)
-                    <p>
-                        STATEMENTS OR CONDUCT OF ANY THIRD PARTY USING THE PRODUCTS AND SERVICES; OR</p>
-                    (E)
-                    <p>
-                        ANY OTHER MATTER RELATING TO THE PRODUCTS AND SERVICES, SUPPORT OR FALLIBLE SOFTWARE SERVICES.</p>
-                </div>
-                8.2
-                <p>
-                    DAMAGES EXCLUDED BY THIS SECTION 8 INCLUDE, WITHOUT LIMITATION, THOSE FOR LOSS OF BUSINESS PROFITS, INJURY TO PERSON OR PROPERTY, BUSINESS INTERRUPTION, OR LOSS OF BUSINESS OR PERSONAL INFORMATION. SOME JURISDICTIONS DO NOT ALLOW LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES SO THIS RESTRICTION MAY NOT APPLY TO YOU.</p>
-                8.3
-                <p>
-                    INFORMATION PROVIDED THROUGH THE PRODUCTS AND SERVICES MAY BE DELAYED, INACCURATE, OR CONTAIN ERRORS OR OMISSIONS, AND THE FALLIBLE ENTITIES, THIRD PARTY SERVICE PROVIDERS, FALLIBLE LICENSORS AND THIRD PARTY DATA PROVIDERS WILL HAVE NO LIABILITY WITH RESPECT THERETO. FALLIBLE MAY CHANGE OR DISCONTINUE ANY ASPECT OR FEATURE OF THE PRODUCTS AND SERVICES OR THE USE OF ALL OR ANY FEATURES OR TECHNOLOGY IN THE PRODUCTS AND SERVICES AT ANY TIME WITHOUT PRIOR NOTICE TO YOU, INCLUDING, BUT NOT LIMITED TO, CONTENT OR HOURS OF AVAILABILITY.</p>
-                8.4
-                <p>
-                    WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, IN NO EVENT WILL THE AGGREGATE LIABILITY OF THE FALLIBLE ENTITIES, THIRD PARTY SERVICE PROVIDERS, FALLIBLE LICENSORS AND THIRD PARTY DATA PROVIDERS TO YOU RELATING TO, ARISING OUT OF OR IN CONNECTION WITH THE PRODUCTS AND SERVICES, SUPPORT, FALLIBLE SOFTWARE SERVICES, LICENSOR SOFTWARE, THIRD PARTY DATA, FALLIBLE DATA OR ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES EXCEED THE UNUSED PORTION OF YOUR PREPAID LICENSE FEE FOR USE OF THE DAMAGES EXCLUDED BY THIS SECTION 8 INCLUDE, WITHOUT PRODUCTS AND SERVICES. YOU EXPRESSLY AGREE THAT THE LIMITATIONS ON LIABILITY CONTAINED IN THIS AGREEMENT ARE REASONABLE AND CONSTITUTE A MATERIAL INDUCEMENT TO FALLIBLE PROVIDING THE PRODUCTS AND SERVICES, THE SUPPORT, THE FALLIBLE SOFTWARE SERVICES, LICENSOR SOFTWARE, THIRD PARTY DATA, FALLIBLE DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES WITHOUT WHICH FALLIBLE WOULD NOT PROVIDE THE PRODUCTS AND SERVICES, SUPPORT, THE FALLIBLE SOFTWARE SERVICES, LICENSOR SOFTWARE, THIRD PARTY DATA, FALLIBLE DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">9. NON-DISCLOSURE AGREEMENT</h2>
-            <div class="service-text">
-                <p>We have no intention of using your data and we will not do so. We want to keep our NDA with you as clear and simple as possible, and it appears below:</p>
-                <div>
-                    <ol>
-                        <li> Fallible will not use any of the information obtained by us while auditing your company for any purpose other than to help you secure your software application.
-                            <li> Fallible will never take any rights to your data nor will we offer the rights to your data to any third party.
-                                <li> Fallible will not share your data with anyone other than with its own internal staff, on an as-needed basis.
-                                    <li> Every Fallible employee and independent contractor who may have access to your information is bound by his or her own Non-Disclosure Agreement with Fallible.
-                                        <li> All information that you provide to Fallible or will be stored securely.
-                                            <li> Under this agreement, the bugs or vulnerabilities found by us will not be disclosed to any third party unless you authorize us to do so.
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">10. INDEMNIFICATION.</h2>
-            <div class="service-text">
-                <p>
-                    You agree to indemnify and hold the Fallible Entities, Third Party Service Providers, Fallible Licensors and Third Party Data Providers harmless from any claim or demand, including reasonable attorneys' fees, made by any third party in connection with or arising out of your use of the Products and Services, Licensor Software, Support, Fallible Software Services, Third Party Data, Fallible Data, any other data accessed through the Products and Services, your violation of any terms or conditions of this Agreement, your violation of applicable laws, or your violation of any rights of another person or entity.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">11. NO GENERAL WAIVER; SEVERABILITY.</h2>
-            <div class="service-text">
-                <p>The failure of Fallible to exercise or enforce any right or provision of this Agreement shall not constitute a waiver of such right or provision. If any provision of this Agreement or any part of any provision of this Agreement is held by a court of competent jurisdiction to be unenforceable then the remainder of this Agreement shall continue to be of full force and effect.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">12. ENTIRE AGREEMENT.</h2>
-            <div class="service-text">
-                <p>This Agreement and the other documents incorporated by reference into this Agreement constitute the entire understanding between the parties respecting use of the Products and Services, superseding all prior agreements between you and Fallible. In the event of any conflict between the terms and conditions of this Agreement and other documents incorporated by reference, the terms and conditions of this Agreement will control.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="subheading-service">13. SURVIVAL.</h2>
-            <div class="service-text">
-                <p>All terms and conditions of this Agreement that by their nature should reasonably survive, including, without limitation, Sections 4 (OWNERSHIP AND RELATIONSHIP OF PARTIES), 7 (DISCLAIMER OF WARRANTIES BY FALLIBLE), 8 (LIMITATION OF LIABILITY), 9 (NON-DISCLOSURE AGREEMENT) and 10 (INDEMNIFICATION), will survive any termination of this Agreement.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<footer class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="lead-footer">
-                <form class="form-inline">
-                    <input class="form-control form-control-lg" type="text" placeholder="Your primary domain">&nbsp;
-                    <a class="btn button-inverse btn-lg" href="https://dashboard.fallible.co/signup" role="button">Get Started</a>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-icons">
-                <a href="https://www.linkedin.com/company/fallible"><i class="fa fa-linkedin icons" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/fallible_inc"><i class="fa fa-twitter icons" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/fallible.co"><i class="fa fa-facebook icons" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="align-pages">
-                <a class="page" href="privacy">Privacy Policy</a>
-                <a class="page" href="terms">Terms of Service</a>
-                <a class="page" href="refund">Refund Policy</a>
-                <a class="page" href="contactus">Contact</a>
-                <a class="page" href="https://angel.co/fallible/jobs/157321-software-engineer-security-r-d">Join Us</a>
-                <a class="page" href="https://fallible.co/blog">Blog</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 copyright">
-            <p>© 2016 Checksum Labs, Inc. All rights reserved. </p>
-        </div>
-    </div>
-</footer>
- 
+                        <li>contains a solicitation of funds, advertising, or solicitation for goods and services;</li>
+                        <li>Company determines is contrary to the interest of Company, the Third Party Service Providers, Company Licensors, Third Party Data Providers, or other users of the Products and Services;</li>
+                        <li>is false, inaccurate, misleading or fraudulent;</li>
+                        <li>may manipulate identifiers in order to disguise the origin of any content transmitted through the Products and Services or any associated software or hardware, or the source of any content; or</li>
+                        <li>you do not have a right to make available under any law, contract or other legal relationship.</li>
+                    </ul>
+                    
+                    <p>(v) use the Products and Services to:</p>
+                    <ul>
+                        <li>download, transmit or otherwise make available any material that contains malicious software or code, software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware;</li>
+                        <li>bypass any measures that Company has taken to restrict access to the Products and Services;</li>
+                        <li>use any robot, spider, scraper or other automated means to access the Products and Services for any purpose;</li>
+                        <li>interfere with, impose an unreasonable traffic load upon or disrupt the software, hardware, web site, servers or networks connected to the Products and Services, or disobey any requirements, procedures, policies or regulations of Company's networks connected to the Products and Services; or</li>
+                        <li>violate, appropriate or infringe any right of any third party.</li>
+                    </ul>
+                    
+                    <p>(vi) use or export the Products and Services in violation of applicable laws or regulations;</p>
+                    
+                    <p>(vii) sell, lease, rent, loan, transfer or sublicense use of the Products and Services, in whole or in part, to third parties or provide access thereto or derive income from the use or provision of the Products and Services, via service bureau, time sharing or application service provider services or otherwise; whether for direct commercial or monetary gain or otherwise, without Company's prior written permission;</p>
+                    
+                    <p>(viii) use the Products and Services in any manner that could damage, disable, overburden, or impair Company's services or any of Company's business partners' (including, without limitation, Third Party Service Providers, Company Licensors and Third Party Data Providers) services (e.g., you may not use the Products and Services in an automated manner), or use the Products and Services in any manner that could interfere with any other party's use and enjoyment of Company's services or Company's business partners' services; or</p>
+                    
+                    <p>(ix) use any Third Party Data to advertise, market to or otherwise solicit any customers of the Third Party Data Providers.</p>
+                    
+                    <p><strong>3.6 (a) YOU WILL:</strong></p>
+                    <p>(i) be solely responsible to provide or maintain any hardware or other software required for you to use the Products and Services;</p>
+                    
+                    <p>(ii) have all necessary right, power and authority to, or have obtained all necessary consents and rights in order to, provide all of the information that you provide through the Products and Services, and for all other purposes of this Agreement;</p>
+                    
+                    <p>(iii) ensure the confidentiality of your information and be, at all times, solely responsible for all activities that occur with respect to the Products and Services under your account or password, and you will notify Company immediately of any unauthorized use;</p>
+                    
+                    <p>(iv) be solely responsible for all information received, sent, saved, collected or distributed through the Products and Services by you or in respect of your account or password, however transmitted; and therefore you are entirely responsible for all content that is developed, derived, received, sent, saved, collected, distributed or otherwise made available through the Products and Services.</p>
+                    
+                    <p>3.7 Company may impose an additional charge or a restriction of any services at any time, if your use of the Products and Services imposes a considerable effect on Company's (or any of its third party providers' including, without limitation, the Third Party Service Providers, Company Licensors and Third Party Data providers) resources or system performance. Company shall have sole discretion as to what constitutes excessive use or what activity is considered excessive or has a "considerable effect". Company is responsible for monitoring such excessive use for the account as a whole, and has no responsibility to identify your individual end-user, employee, or other agent who may or may not be responsible for the excessive use of the Products and Services.</p>
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+                    <h3>4. OWNERSHIP AND RELATIONSHIP OF PARTIES</h3>
+                    <p>4.1 The Products and Services and Licensor Software are protected by copyrights, trademarks, service marks, international treaties, and/or other proprietary rights and laws of the United States. You agree to abide by all applicable proprietary rights laws and other laws, as well as any additional copyright notices or restrictions contained in the Products and Services, the Licensor Software or this Agreement.</p>
+                    
+                    <p>4.2 Company and Company Licensors own all right, title, and interest in and to their applicable contributions to the Products and Services. Other than the limited license granted herein, the software license granted under this Agreement grants you no right, title, or interest in any intellectual property owned or licensed by Company or Company Licensors, including, without limitation, the Products and Services, Licensor Software, Company trademarks and Licensor trademarks, and creates no relationship between you and Company or Company Licensors other than that of licensor to licensee. This Agreement grants you no right, title and interest in any Third Party Data, Company Data or any other data accessed through the Products and Services.</p>
+                    
+                    <p>4.3 You agree not to assign, copy, transfer, or transmit the Products and Services, Licensor Software, Third Party Data, Company Data or any other data accessed through the Products and Services, to any third party. Your license to use the Products and Services, Licensor Software, Third Party Data, Company Data and any other data accessed through the Products and Services, will terminate if you violate these restrictions.</p>
+                    
+                    <p>4.4 If your license terminates, you agree to cease any and all use of the Products and Services, Licensor Software, Third Party Data, Company Data and any other data accessed through the Products and Services. All rights in any Third Party Data, Licensor Software, and any third-party data servers, including all ownership rights, are reserved by and remain with the respective third parties.</p>
+                    
+                    <p>4.5 You represent and warrant that you own all right, title and interest to any data stored by you on Company's host computer system using the Products and Services or uploaded or submitted to the Websites (the "Subscriber Data"). You hereby grant Company a limited, non-exclusive, royalty-free license to use, reproduce, and store Subscriber Data solely as necessary to provide the Products and Services to you. Company will not use Subscriber Data for any other purpose without your express written consent.</p>
+                    
+                    <p>4.6 You acknowledge and agree that Company may compile aggregate statistical information derived from Subscriber Data, provided that such information does not identify you or any individual personally. Company may use such aggregate statistical information to improve the Products and Services.</p>
+
+                    <h3>5. PAYMENT TERMS</h3>
+                    <p>5.1 The payment terms contained in this Section 5 apply only if you have subscribed for the Products and Services directly from Company. If you have subscribed for the Products and Services through a Third Party Service Provider, the applicable payment terms will be as agreed to by you and such Third Party Service Provider.</p>
+                    
+                    <p>5.2 Company reserves the right to change the Subscription Fees with thirty (30) days advance notice. Company charges and collects Subscription Fees in advance for use of the Products and Services.</p>
+                    
+                    <p>5.3 The Subscription Fees do not include any payment for telecommunications and computer hardware, software, telecommunications access charges, lines or connections or other equipment and services required to access and use the Products and Services.</p>
+                    
+                    <p>5.4 All Subscription Fees, taxes and other charges will be billed as you've agreed to in the sign up process.</p>
+                    
+                    <p>5.5 You agree to promptly pay Company in the event of any refusal of your credit card issuer to pay any amount to Company for any reason.</p>
+                    
+                    <p>5.6 You must provide Company with complete and accurate billing and contact information. YOU REPRESENT AND WARRANT THAT YOU HAVE NOT FALSELY IDENTIFIED YOURSELF NOR PROVIDED ANY FALSE INFORMATION TO GAIN ACCESS TO THE PRODUCTS AND SERVICES AND THAT YOUR BILLING INFORMATION IS CORRECT.</p>
+                    
+                    <p>5.7 Company reserves the right to revoke any stated offer and to correct any errors, inaccuracies or omissions, including after an order has been submitted, whether or not the order has been confirmed and your credit card charged. If your credit card has been charged for the purchase and an order is cancelled, Company will issue a credit to your credit card account in the amount of the charge. Individual bank policies will dictate when this amount is credited to your account.</p>
+                    
+                    <p><strong>5.8 REFUND AND CANCELLATION POLICY</strong></p>
+                    <p>Except as provided in this policy, all sales of Company products and services are final and Company does not offer refunds.</p>
+                    <p>If you have pre-paid for an annual subscription and wish to cancel it before the completion of the term, you are eligible for a limited refund of the amount of the remaining months post current month. Subscription fees incurred for past months are not refundable.</p>
+                    <p>If you require assistance with cancelling, please provide Company Support with 2 business days' advanced notice to carry out your cancellation request.</p>
+                    <p>Promotional rates are only available on the terms specified at sign up and may not be available if you cancel and subsequently re-subscribe for Company products or services.</p>
+
+                    <h3>6. SUPPORT AND SOFTWARE UPDATES/AVAILABILITY OF ONLINE SERVICES</h3>
+                    <p>6.1 Company will provide you with customer support and/or software upgrades, enhancements, or modifications for the Products and Services (collectively, "Support") provided that Company, in its sole discretion, may terminate such Support at any time with reasonable notice to you. Company may change, suspend, or discontinue any aspect of the Products and Services at any time, including the availability of any Products and Services related feature, database, or content. Company may also impose limits on certain features and services or restrict your access to parts or all of the Products and Services or the Websites with reasonable notice.</p>
+                    
+                    <p>6.2 Company will use commercially reasonable efforts to make the Products and Services available at all times. Company does not guarantee that the Products and Services will always be available.</p>
+                    
+                    <p>6.3 Company may suspend or take down the Products and Services at any time to perform routine or emergency maintenance. Where reasonably practicable Company will provide you advance notice when the Products and Services will be unavailable and for how long.</p>
+                    
+                    <p>6.4 Company will, in general, attempt to schedule maintenance and downtime to the Products and Services during off-peak hours to try to minimize the impact to the Products and Services and you.</p>
+                    
+                    <p>6.5 Company is not responsible to provide Products and Services or any part thereof or perform any of its obligations under this Agreement if it is prevented from doing so by any reason beyond Company's reasonable control. These reasons can include, but are not limited to, acts of God, floods, fires, earthquakes, civil unrest, terrorism, war, strikes, Internet service provider acts or omissions or online attacks.</p>
+
+                    <h3>7. DISCLAIMER OF WARRANTIES BY COMPANY</h3>
+                    <p>7.1 USE OF THE PRODUCTS AND SERVICES, LICENSOR SOFTWARE, THE SUPPORT, THIRD PARTY DATA, COMPANY DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES IS AT YOUR SOLE RISK. THEY ARE PROVIDED "AS IS." ANY MATERIAL OR SERVICE DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE PRODUCTS AND SERVICES IS DONE AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD AND/OR USE OF ANY SUCH MATERIAL OR SERVICE.</p>
+                    
+                    <p>7.2 COMPANY, ITS OFFICERS, DIRECTORS, EMPLOYEES, CONTRACTORS, AGENTS, AFFILIATES, AND ASSIGNS (COLLECTIVELY, THE "COMPANY ENTITIES"), THIRD PARTY SERVICE PROVIDERS, COMPANY LICENSORS AND THIRD PARTY DATA PROVIDERS DO NOT REPRESENT THAT THE PRODUCTS AND SERVICES, SUPPORT, LICENSOR SOFTWARE, THIRD PARTY DATA, COMPANY DATA OR ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES IS APPROPRIATE OR AVAILABLE FOR USE OUTSIDE THE UNITED STATES. IT IS YOUR RESPONSIBILITY TO ENSURE THAT YOUR USE OF THE PRODUCTS AND SERVICES, SUPPORT, LICENSOR SOFTWARE, THIRD PARTY DATA, COMPANY DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES IS IN COMPLIANCE WITH APPLICABLE LOCAL LAWS.</p>
+                    
+                    <p>7.3 THE COMPANY ENTITIES, THIRD PARTY SERVICE PROVIDERS, COMPANY LICENSORS AND THIRD PARTY DATA PROVIDERS EXPRESSLY DISCLAIM ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, RELATING TO THE PRODUCTS AND SERVICES, SUPPORT AND ANY OTHER SERVICES RELATED TO THE PRODUCTS AND SERVICES (THE "COMPANY SOFTWARE SERVICES"), LICENSOR SOFTWARE, THIRD PARTY DATA, COMPANY DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES, OR THE ACCURACY, TIMELINESS, COMPLETENESS, OR ADEQUACY OF THE PRODUCTS AND SERVICES, SUPPORT, COMPANY SOFTWARE SERVICES, LICENSOR SOFTWARE, THIRD PARTY DATA, COMPANY DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES, INCLUDING THE IMPLIED WARRANTIES OF TITLE, MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+                    
+                    <p>7.4 IF THE PRODUCTS AND SERVICES, SUPPORT, COMPANY SOFTWARE SERVICES LICENSOR SOFTWARE, THIRD PARTY DATA, COMPANY DATA OR ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES PROVES DEFECTIVE, YOU (AND NOT THE COMPANY ENTITIES, COMPANY LICENSORS, THIRD PARTY SERVICE PROVIDERS OR THIRD PARTY DATA PROVIDERS) ASSUME THE ENTIRE COST OF ALL REPAIR OR INJURY OF ANY KIND, EVEN IF SOME OR ALL OF THE COMPANY ENTITIES, THIRD PARTY SERVICE PROVIDERS, COMPANY LICENSORS OR THIRD PARTY DATA PROVIDERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH A DEFECT OR DAMAGES. SOME JURISDICTIONS DO NOT ALLOW RESTRICTIONS ON IMPLIED WARRANTIES SO SOME OF THESE LIMITATIONS MAY NOT APPLY TO YOU.</p>
+                    
+                    <p>7.5 YOU UNDERSTAND THAT ASSESSING COMPUTER SECURITY IS HIGHLY COMPLEX AND CHANGEABLE, AND COMPANY MAKES NO WARRANTY THAT THE SERVICES WILL FIND EVERY VULNERABILITY IN YOUR NETWORK OR SERVER(S), OR THAT THE SOLUTIONS SUGGESTED AND ADVICE PROVIDED BY COMPANY WILL BE COMPLETE OR ERROR-FREE.</p>
+
+                    <h3>8. LIMITATION OF LIABILITY</h3>
+                    <p>8.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT THE COMPANY ENTITIES, THIRD PARTY SERVICE PROVIDERS, COMPANY LICENSORS AND THIRD PARTY DATA PROVIDERS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES (EVEN IF SOME OR ALL OF THE COMPANY ENTITIES, THIRD PARTY SERVICE PROVIDERS, COMPANY LICENSORS OR THIRD PARTY DATA PROVIDERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), RESULTING FROM:</p>
+                    
+                    <p>(A) UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA BY A THIRD PARTY (HACKER) NOT AUTHORIZED BY US.</p>
+                    
+                    <p>(B) THE USE OR THE INABILITY TO USE THE PRODUCTS AND SERVICES;</p>
+                    
+                    <p>(C) THE COST OF PROCUREMENT OF SUBSTITUTE PRODUCTS AND SERVICES;</p>
+                    
+                    <p>(D) STATEMENTS OR CONDUCT OF ANY THIRD PARTY USING THE PRODUCTS AND SERVICES; OR</p>
+                    
+                    <p>(E) ANY OTHER MATTER RELATING TO THE PRODUCTS AND SERVICES, SUPPORT OR COMPANY SOFTWARE SERVICES.</p>
+                    
+                    <p>8.2 DAMAGES EXCLUDED BY THIS SECTION 8 INCLUDE, WITHOUT LIMITATION, THOSE FOR LOSS OF BUSINESS PROFITS, INJURY TO PERSON OR PROPERTY, BUSINESS INTERRUPTION, OR LOSS OF BUSINESS OR PERSONAL INFORMATION. SOME JURISDICTIONS DO NOT ALLOW LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES SO THIS RESTRICTION MAY NOT APPLY TO YOU.</p>
+                    
+                    <p>8.3 INFORMATION PROVIDED THROUGH THE PRODUCTS AND SERVICES MAY BE DELAYED, INACCURATE, OR CONTAIN ERRORS OR OMISSIONS, AND THE COMPANY ENTITIES, THIRD PARTY SERVICE PROVIDERS, COMPANY LICENSORS AND THIRD PARTY DATA PROVIDERS WILL HAVE NO LIABILITY WITH RESPECT THERETO. COMPANY MAY CHANGE OR DISCONTINUE ANY ASPECT OR FEATURE OF THE PRODUCTS AND SERVICES OR THE USE OF ALL OR ANY FEATURES OR TECHNOLOGY IN THE PRODUCTS AND SERVICES AT ANY TIME WITH REASONABLE NOTICE TO YOU, INCLUDING, BUT NOT LIMITED TO, CONTENT OR HOURS OF AVAILABILITY.</p>
+                    
+                    <p>8.4 WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, IN NO EVENT WILL THE AGGREGATE LIABILITY OF THE COMPANY ENTITIES, THIRD PARTY SERVICE PROVIDERS, COMPANY LICENSORS AND THIRD PARTY DATA PROVIDERS TO YOU RELATING TO, ARISING OUT OF OR IN CONNECTION WITH THE PRODUCTS AND SERVICES, SUPPORT, COMPANY SOFTWARE SERVICES, LICENSOR SOFTWARE, THIRD PARTY DATA, COMPANY DATA OR ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES EXCEED THE UNUSED PORTION OF YOUR PREPAID LICENSE FEE FOR USE OF THE PRODUCTS AND SERVICES. YOU EXPRESSLY AGREE THAT THE LIMITATIONS ON LIABILITY CONTAINED IN THIS AGREEMENT ARE REASONABLE AND CONSTITUTE A MATERIAL INDUCEMENT TO COMPANY PROVIDING THE PRODUCTS AND SERVICES, THE SUPPORT, THE COMPANY SOFTWARE SERVICES, LICENSOR SOFTWARE, THIRD PARTY DATA, COMPANY DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES WITHOUT WHICH COMPANY WOULD NOT PROVIDE THE PRODUCTS AND SERVICES, SUPPORT, THE COMPANY SOFTWARE SERVICES, LICENSOR SOFTWARE, THIRD PARTY DATA, COMPANY DATA AND ANY OTHER DATA ACCESSED THROUGH THE PRODUCTS AND SERVICES.</p>
+
+                    <h3>9. NON-DISCLOSURE AGREEMENT</h3>
+                    <p>Company will maintain the confidentiality of your information as follows:</p>
+                    <p>9.1 Company will not use any of the information obtained while providing security audit services for any purpose other than to help you secure your software application.</p>
+                    <p>9.2 Company will never take any rights to your data nor will Company offer the rights to your data to any third party.</p>
+                    <p>9.3 Company will not share your data with anyone other than with its own internal staff, on an as-needed basis.</p>
+                    <p>9.4 Every Company employee and independent contractor who may have access to your information is bound by his or her own Non-Disclosure Agreement with Company.</p>
+                    <p>9.5 All information that you provide to Company will be stored securely.</p>
+                    <p>9.6 Under this agreement, the bugs or vulnerabilities found by Company will not be disclosed to any third party unless you authorize Company to do so in writing.</p>
+
+                    <h3>10. INDEMNIFICATION</h3>
+                    <p>You agree to indemnify and hold the Company Entities, Third Party Service Providers, Company Licensors and Third Party Data Providers harmless from any claim or demand, including reasonable attorneys' fees, made by any third party in connection with or arising out of your use of the Products and Services, Licensor Software, Support, Company Software Services, Third Party Data, Company Data, any other data accessed through the Products and Services, your violation of any terms or conditions of this Agreement, your violation of applicable laws, or your violation of any rights of another person or entity.</p>
+
+                    <h3>11. DISPUTE RESOLUTION</h3>
+                    <p>11.1 <strong>Governing Law</strong>: This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of laws principles.</p>
+                    <p>11.2 <strong>Jurisdiction</strong>: Any legal action or proceeding arising under this Agreement will be brought exclusively in the federal or state courts located in Delaware, and the parties hereby irrevocably consent to the personal jurisdiction and venue therein.</p>
+                    <p>11.3 <strong>Arbitration</strong>: Any dispute, controversy or claim arising out of or relating to this Agreement shall be settled by binding arbitration in accordance with the Commercial Arbitration Rules of the American Arbitration Association. The arbitration shall be conducted in Delaware, and judgment on the arbitration award may be entered in any court having jurisdiction thereof.</p>
+
+                    <h3>12. NO GENERAL WAIVER; SEVERABILITY</h3>
+                    <p>The failure of Company to exercise or enforce any right or provision of this Agreement shall not constitute a waiver of such right or provision. If any provision of this Agreement or any part of any provision of this Agreement is held by a court of competent jurisdiction to be unenforceable then the remainder of this Agreement shall continue to be of full force and effect.</p>
+
+                    <h3>13. ENTIRE AGREEMENT</h3>
+                    <p>This Agreement and the other documents incorporated by reference into this Agreement constitute the entire understanding between the parties respecting use of the Products and Services, superseding all prior agreements between you and Company. In the event of any conflict between the terms and conditions of this Agreement and other documents incorporated by reference, the terms and conditions of this Agreement will control.</p>
+
+                    <h3>14. SURVIVAL</h3>
+                    <p>All terms and conditions of this Agreement that by their nature should reasonably survive, including, without limitation, Sections 4 (OWNERSHIP AND RELATIONSHIP OF PARTIES), 7 (DISCLAIMER OF WARRANTIES BY COMPANY), 8 (LIMITATION OF LIABILITY), 9 (NON-DISCLOSURE AGREEMENT), 10 (INDEMNIFICATION), and 11 (DISPUTE RESOLUTION), will survive any termination of this Agreement.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fallible</h3>
+                    <p>Elite cybersecurity solutions for global organizations. Protecting your digital assets with cutting-edge security technologies and expert threat intelligence.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/fallible" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/fallible_inc" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="fallible-managed-security.html">Managed Security</a></p>
+                    <p><a href="https://android.fallible.co">Mobile Security</a></p>
+                    <p><a href="index.html#services">Security Consulting</a></p>
+                    <p><a href="index.html#services">Cloud Security</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="https://medium.com/@fallible">Security Blog</a></p>
+                    <p><a href="https://github.com/FallibleInc/security-guide-for-developers">Security Guide for Developers</a></p>
+                    <p><a href="https://github.com/FallibleInc">Open Source Projects</a></p>
+                    <p><a href="faq.html">FAQ</a></p>
+                    <p><a href="pricing.html">Pricing</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p><a href="contactus.html">Contact Us</a></p>
+                    <p><a href="privacy.html">Privacy Policy</a></p>
+                    <p><a href="terms.html">Terms of Service</a></p>
+                    <p><a href="refund.html">Refund Policy</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Checksum Labs, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 
-      ga('create', 'UA-68651333-1', 'auto');
-      ga('send', 'pageview');
-  </script>
-    <script src="scripts/vendor.js"></script>
-    
-    <script src="scripts/main.js"></script>
-    <!-- begin olark code -->
-    <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
-    f[z]=function(){
-    (a.s=a.s||[]).push(arguments)};var a=f[z]._={
-    },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
-    f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
-    0:+new Date};a.P=function(u){
-    a.p[u]=new Date-a.p[0]};function s(){
-    a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
-    hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
-    return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
-    b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
-    b.contentWindow[g].open()}catch(w){
-    c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
-    var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
-    b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
-    loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
-    /* custom configuration goes here (www.olark.com/documentation) */
-    olark.identify('4350-869-10-6474');/*]]>*/</script><noscript><a href="https://www.olark.com/site/4350-869-10-6474/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
-    <!-- end olark code -->
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-68651333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
-
 </html>
